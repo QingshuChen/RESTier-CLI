@@ -24,6 +24,7 @@
         {
             return RED + text + RESET;
         }
+
         public static string Green(this string text)
         {
             return GREEN + text + RESET;

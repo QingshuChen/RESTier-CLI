@@ -1,8 +1,7 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using System;
-using System.Threading.Tasks;
+﻿using System;
+using Microsoft.Extensions.CommandLineUtils;
 
-namespace Microsoft.RESTier.Cli
+namespace Microsoft.RESTier.Cli.Commands
 {
     public class NewCommand
     {
@@ -15,7 +14,6 @@ namespace Microsoft.RESTier.Cli
 
             command.OnExecute(() =>
             {
-
                 var name = command.GetOptionValue("name");
                 var @namespace = command.GetOptionValue("namespace");
                 var connectionString = command.Parent.GetOptionValue("connectionstring");

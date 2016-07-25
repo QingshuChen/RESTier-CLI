@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnsiColorExtensions.cs" />
-    <Compile Include="BuildCommand.cs" />
+    <Compile Include="Commands\BuildCommand.cs" />
     <Compile Include="Check.cs" />
     <Compile Include="CommonOptions.cs" />
     <Compile Include="ConsoleHelper.cs" />
@@ -71,12 +71,12 @@
     </Compile>
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="GenerateCommand.cs" />
+    <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="LoggingExtensions.cs" />
-    <Compile Include="NewCommand.cs" />
+    <Compile Include="Commands\NewCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunCommand.cs" />
+    <Compile Include="Commands\RunCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -4,7 +4,7 @@ namespace Microsoft.RESTier.Cli
 {
     public class ConsoleHelper
     {
-        private static object _lock = new object();
+        private static readonly object _lock = new object();
         public static bool IsVerbose { get; set; }
 
         public static void WriteLine(ConsoleColor color, string format, params object[] args)
@@ -34,7 +34,7 @@ namespace Microsoft.RESTier.Cli
 
         private static void WritePlain(Action<string> action, string format, params object[] args)
         {
-            lock(_lock)
+            lock (_lock)
             {
                 action(string.Format(format, args));
             }

@@ -1,7 +1,7 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using System;
+﻿using System;
+using Microsoft.Extensions.CommandLineUtils;
 
-namespace Microsoft.RESTier.Cli
+namespace Microsoft.RESTier.Cli.Commands
 {
     public class RunCommand
     {
@@ -9,7 +9,8 @@ namespace Microsoft.RESTier.Cli
         {
             command.Description = "Hosts the RESTier API.";
 
-            command.Option("-c|--connection-string", "The connection string to connect to the database.", CommandOptionType.SingleValue);
+            command.Option("-c|--connection-string", "The connection string to connect to the database.",
+                CommandOptionType.SingleValue);
             command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);
 
             command.OnExecute(() =>

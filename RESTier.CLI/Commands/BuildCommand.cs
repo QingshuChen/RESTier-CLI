@@ -1,8 +1,7 @@
-﻿using Microsoft.Extensions.CommandLineUtils;
-using System;
-using System.Linq;
+﻿using System;
+using Microsoft.Extensions.CommandLineUtils;
 
-namespace Microsoft.RESTier.Cli
+namespace Microsoft.RESTier.Cli.Commands
 {
     public class BuildCommand
     {
