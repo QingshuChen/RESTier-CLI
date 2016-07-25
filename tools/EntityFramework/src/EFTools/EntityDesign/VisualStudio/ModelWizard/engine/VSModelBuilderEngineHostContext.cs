@@ -5,11 +5,11 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
     using System.Xml.Linq;
     using EnvDTE;
 
-    internal class VSModelBuilderEngineHostContext : ModelBuilderEngineHostContext
+    public class VSModelBuilderEngineHostContext : ModelBuilderEngineHostContext
     {
         private readonly ModelBuilderSettings _settings;
 
-        internal VSModelBuilderEngineHostContext(ModelBuilderSettings settings)
+        public VSModelBuilderEngineHostContext(ModelBuilderSettings settings)
         {
             _settings = settings;
         }

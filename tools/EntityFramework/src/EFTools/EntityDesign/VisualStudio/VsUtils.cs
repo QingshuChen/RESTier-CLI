@@ -46,7 +46,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
     using Resources = Microsoft.Data.Entity.Design.Resources;
     using VSErrorHandler = Microsoft.VisualStudio.ErrorHandler;
 
-    internal enum VisualStudioProjectSystem
+    public enum VisualStudioProjectSystem
     {
         WindowsApplication = 0,
         WebApplication = 1,

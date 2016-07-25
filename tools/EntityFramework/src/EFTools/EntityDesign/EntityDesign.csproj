@@ -209,6 +209,7 @@
     <Compile Include="CodeGeneration\Generators\IEntityTypeGenerator.cs" />
     <Compile Include="CodeGeneration\Generators\TextTemplatingHost.cs" />
     <Compile Include="CodeGeneration\Generators\VBCodeFirstEmptyModelGenerator.cs" />
+    <Compile Include="CodeGeneration\MyCodeFirstModelGenerator.cs" />
     <Compile Include="CodeGeneration\VBCodeHelper.cs" />
     <Compile Include="CodeGeneration\Generators\GeneratedCode\DefaultVBContextGenerator.cs">
       <AutoGen>True</AutoGen>
@@ -292,6 +293,7 @@
     <Compile Include="VisualStudio\ModelWizard\Engine\ModelGenerationOption.cs" />
     <Compile Include="VisualStudio\ModelWizard\Engine\ModelGenerator.cs" />
     <Compile Include="VisualStudio\ModelWizard\Engine\InitialModelContentsFactory.cs" />
+    <Compile Include="VisualStudio\ModelWizard\Engine\MyCodeFirstModelBuilderEngine.cs" />
     <Compile Include="VisualStudio\ModelWizard\Engine\ProgressDialogHelper.cs" />
     <Compile Include="VisualStudio\ModelWizard\OneEFWizard.cs" />
     <Compile Include="VisualStudio\ModelWizard\Properties\Resources.Designer.cs">

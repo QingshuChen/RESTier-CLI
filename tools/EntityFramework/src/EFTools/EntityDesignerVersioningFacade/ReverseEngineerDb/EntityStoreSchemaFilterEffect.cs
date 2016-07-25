@@ -7,7 +7,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
     ///     When a database object matchs the pattern for both an allow and exclude EntityStoreSchemaFilterEntry,
     ///     the database object will be excluded.
     /// </summary>
-    internal enum EntityStoreSchemaFilterEffect
+    public enum EntityStoreSchemaFilterEffect
     {
         /// <summary>Allow the entries that match the specified pattern.</summary>
         Allow = 0,

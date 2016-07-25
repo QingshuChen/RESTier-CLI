@@ -9,7 +9,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
     /// <summary>
     ///     This class represent a single filter entry
     /// </summary>
-    internal class EntityStoreSchemaFilterEntry
+    public class EntityStoreSchemaFilterEntry
     {
         private readonly string _catalog;
         private readonly string _schema;

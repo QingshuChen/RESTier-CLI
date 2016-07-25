@@ -9,7 +9,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
     using Microsoft.Data.Entity.Design.Common;
     using Microsoft.VisualStudio.Shell.Interop;
 
-    internal class VsUtilsWrapper : IVsUtils
+    public class VsUtilsWrapper : IVsUtils
     {
         public ProjectItem FindFirstProjectItemWithName(ProjectItems projectItems, string nameToMatch)
         {

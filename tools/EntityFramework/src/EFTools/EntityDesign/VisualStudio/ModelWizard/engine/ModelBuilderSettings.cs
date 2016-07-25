@@ -20,11 +20,11 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
     // <summary>
     //     Settings class used by ModelBuilderEngine
     // </summary>
-    internal class ModelBuilderSettings
+    public class ModelBuilderSettings
     {
         #region Constructors
 
-        internal ModelBuilderSettings()
+        public ModelBuilderSettings()
         {
             _applicationType = VisualStudioProjectSystem.WindowsApplication;
             UseLegacyProvider = OptionsDesignerInfo.UseLegacyProviderDefault;
@@ -35,11 +35,11 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
         #region Fields
 
         private ModelGenerationOption _modelGenerationOption = ModelGenerationOption.GenerateFromDatabase;
-        private string _designTimeConnectionString;
+        public string _designTimeConnectionString;
         private string _appConfigConnectionString;
         private string _appConfigConnectionPropertyName;
-        private string _designTimeProviderInvariantName;
-        private string _runtimeProviderInvariantName;
+        public string _designTimeProviderInvariantName;
+        public string _runtimeProviderInvariantName;
         private string _modelNamespace;
         private VisualStudioProjectSystem _applicationType;
         private EFArtifact _preexistingEFArtifact;
@@ -80,7 +80,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             set { _appConfigConnectionPropertyName = value; }
         }
 
-        internal ICollection<EntityStoreSchemaFilterEntry> DatabaseObjectFilters { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> DatabaseObjectFilters { get; set; }
 
         internal string ModelNamespace
         {
@@ -132,7 +132,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
 
         internal WorkflowApplication WorkflowInstance { get; set; }
 
-        internal string ProviderManifestToken { get; set; }
+        public string ProviderManifestToken { get; set; }
 
         // <summary>
         //     Returns a Dictionary mapping the identity of each _new_ Function to an IDataSchemaProcedure containing
@@ -227,11 +227,11 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
             return (T)value;
         }
 
-        internal bool UsePluralizationService { get; set; }
+        public bool UsePluralizationService { get; set; }
 
-        internal ModelBuilderEngine ModelBuilderEngine { get; set; }
+        public ModelBuilderEngine ModelBuilderEngine { get; set; }
 
-        internal bool IncludeForeignKeysInModel { get; set; }
+        public bool IncludeForeignKeysInModel { get; set; }
 
         internal WizardKind WizardKind
         {

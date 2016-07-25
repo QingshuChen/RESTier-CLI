@@ -2,7 +2,7 @@
 
 namespace Microsoft.Data.Entity.Design.Common
 {
-    internal enum LangEnum
+    public enum LangEnum
     {
         Unknown = 0,
         CSharp = 1,

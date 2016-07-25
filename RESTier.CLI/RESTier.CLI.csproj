@@ -62,6 +62,12 @@
     <Compile Include="AnsiColorExtensions.cs" />
     <Compile Include="Commands\BuildCommand.cs" />
     <Compile Include="Check.cs" />
+    <Compile Include="Commands\CodeGenerationEngine.cs" />
+    <Compile Include="Commands\Config.cs" />
+    <Compile Include="Commands\DatabaseTableOrView.cs" />
+    <Compile Include="Commands\FileContent.cs" />
+    <Compile Include="Commands\SQLServerDatabaseManager.cs" />
+    <Compile Include="Commands\RESTierProjectBuilder.cs" />
     <Compile Include="ConsoleHelper.cs" />
     <Compile Include="CoreStrings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -85,6 +91,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CoreStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\tools\EntityFramework\src\EFTools\EntityDesignerVersioningFacade\EntityDesignerVersioningFacade.csproj">
+      <Project>{0518e682-510d-48f8-bb14-7151c50a1850}</Project>
+      <Name>EntityDesignerVersioningFacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tools\EntityFramework\src\EFTools\EntityDesign\EntityDesign.csproj">
+      <Project>{f904b4be-c7cf-4e4f-85b7-b006a2d1c561}</Project>
+      <Name>EntityDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tools\EntityFramework\src\EntityFramework\EntityFramework.csproj">
+      <Project>{e06d1c12-efe8-4413-a15c-ae01fc158f2f}</Project>
+      <Name>EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\tools\NuGet.Client.CommandLine\src\NuGet.Clients\NuGet.CommandLine\NuGet.CommandLine.csproj">
+      <Project>{957c4e99-3644-47dd-8f9a-ae36f41ebe4a}</Project>
+      <Name>NuGet.CommandLine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -14,9 +14,9 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
     using System.Linq;
     using Resources = Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Properties.Resources;
 
-    internal abstract class ModelBuilderEngine
+    public abstract class ModelBuilderEngine
     {
-        public DbModel Model { get; private set; }
+        public DbModel Model { get; set; }
 
         // virutal for testing
         [SuppressMessage("Microsoft.Design", "CA1031:DoNotCatchGeneralExceptionTypes")]

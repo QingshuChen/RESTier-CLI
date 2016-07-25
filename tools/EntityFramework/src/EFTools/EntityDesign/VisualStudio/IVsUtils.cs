@@ -9,7 +9,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio
     using Microsoft.Data.Entity.Design.Common;
     using Microsoft.VisualStudio.Shell.Interop;
 
-    interface IVsUtils
+    public interface IVsUtils
     {
         ProjectItem FindFirstProjectItemWithName(ProjectItems projectItems, string nameToMatch);
         uint GetProjectItemId(IVsHierarchy hierarchy, ProjectItem projectItem);

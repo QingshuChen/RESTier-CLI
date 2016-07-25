@@ -2,7 +2,7 @@
 
 namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
 {
-    internal abstract class ModelBuilderEngineHostContext
+    public abstract class ModelBuilderEngineHostContext
     {
         internal abstract void LogMessage(string s);
         internal abstract void DispatchToModelGenerationExtensions();

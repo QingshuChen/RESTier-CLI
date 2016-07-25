@@ -10,7 +10,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade
     using System.Diagnostics;
     using System.Linq;
 
-    internal sealed class DependencyResolver : IDbDependencyResolver
+    public sealed class DependencyResolver : IDbDependencyResolver
     {
         public static readonly DependencyResolver Instance = new DependencyResolver();
 

@@ -6,16 +6,16 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
     using System.Diagnostics;
     using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
 
-    internal class SchemaFilterEntryBag
+    public class SchemaFilterEntryBag
     {
-        internal ICollection<EntityStoreSchemaFilterEntry> IncludedTableEntries { get; set; }
-        internal ICollection<EntityStoreSchemaFilterEntry> IncludedViewEntries { get; set; }
-        internal ICollection<EntityStoreSchemaFilterEntry> IncludedSprocEntries { get; set; }
-        internal ICollection<EntityStoreSchemaFilterEntry> ExcludedTableEntries { get; set; }
-        internal ICollection<EntityStoreSchemaFilterEntry> ExcludedViewEntries { get; set; }
-        internal ICollection<EntityStoreSchemaFilterEntry> ExcludedSprocEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> IncludedTableEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> IncludedViewEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> IncludedSprocEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> ExcludedTableEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> ExcludedViewEntries { get; set; }
+        public ICollection<EntityStoreSchemaFilterEntry> ExcludedSprocEntries { get; set; }
 
-        internal SchemaFilterEntryBag()
+        public SchemaFilterEntryBag()
         {
             IncludedTableEntries = new List<EntityStoreSchemaFilterEntry>();
             IncludedViewEntries = new List<EntityStoreSchemaFilterEntry>();
@@ -33,7 +33,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
         //     returning back a minimal set of schema filter entries
         // </summary>
         // <param name="schemaFilterPolicy">The policy used for optimizing changes. We will store a </param>
-        internal IList<EntityStoreSchemaFilterEntry> CollapseAndOptimize(SchemaFilterPolicy schemaFilterPolicy)
+        public IList<EntityStoreSchemaFilterEntry> CollapseAndOptimize(SchemaFilterPolicy schemaFilterPolicy)
         {
             var optimizedFilterEntryList = new List<EntityStoreSchemaFilterEntry>();
             // 

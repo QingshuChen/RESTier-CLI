@@ -2,7 +2,7 @@
 
 namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
 {
-    internal struct SchemaFilterPolicy
+    public struct SchemaFilterPolicy
     {
         private readonly ObjectFilterPolicy _tables;
         private readonly ObjectFilterPolicy _views;
@@ -31,7 +31,7 @@ namespace Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine
         }
 
         // Edmx files that aren't by-ref only take a one time snapshot, so we just pick whichever policy gives us the smallest changeset.
-        internal static SchemaFilterPolicy GetByValEdmxPolicy()
+        public static SchemaFilterPolicy GetByValEdmxPolicy()
         {
             return new SchemaFilterPolicy(ObjectFilterPolicy.Optimal, ObjectFilterPolicy.Optimal, ObjectFilterPolicy.Optimal);
         }

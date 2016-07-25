@@ -9,7 +9,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
     using System.Data.Entity.Utilities;
 
     // TODO: METADATA: Rename or remove?
-    internal class DbDatabaseMapping
+    public class DbDatabaseMapping
     {
         private readonly List<EntityContainerMapping> _entityContainerMappings
             = new List<EntityContainerMapping>();

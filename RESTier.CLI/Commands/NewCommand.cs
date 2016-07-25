@@ -22,7 +22,26 @@ namespace Microsoft.RESTier.Cli.Commands
                 if (string.IsNullOrEmpty(name))
                 {
                     Console.WriteLine("No name supplied; defaulting to Foo.");
+                    name = "Foo";
                 }
+                if (string.IsNullOrEmpty(@namespace))
+                {
+                    Console.WriteLine("No namespace supplied; defaulting to RESTier");
+                    @namespace = "RESTier";
+                }
+                if (string.IsNullOrEmpty(connectionString))
+                {
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "No connectionstring supplied;\n" + 
+                        "A connection string is required to createing new RESTier API.\n" +
+                        "The format of connection string is like:\n" +
+                        "\"Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password = myPassword;\"");
+                    command.Parent.ShowHelp();
+                    return 0;
+                }
+
+                var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
+                builder.Generate();
+
                 return 0;
             });
         }

@@ -25,7 +25,7 @@ namespace System.Data.Entity.Infrastructure
         // <summary>
         // Initializes a new instance of the <see cref="DbModel" /> class.
         // </summary>
-        internal DbModel(DbDatabaseMapping databaseMapping, DbModelBuilder modelBuilder)
+        public DbModel(DbDatabaseMapping databaseMapping, DbModelBuilder modelBuilder)
         {
             DebugCheck.NotNull(databaseMapping);
             DebugCheck.NotNull(modelBuilder);

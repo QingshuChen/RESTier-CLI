@@ -19,7 +19,7 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
     using System.Security;
     using System.Threading;
 
-    internal class StoreSchemaConnectionFactory
+    public class StoreSchemaConnectionFactory
     {
         /// <summary>
         ///     Creates an EntityConnection loaded with the providers metadata for the latest available store schema.
