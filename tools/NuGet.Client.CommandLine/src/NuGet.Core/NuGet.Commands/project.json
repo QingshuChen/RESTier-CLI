@@ -1,0 +1,69 @@
+﻿{
+  "version": "3.3.0",
+  "description": "Complete commands common to command-line and GUI NuGet clients",
+  "compilationOptions": {
+    "warningsAsErrors": true
+  },
+  "compile": [
+    "../../../submodules/FileSystem/src/Microsoft.Extensions.FileSystemGlobbing/**/*.cs",
+    "../../../submodules/FileSystem/src/Microsoft.AspNet.FileProviders.Abstractions/**/*.cs",
+    "../../../submodules/FileSystem/src/Microsoft.AspNet.FileProviders.Sources/**/*.cs",
+    "../../../submodules/Common/src/Microsoft.Extensions.Primitives/IChangeToken.cs"
+  ],
+  "compileExclude": [
+    "../../../submodules/FileSystem/src/**/AssemblyInfo.cs"
+  ],
+  "preprocess": [
+    "../../../tools/compiler/preprocess/Internalization.cs"
+  ],
+  "dependencies": {
+    "NuGet.Client": "3.3.0",
+    "NuGet.ContentModel": "3.3.0",
+    "NuGet.ProjectModel": "3.3.0",
+    "NuGet.Configuration": "3.3.0",
+    "NuGet.DependencyResolver": "3.3.0",
+    "NuGet.RuntimeModel": "3.3.0",
+    "NuGet.Common": {
+      "version": "3.3.0",
+      "type": "build"
+    },
+    "Microsoft.Extensions.HashCodeCombiner.Sources": {
+      "version": "1.0.0-*",
+      "type": "build"
+    }
+  },
+  "frameworks": {
+    "net45": {
+      "frameworkAssemblies": {
+        "System.Xml": "",
+        "System.Xml.Linq": ""
+      }
+    },
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Xml": "",
+        "System.Xml.Linq": "",
+        "System.Runtime": "",
+        "System.Text.Encoding": "",
+        "System.Collections": "",
+        "System.Threading.Tasks": ""
+      },
+      "dependencies": {
+        "Microsoft.CodeAnalysis.CSharp": {
+          "version": "1.0.0",
+          "type": "build"
+        },
+        "Microsoft.Framework.Runtime.Roslyn.Abstractions": {
+          "version": "1.0.0-beta6",
+          "type": "build"
+        }
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Linq.Parallel": "4.0.0-beta-23109",
+        "System.Xml.XDocument": "4.0.10-beta-23109"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="_NuGet_GetProjectsReferencingProjectJsonInternal"
+            DependsOnTargets="_SplitProjectReferencesByFileExistence"
+            Returns="@(_ProjectReferencingProjectJsonFile)">
+
+        <PropertyGroup>
+            <EntryPointProject Condition=" '$(EntryPointProject)' == '' ">$(MsBuildProjectFullPath)</EntryPointProject>
+        </PropertyGroup>
+
+        <ItemGroup>
+            <_ProjectReferencingProjectJsonFile
+                Include="#:$(MSBuildProjectFullPath)"
+                Condition=" '$(MSBuildProjectFullPath)' == '$(EntryPointProject)' " />
+            <_ProjectReferencingProjectJsonFile
+                Include="$(MSBuildProjectFullPath)"
+                Condition=" '$(MSBuildProjectFullPath)' != '$(EntryPointProject)' " />
+        </ItemGroup>
+
+        <MSBuild
+          Projects="@(ProjectReference)"
+          Targets="_NuGet_GetProjectsReferencingProjectJsonInternal"
+          BuildInParallel="$(BuildInParallel)"
+          Properties="
+            %(_MSBuildProjectReferenceExistent.SetConfiguration);
+            %(_MSBuildProjectReferenceExistent.SetPlatform);
+            EntryPointProject=$(EntryPointProject)"
+          RemoveProperties="%(_MSBuildProjectReferenceExistent.GlobalPropertiesToRemove)">
+
+            <Output
+                TaskParameter="TargetOutputs"
+                ItemName="_ProjectReferencingProjectJsonFile" />
+        </MSBuild>
+    </Target>
+</Project>
