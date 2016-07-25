@@ -39,7 +39,7 @@ namespace Microsoft.RESTier.Cli
                     else
                     {
                         SqlConnectionStringBuilder connectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
-                        ConsoleCommandLogger.Output(string.Format("Creating new RESTier API for {0}.", connectionStringBuilder.InitialCatalog));
+                        ConsoleHelper.WriteLine(string.Format("Creating new RESTier API for {0}.", connectionStringBuilder.InitialCatalog));
                         app.Commands.First(c => c.Name == "new").Execute();
                         return 0;   
                     }
@@ -50,23 +50,23 @@ namespace Microsoft.RESTier.Cli
 
         private static void WriteLogo()
         {
-            ConsoleCommandLogger.Output(@"");
-            ConsoleCommandLogger.Output(@" __   ___  __  ___    ___  __      ___       ___     __   ___  __  ___                     ___  __  ");
-            ConsoleCommandLogger.Output(@"|__) |__  /__`  |  | |__  |__) .    |  |__| |__     |__) |__  /__`  |     |  |  /\  \ /     |  /  \ ");
-            ConsoleCommandLogger.Output(@"|  \ |___ .__/  |  | |___ |  \ .    |  |  | |___    |__) |___ .__/  |     |/\| /~~\  |      |  \__/ ");
-            ConsoleCommandLogger.Output(@"");
-            ConsoleCommandLogger.Output(@"          .----------------.  .----------------.  .----------------.  .----------------.");
-            ConsoleCommandLogger.Output(@"          | .--------------. || .--------------. || .--------------. || .--------------. |");
-            ConsoleCommandLogger.Output(@"          | |  _______     | || |  _________   | || |    _______   | || |  _________   | |");
-            ConsoleCommandLogger.Output(@"          | | |_   __ \    | || | |_   ___  |  | || |   /  ___  |  | || | |  _   _  |  | |");
-            ConsoleCommandLogger.Output(@"          | |   | |__) |   | || |   | |_  \_|  | || |  |  (__ \_|  | || | |_/ | | \_|  | |");
-            ConsoleCommandLogger.Output(@"          | |   |  __ /    | || |   |  _|  _   | || |   '.___`-.   | || |     | |      | |");
-            ConsoleCommandLogger.Output(@"          | |  _| |  \ \_  | || |  _| |___/ |  | || |  |`\____) |  | || |    _| |_     | |");
-            ConsoleCommandLogger.Output(@"          | | |____| |___| | || | |_________|  | || |  |_______.'  | || |   |_____|    | |");
-            ConsoleCommandLogger.Output(@"          | |              | || |              | || |              | || |              | |");
-            ConsoleCommandLogger.Output(@"          | '--------------' || '--------------' || '--------------' || '--------------' |");
-            ConsoleCommandLogger.Output(@"           '----------------'  '----------------'  '----------------'  '----------------'");
-            ConsoleCommandLogger.Output(@"");
+            ConsoleHelper.WriteLine(@"");
+            ConsoleHelper.WriteLine(@" __   ___  __  ___    ___  __      ___       ___     __   ___  __  ___                     ___  __  ");
+            ConsoleHelper.WriteLine(@"|__) |__  /__`  |  | |__  |__) .    |  |__| |__     |__) |__  /__`  |     |  |  /\  \ /     |  /  \ ");
+            ConsoleHelper.WriteLine(@"|  \ |___ .__/  |  | |___ |  \ .    |  |  | |___    |__) |___ .__/  |     |/\| /~~\  |      |  \__/ ");
+            ConsoleHelper.WriteLine(@"");
+            ConsoleHelper.WriteLine(@"          .----------------.  .----------------.  .----------------.  .----------------.");
+            ConsoleHelper.WriteLine(@"          | .--------------. || .--------------. || .--------------. || .--------------. |");
+            ConsoleHelper.WriteLine(@"          | |  _______     | || |  _________   | || |    _______   | || |  _________   | |");
+            ConsoleHelper.WriteLine(@"          | | |_   __ \    | || | |_   ___  |  | || |   /  ___  |  | || | |  _   _  |  | |");
+            ConsoleHelper.WriteLine(@"          | |   | |__) |   | || |   | |_  \_|  | || |  |  (__ \_|  | || | |_/ | | \_|  | |");
+            ConsoleHelper.WriteLine(@"          | |   |  __ /    | || |   |  _|  _   | || |   '.___`-.   | || |     | |      | |");
+            ConsoleHelper.WriteLine(@"          | |  _| |  \ \_  | || |  _| |___/ |  | || |  |`\____) |  | || |    _| |_     | |");
+            ConsoleHelper.WriteLine(@"          | | |____| |___| | || | |_________|  | || |  |_______.'  | || |   |_____|    | |");
+            ConsoleHelper.WriteLine(@"          | |              | || |              | || |              | || |              | |");
+            ConsoleHelper.WriteLine(@"          | '--------------' || '--------------' || '--------------' || '--------------' |");
+            ConsoleHelper.WriteLine(@"           '----------------'  '----------------'  '----------------'  '----------------'");
+            ConsoleHelper.WriteLine(@"");
         }
 
         private static readonly Assembly ThisAssembly = typeof(CommandExecutor).GetTypeInfo().Assembly;

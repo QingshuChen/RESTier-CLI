@@ -9,8 +9,7 @@ namespace Microsoft.RESTier.Cli
     {
         public static int Main(string[] args)
         {
-            ConsoleCommandLogger.IsVerbose = HandleVerboseOption(ref args);
-            HandleDebugSwitch(ref args);
+            ConsoleHelper.IsVerbose = HandleVerboseOption(ref args);
 
             try
             {
@@ -24,7 +23,7 @@ namespace Microsoft.RESTier.Cli
                     ex = ex.InnerException;
                 }
 
-                ConsoleCommandLogger.Error(ex.Message.Bold().Red());
+                ConsoleHelper.WriteError(ex.Message);
                 return 1;
             }
         }
@@ -40,21 +39,6 @@ namespace Microsoft.RESTier.Cli
                 }
             }
             return false;
-        }
-
-        [Conditional("DEBUG")]
-        private static void HandleDebugSwitch(ref string[] args)
-        {
-            for (var i = 0; i < args.Length; i++)
-            {
-                if (args[i] == "--debug")
-                {
-                    args = args.Take(i).Concat(args.Skip(i + 1)).ToArray();
-                    Console.WriteLine("Waiting for debugger to attach. Press ENTER to continue");
-                    Console.WriteLine($"Process ID: {Process.GetCurrentProcess().Id}");
-                    Console.ReadLine();
-                }
-            }
         }
     }
 }

@@ -62,9 +62,8 @@
     <Compile Include="AnsiColorExtensions.cs" />
     <Compile Include="BuildCommand.cs" />
     <Compile Include="Check.cs" />
-    <Compile Include="CommandLogger.cs" />
     <Compile Include="CommonOptions.cs" />
-    <Compile Include="ConsoleCommandLogger.cs" />
+    <Compile Include="ConsoleHelper.cs" />
     <Compile Include="CoreStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

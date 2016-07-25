@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.CommandLineUtils;
 using System;
+using System.Threading.Tasks;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -14,8 +15,13 @@ namespace Microsoft.RESTier.Cli
 
             command.OnExecute(() =>
             {
-                ConsoleCommandLogger.Output("Creating new RESTier API.");
-                if (string.IsNullOrEmpty(command.GetOptionValue("n")))
+
+                var name = command.GetOptionValue("name");
+                var @namespace = command.GetOptionValue("namespace");
+                var connectionString = command.Parent.GetOptionValue("connectionstring");
+
+                ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API.");
+                if (string.IsNullOrEmpty(name))
                 {
                     Console.WriteLine("No name supplied; defaulting to Foo.");
                 }
