@@ -19,7 +19,7 @@
 
         public CodeGeneratorFactory(Project project)
         {
-            Debug.Assert(project != null, "project is null.");
+//            Debug.Assert(project != null, "project is null.");
 
             _project = project;
         }
