@@ -200,9 +200,7 @@
     <Compile Include="VirtualTreeGrid\UI\CheckBoxImages.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="VirtualTreeGrid\UI\ColumnHeader.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="VirtualTreeGrid\UI\ColumnHeader.cs" />
     <Compile Include="VirtualTreeGrid\UI\ColumnSelection.cs">
       <SubType>Component</SubType>
     </Compile>
