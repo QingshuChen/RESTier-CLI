@@ -37,12 +37,18 @@ namespace Microsoft.RESTier.Cli.Commands
                 else
                 {
                     pName = projectName.Value();
+                    if(!File.Exists(pName))
+                    {
+                        ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find the file {0}", pName);
+                        ConsoleHelper.WriteLine("Use \"RESTier build -h\" for more information");
+                        return 0;
+                    }
                 }
 
                 if (pName.Length == 0)
                 {
-                    Console.Write("Can't find a project to build");
-                    command.ShowHelp();
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a RESTier project to build in current directory");
+                    ConsoleHelper.WriteLine("Use \"RESTier build -h\" for more information");
                     return 0;
                 }
 
