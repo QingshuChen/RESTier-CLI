@@ -13,49 +13,64 @@ namespace Microsoft.RESTier.Cli.Commands
 
             command.HelpOption("-h|--help");
 
-            command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);
-
-            CommandOption projectDir = command.Option("-d|--project-directory",
-               " The directory that contains the project to run, default to current directory",
-               CommandOptionType.SingleValue);
+            var project = command.Option("-p|--project",
+                "The name for the RESTier project, default to the project in current directory",
+                CommandOptionType.SingleValue);
 
             command.OnExecute(() =>
             {
-                //    Console.WriteLine("API is hosted at http://localhost:8080.");
-                string pDir = "";
-                if (string.IsNullOrEmpty(projectDir.Value()))
+                ConsoleHelper.WriteLine(ConsoleColor.Green, "Hosts the RESTier API for {0}", project.Value());
+                string projectDirectory = "";
+                if (string.IsNullOrEmpty(project.Value()))
                 {
-                    pDir = Directory.GetCurrentDirectory();
-
+                    projectDirectory = Directory.GetCurrentDirectory();
                 }
                 else
                 {
-                    pDir = projectDir.Value();
+                    if (!File.Exists(project.Value()))
+                    {
+                        ConsoleHelper.WriteError("Can't find solution: {0}", project.Value());
+                        command.ShowHelp();
+                        return 0;
+                    }
+                    int index1 = project.Value().LastIndexOf('/');
+                    int index2 = project.Value().LastIndexOf('\\');
+                    if (index1 == -1 && index2 == -1)
+                    {
+                        projectDirectory = Directory.GetCurrentDirectory();
+                    }
+                    else
+                    {
+                        projectDirectory = project.Value().Substring(0, (index1 > index2 ? index1 : index2));
+                    }
                 }
-                if (!File.Exists(pDir + "\\" + ".vs\\config\\applicationhost.config"))
+                
+                // Set current directory to the directory that contains the RESTier Project
+                Directory.SetCurrentDirectory(projectDirectory);
+                if (!File.Exists(".vs\\config\\applicationhost.config"))
                 {
-                    Console.Write("Can't find the configration file '" + pDir + "\\" + ".vs\\config\\applicationhost.config' \n" +
-                        "Make sure you have set the correct project directory");
+                    Console.Write("Can't find the configration file '" + projectDirectory + "\\" + ".vs\\config\\applicationhost.config' \n" +
+                        "Make sure you have set the correct project");
                     command.ShowHelp();
                     return 0;
                 }
 
-                CmdIISExpress(pDir);
+                CmdIISExpress();
 
                 return 0;
             });
         }
 
-        // execute the msbuild to build a project
-        private static void CmdIISExpress(string projectDir)
+        // Execute the msbuild to build a project
+        // Current directory is set to the directory that contains the RESTier Project before executing this function
+        private static void CmdIISExpress()
         {
 
             Process p = new Process();
 
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.Arguments = "/c \"" + Config.IISExpressPath + "iisexpress.exe\" " +
-                 "/config:" + projectDir + "\\" + ".vs\\config\\applicationhost.config";
-            Console.WriteLine(p.StartInfo.Arguments);
+                 "/config:" + ".vs\\config\\applicationhost.config";
             p.StartInfo.UseShellExecute = false;
             p.Start();
             p.WaitForExit();
