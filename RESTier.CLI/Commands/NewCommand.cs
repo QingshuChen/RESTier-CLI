@@ -24,16 +24,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 var connectionString = command.GetOptionValue("connectionstring");
 
                 ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API.");
-                if (string.IsNullOrEmpty(name))
-                {
-                    Console.WriteLine("No name supplied; defaulting to Foo.");
-                    name = "Foo";
-                }
-                if (string.IsNullOrEmpty(@namespace))
-                {
-                    Console.WriteLine("No namespace supplied; defaulting to RESTier");
-                    @namespace = "RESTier";
-                }
+                
                 if (string.IsNullOrEmpty(connectionString) && string.IsNullOrEmpty(parentConnectionString))
                 {
                     ConsoleHelper.WriteLine(ConsoleColor.Red, "No connectionstring supplied;\n" +
@@ -60,6 +51,17 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 if (string.IsNullOrEmpty(connectionString))
                     connectionString = parentConnectionString;
+
+                if (string.IsNullOrEmpty(name))
+                {
+                    Console.WriteLine("No name supplied; defaulting to Foo.");
+                    name = "Foo";
+                }
+                if (string.IsNullOrEmpty(@namespace))
+                {
+                    Console.WriteLine("No namespace supplied; defaulting to RESTier");
+                    @namespace = "RESTier";
+                }
 
                 var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
                 builder.Generate();
