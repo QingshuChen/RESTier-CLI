@@ -42,7 +42,7 @@ namespace Microsoft.RESTier.Cli
                     }
                     var connectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
                     ConsoleHelper.WriteLine(string.Format("Creating new RESTier API for {0}.",
-                        connectionStringBuilder.InitialCatalog));
+                        connectionStringBuilder.InitialCatalog + connectionStringBuilder.AttachDBFilename));
                     app.Commands.First(c => c.Name == "new").Execute();
                     return 0;
                 });
