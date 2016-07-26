@@ -13,8 +13,6 @@ namespace Microsoft.RESTier.Cli.Commands
 
             command.HelpOption("-h|--help");
 
-            command.Option("-c|--connection-string", "The connection string to connect to the database.",
-                CommandOptionType.SingleValue);
             command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);
 
             CommandOption projectDir = command.Option("-d|--project-directory",
