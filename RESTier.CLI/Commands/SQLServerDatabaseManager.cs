@@ -9,6 +9,7 @@ using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -40,7 +41,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 Version actualEntityFrameworkConnectionVersion;
                 ec = new StoreSchemaConnectionFactory().Create(
                     DependencyResolver.Instance,
-                    Config.providerInvariantName,
+                    ConfigurationManager.AppSettings["ProviderInvariantName"],
                     connectionString,
                     maxVersion,
                     out actualEntityFrameworkConnectionVersion);

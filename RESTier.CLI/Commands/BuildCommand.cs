@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.Extensions.CommandLineUtils;
 using System.Diagnostics;
 using System.IO;
@@ -69,7 +70,7 @@ namespace Microsoft.RESTier.Cli.Commands
 
             p.StartInfo.UseShellExecute = false;
 
-            p.StartInfo.Arguments = "/c " + "\"" + Config.MSBuildPath + "MSBuild.exe\" " + projectName +
+            p.StartInfo.Arguments = "/c " + "\"" + Path.Combine(ConfigurationManager.AppSettings["MSBuildPath"], "MSBuild.exe") + projectName +
                 (string.IsNullOrEmpty(buildSetting) ? "" : " " + buildSetting);
 
             p.Start();
