@@ -63,7 +63,7 @@ namespace Microsoft.RESTier.Cli.Commands
 
             p.StartInfo.UseShellExecute = false;
 
-            p.StartInfo.Arguments = "/c " + Config.MSBuildPath + "MSBuild.exe " + projectName +
+            p.StartInfo.Arguments = "/c " + "\"" + Config.MSBuildPath + "MSBuild.exe\" " + projectName +
                 (string.IsNullOrEmpty(buildSetting) ? "" : " " + buildSetting);
 
             p.Start();
