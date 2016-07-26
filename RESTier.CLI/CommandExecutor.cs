@@ -18,8 +18,8 @@ namespace Microsoft.RESTier.Cli
                 FullName = "RESTier CLI Commands"
             };
 
-            app.VersionOption("--version", "1.0.0");
-            app.HelpOption("--help");
+            app.VersionOption("-v|--version", "1.0.0");
+            app.HelpOption("-h|--help");
 
             app.Option("-c|--connectionstring",
                 "A connection string to a SQL Server database. Used to reverse engineer a RESTier API.",

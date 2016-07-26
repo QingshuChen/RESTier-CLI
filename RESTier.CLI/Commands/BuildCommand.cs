@@ -10,7 +10,7 @@ namespace Microsoft.RESTier.Cli.Commands
         public static void Configure(CommandLineApplication command)
         {
             command.Description = "Builds the RESTier project.";
-            command.HelpOption("--help");
+            command.HelpOption("-h|--help");
 
             var projectName = command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);
             var buildSetting = command.Option("-s|--build-setting",

@@ -11,6 +11,8 @@ namespace Microsoft.RESTier.Cli.Commands
         {
             command.Description = "Hosts the RESTier API.";
 
+            command.HelpOption("-h|--help");
+
             command.Option("-c|--connection-string", "The connection string to connect to the database.",
                 CommandOptionType.SingleValue);
             command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);

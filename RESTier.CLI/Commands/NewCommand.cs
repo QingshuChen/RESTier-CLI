@@ -8,6 +8,7 @@ namespace Microsoft.RESTier.Cli.Commands
         public static void Configure(CommandLineApplication command)
         {
             command.Description = "Creates a new RESTier project.";
+            command.HelpOption("-h|--help");
 
             command.Option("-n|--name", "The name for the new RESTier project", CommandOptionType.SingleValue);
             command.Option("-ns|--namespace", "The namespace for the new RESTier project", CommandOptionType.SingleValue);
