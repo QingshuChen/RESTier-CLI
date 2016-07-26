@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -191,12 +193,30 @@ namespace Microsoft.RESTier.Cli.Commands
             CreateWebConfigFile();
             CreateWebDebugConfigFile();
             CreateWebReleaseConfigFile();
-            string[] install = { "install", projectPath + "\\" + projectName + @"\packages.config" };
-            NuGet.CommandLine.Program.MainCore(projectPath + "\\packages", install);
+            
+            // restore packages for the RESTier project
+            WebClient t = new WebClient();
+            t.DownloadFile("https://dist.nuget.org/win-x86-commandline/latest/nuget.exe", "nuget.exe");
+            CmdNugetRestore(projectPath + "\\" + projectName + @".sln");
 
             var engine = new CodeGenerationEngine(connectionString, projectName, @namespace);
             AddModleFile(engine.GenerateCode());
             return flag;
+        }
+
+        private void CmdNugetRestore(string projectName)
+        {
+
+            Process p = new Process();
+
+            p.StartInfo.FileName = "cmd.exe";
+
+            p.StartInfo.UseShellExecute = false;
+
+            p.StartInfo.Arguments = "/c " + "nuget.exe restore " + projectName; 
+            p.Start();
+
+            p.WaitForExit();
         }
 
         // To add files to the cs project, we need to update the .csproj file

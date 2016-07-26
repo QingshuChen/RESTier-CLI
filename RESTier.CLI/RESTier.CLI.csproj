@@ -105,10 +105,6 @@
       <Project>{e06d1c12-efe8-4413-a15c-ae01fc158f2f}</Project>
       <Name>EntityFramework</Name>
     </ProjectReference>
-    <ProjectReference Include="..\tools\NuGet.Client.CommandLine\src\NuGet.Clients\NuGet.CommandLine\NuGet.CommandLine.csproj">
-      <Project>{957c4e99-3644-47dd-8f9a-ae36f41ebe4a}</Project>
-      <Name>NuGet.CommandLine</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
