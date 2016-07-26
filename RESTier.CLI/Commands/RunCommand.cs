@@ -29,8 +29,8 @@ namespace Microsoft.RESTier.Cli.Commands
                 {
                     if (!File.Exists(project.Value()))
                     {
-                        ConsoleHelper.WriteError("Can't find solution: {0}", project.Value());
-                        command.ShowHelp();
+                        ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find solution: {0}", project.Value());
+                        ConsoleHelper.WriteLine("Use \"RESTier run -h\" for more information");
                         return 0;
                     }
                     int index1 = project.Value().LastIndexOf('/');
@@ -49,9 +49,10 @@ namespace Microsoft.RESTier.Cli.Commands
                 Directory.SetCurrentDirectory(projectDirectory);
                 if (!File.Exists(".vs\\config\\applicationhost.config"))
                 {
-                    Console.Write("Can't find the configration file '" + projectDirectory + "\\" + ".vs\\config\\applicationhost.config' \n" +
-                        "Make sure you have set the correct project");
-                    command.ShowHelp();
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find the configration file '" + projectDirectory + 
+                        "\\" + ".vs\\config\\applicationhost.config'");
+                    ConsoleHelper.WriteLine("Make sure you have set the correct project");
+                    ConsoleHelper.WriteLine("Use \"RESTier run -h\" for more information");
                     return 0;
                 }
 
