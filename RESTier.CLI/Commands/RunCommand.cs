@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.Extensions.CommandLineUtils;
 using System.Diagnostics;
 using System.IO;
@@ -66,11 +67,11 @@ namespace Microsoft.RESTier.Cli.Commands
         // Current directory is set to the directory that contains the RESTier Project before executing this function
         private static void CmdIISExpress()
         {
-
+            // TODO: Is this still the right pattern? I thought invoking command-line stuff like this was out of style.
             Process p = new Process();
 
             p.StartInfo.FileName = "cmd.exe";
-            p.StartInfo.Arguments = "/c \"" + Config.IISExpressPath + "iisexpress.exe\" " +
+            p.StartInfo.Arguments = "/c \"" + Path.Combine(ConfigurationManager.AppSettings["IISExpressPath"], "iisexpress.exe") +
                  "/config:" + ".vs\\config\\applicationhost.config";
             p.StartInfo.UseShellExecute = false;
             p.Start();

@@ -9,6 +9,7 @@ using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
 using System.IO;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity.Core.Common;
 using System.Diagnostics;
 using System.Data.Entity.Infrastructure.DependencyResolution;
@@ -81,8 +82,8 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 ModelBuilderSettings modelBuilderSettings = new ModelBuilderSettings();
                 modelBuilderSettings._designTimeConnectionString = connectionString;
-                modelBuilderSettings._designTimeProviderInvariantName = Config.providerInvariantName;
-                modelBuilderSettings._runtimeProviderInvariantName = Config.providerInvariantName;
+                modelBuilderSettings._designTimeProviderInvariantName = ConfigurationManager.AppSettings["ProviderInvariantName"];
+                modelBuilderSettings._runtimeProviderInvariantName = ConfigurationManager.AppSettings["ProviderInvariantName"];
                 modelBuilderSettings.UsePluralizationService = true;
                 modelBuilderSettings.IncludeForeignKeysInModel = true;
 
@@ -93,8 +94,9 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 // Get the providerManifestTokern 
                 IDbDependencyResolver resolver = DependencyResolver.Instance;
-                var providerServices = resolver.GetService<DbProviderServices>(Config.providerInvariantName);
-                var factory = DbProviderFactories.GetFactory(Config.providerInvariantName);
+                // TODO: These should be using the value off the modelBuilderSettings, right?
+                var providerServices = resolver.GetService<DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
+                var factory = DbProviderFactories.GetFactory(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var dbconnection = factory.CreateConnection();
                 dbconnection.ConnectionString = connectionString;
                 Debug.Assert(providerServices != null, "Trying to get unregistered provider.");
