@@ -72,7 +72,7 @@ namespace Microsoft.RESTier.Cli.Commands
 
             p.StartInfo.FileName = "cmd.exe";
             p.StartInfo.Arguments = "/c \"" + Path.Combine(ConfigurationManager.AppSettings["IISExpressPath"], "iisexpress.exe") +
-                 "/config:" + ".vs\\config\\applicationhost.config";
+                 "\" /config:" + ".vs\\config\\applicationhost.config";
             p.StartInfo.UseShellExecute = false;
             p.Start();
             p.WaitForExit();
