@@ -1,4 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.CommandLineUtils;
@@ -40,7 +42,16 @@ namespace Microsoft.RESTier.Cli
                         app.ShowHelp();
                         return 0;
                     }
-                    var connectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
+                    var connectionStringBuilder = new SqlConnectionStringBuilder();
+                    try
+                    {
+                        connectionStringBuilder.ConnectionString = connectionString;
+                    }
+                    catch (ArgumentException e)
+                    {
+                        throw new ArgumentException("Invalid connection string: " + e.Message, e);
+                    }
+                    
                     ConsoleHelper.WriteLine(string.Format("Creating new RESTier API for {0}.",
                         connectionStringBuilder.InitialCatalog + connectionStringBuilder.AttachDBFilename));
                     app.Commands.First(c => c.Name == "new").Execute();
