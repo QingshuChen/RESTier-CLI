@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 
-namespace Microsoft.RESTier.Cli.Commands
+namespace Microsoft.RESTier.Cli
 {
     /// <summary>
     /// Build an .NET Web Application Projcet which support a standardized, 

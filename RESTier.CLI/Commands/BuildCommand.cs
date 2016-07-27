@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using Microsoft.Extensions.CommandLineUtils;
 using System.Diagnostics;
 using System.IO;
+using Microsoft.Extensions.CommandLineUtils;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -13,20 +13,21 @@ namespace Microsoft.RESTier.Cli.Commands
             command.Description = "Builds the RESTier project.";
             command.HelpOption("-h|--help");
 
-            var projectName = command.Option("-p|--project", "The name for the RESTier project", CommandOptionType.SingleValue);
+            var projectName = command.Option("-p|--project", "The name for the RESTier project",
+                CommandOptionType.SingleValue);
             var buildSetting = command.Option("-s|--build-setting",
-               "Parameter for the msbuild when complile the project",
-               CommandOptionType.SingleValue);
+                "Build setting for MSBuild",
+                CommandOptionType.SingleValue);
 
             command.OnExecute(() =>
             {
-                string pName = "";
+                var pName = "";
                 if (string.IsNullOrEmpty(projectName.Value()))
                 {
-                    string dir = Directory.GetCurrentDirectory();
-                    DirectoryInfo sDir = new DirectoryInfo(dir);
-                    FileInfo[] fileArray = sDir.GetFiles();
-                    foreach (FileInfo file in fileArray)
+                    var dir = Directory.GetCurrentDirectory();
+                    var sDir = new DirectoryInfo(dir);
+                    var fileArray = sDir.GetFiles();
+                    foreach (var file in fileArray)
                     {
                         if (file.Extension.Equals("sln"))
                         {
@@ -38,7 +39,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 else
                 {
                     pName = projectName.Value();
-                    if(!File.Exists(pName))
+                    if (!File.Exists(pName))
                     {
                         ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find the file {0}", pName);
                         ConsoleHelper.WriteLine("Use \"RESTier build -h\" for more information");
@@ -48,7 +49,8 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 if (pName.Length == 0)
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a RESTier project to build in current directory");
+                    ConsoleHelper.WriteLine(ConsoleColor.Red,
+                        "Can't find a RESTier project to build in current directory");
                     ConsoleHelper.WriteLine("Use \"RESTier build -h\" for more information");
                     return 0;
                 }
@@ -63,8 +65,7 @@ namespace Microsoft.RESTier.Cli.Commands
         // execute the msbuild to build a project
         private static void CmdMSBuild(string projectName, string buildSetting)
         {
-
-            Process p = new Process();
+            var p = new Process();
 
             p.StartInfo.FileName = "cmd.exe";
 
@@ -76,16 +77,6 @@ namespace Microsoft.RESTier.Cli.Commands
             p.Start();
 
             p.WaitForExit();
-        }
-
-        // Ignore the last line that contains the word "exit"
-        // Used to delete the output when execute "exit" command
-        private static string ignoreLastLineContainWordExit(string str)
-        {
-            int index = str.LastIndexOf('\n', str.LastIndexOf("exit"));
-            if (index < 0) // unlikely to happen
-                return str;
-            return str.Substring(0, index);
         }
     }
 }
