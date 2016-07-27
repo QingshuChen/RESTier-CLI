@@ -85,6 +85,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SolutionFile.tt</DependentUpon>
     </Compile>
+    <Compile Include="TextTemplate\SolutionFileCode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

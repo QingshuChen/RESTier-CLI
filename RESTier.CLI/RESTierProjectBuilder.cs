@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Xml;
+using Microsoft.RESTier.Cli.TextTemplate;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -64,7 +65,8 @@ namespace Microsoft.RESTier.Cli
         private void CreateSolutionFile()
         {
             string filename = projectPath + "\\" + projectName + ".sln";
-            CreateFile(filename, FileContent.solutionFileContent.Replace("{0}", projectName));
+            SolutionFile solutionFile = new SolutionFile(projectName);
+            CreateFile(filename, solutionFile.TransformText());
         }
         // Create applicationhost.config file for the IIS Express
         private void CreateApplicationhostConfigFile()

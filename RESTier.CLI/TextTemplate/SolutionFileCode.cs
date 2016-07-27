@@ -9,5 +9,9 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     partial class SolutionFile
     {
         private string projectName;
+        public SolutionFile(string projectName)
+        {
+            this.projectName = projectName;
+        }
     }
 }

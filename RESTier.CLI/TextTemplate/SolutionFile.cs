@@ -28,7 +28,52 @@ namespace Microsoft.RESTier.Cli.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("\r\n ");
+            this.Write("Microsoft Visual Studio Solution File, Format Version 12.00\r\n# Visual Studio 14\r\n" +
+                    "VisualStudioVersion = 14.0.25420.1\r\nMinimumVisualStudioVersion = 10.0.40219.1\r\nP" +
+                    "roject(\"{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}\") = \"");
+            
+            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\SolutionFile.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
+            
+            #line default
+            #line hidden
+            this.Write("\", \"");
+            
+            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\SolutionFile.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
+            
+            #line default
+            #line hidden
+            
+            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\SolutionFile.tt"
+ this.Write("\\"); 
+            
+            #line default
+            #line hidden
+            
+            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\SolutionFile.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
+            
+            #line default
+            #line hidden
+            this.Write(@".csproj"", ""{B07B6E14-B039-49B9-8C8C-3F63F3A7F0AE}""
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B07B6E14-B039-49B9-8C8C-3F63F3A7F0AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B07B6E14-B039-49B9-8C8C-3F63F3A7F0AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B07B6E14-B039-49B9-8C8C-3F63F3A7F0AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B07B6E14-B039-49B9-8C8C-3F63F3A7F0AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+ ");
             return this.GenerationEnvironment.ToString();
         }
     }
