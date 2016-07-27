@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data.SqlClient;
+using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
 
 namespace Microsoft.RESTier.Cli.Commands
@@ -10,56 +12,37 @@ namespace Microsoft.RESTier.Cli.Commands
             command.Description = "Creates a new RESTier project.";
             command.HelpOption("-h|--help");
 
-            command.Option("-n|--name", "The name for the new RESTier project", CommandOptionType.SingleValue);
-            command.Option("-ns|--namespace", "The namespace for the new RESTier project", CommandOptionType.SingleValue);
-            command.Option("-c|--connectionstring",
-                "A connection string to a SQL Server database. Used to reverse engineer a RESTier API.",
+            var nameOption = command.Option("-n|--name", "The name for the new RESTier project",
+                CommandOptionType.SingleValue);
+            var namespaceOption = command.Option("-ns|--namespace", "The namespace for the new RESTier project",
                 CommandOptionType.SingleValue);
 
             command.OnExecute(() =>
             {
-                var name = command.GetOptionValue("name");
-                var @namespace = command.GetOptionValue("namespace");
-                var parentConnectionString = command.Parent.GetOptionValue("connectionstring");
-                var connectionString = command.GetOptionValue("connectionstring");
+                var name = nameOption.Value();
+                var @namespace = namespaceOption.Value();
+                var connectionString = command.Parent.GetOptionValue("connectionstring");
 
                 ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API.");
-                
-                if (string.IsNullOrEmpty(connectionString) && string.IsNullOrEmpty(parentConnectionString))
-                {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "No connectionstring supplied;\n" +
-                        "A connection string is required to createing new RESTier API.\n" +
-                        "The right command is like:");
-                    ConsoleHelper.WriteLine(ConsoleColor.Green,
-                        "RESTier.exe new -c connectionstring [-n projectname] [-ns namespace]");
-                    ConsoleHelper.WriteLine("Use \"RESTier new -h\" for more information");
-                    return 0;
-                }
-
-                if (!string.IsNullOrEmpty(connectionString) && 
-                    !string.IsNullOrEmpty(parentConnectionString) &&
-                    !connectionString.Equals(parentConnectionString))
-                {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, 
-                        "Two connectionstrings are supplied and they are not the same;\n" +
-                        "The right command is like:");
-                    ConsoleHelper.WriteLine(ConsoleColor.Green,
-                        "RESTier.exe new -c connectionstring [-n projectname] [-ns namespace]");
-                    ConsoleHelper.WriteLine("Use \"RESTier new -h\" for more information");
-                    return 0;
-                }
 
                 if (string.IsNullOrEmpty(connectionString))
-                    connectionString = parentConnectionString;
-
+                {
+                    command.Parent.ShowHelp();
+                }
                 if (string.IsNullOrEmpty(name))
                 {
-                    Console.WriteLine("No name supplied; defaulting to Foo.");
-                    name = "Foo";
+                    // TODO #4: Need better error handling for connection string.
+                    var connectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
+                    name = connectionStringBuilder.InitialCatalog;
+                    if (string.IsNullOrEmpty(name))
+                    {
+                        name = Path.GetFileNameWithoutExtension(connectionStringBuilder.AttachDBFilename);
+                    }
+                    ConsoleHelper.WriteLine("No name supplied; defaulting to \"{0}\".", name);
                 }
                 if (string.IsNullOrEmpty(@namespace))
                 {
-                    Console.WriteLine("No namespace supplied; defaulting to RESTier");
+                    ConsoleHelper.WriteLine("No namespace supplied; defaulting to \"RESTier\".");
                     @namespace = "RESTier";
                 }
 
