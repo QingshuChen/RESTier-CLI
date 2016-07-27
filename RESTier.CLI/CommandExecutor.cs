@@ -26,8 +26,12 @@ namespace Microsoft.RESTier.Cli
             app.Option("-c|--connectionstring",
                 "A connection string to a SQL Server database. Used to reverse engineer a RESTier API.",
                 CommandOptionType.SingleValue);
+            var downloadOption = app.Option("-d|--download",
+                "Automatically downloads dependencies and places in child folder.",
+                CommandOptionType.NoValue);
 
-            app.Command("new", c => NewCommand.Configure(c));
+            var checkDependenciesCommand = app.Command("dependencies", c => CheckDependenciesCommand.Configure(c));
+            var newCommand = app.Command("new", c => NewCommand.Configure(c));
             app.Command("generate", c => GenerateCommand.Configure(c));
             app.Command("build", c => BuildCommand.Configure(c));
             app.Command("run", c => RunCommand.Configure(c));
@@ -54,7 +58,8 @@ namespace Microsoft.RESTier.Cli
                     
                     ConsoleHelper.WriteLine(string.Format("Creating new RESTier API for {0}.",
                         connectionStringBuilder.InitialCatalog + connectionStringBuilder.AttachDBFilename));
-                    app.Commands.First(c => c.Name == "new").Execute();
+                    checkDependenciesCommand.Execute();
+                    newCommand.Execute();
                     return 0;
                 });
 
