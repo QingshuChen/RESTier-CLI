@@ -58,8 +58,8 @@ namespace Microsoft.RESTier.Cli.Commands
                     for (int i = 0; i < databaseTables.Count; i++)
                     {
                         tableItem = (DatabaseTableOrView)(databaseTables[i]);
-                        EntityStoreSchemaFilterEntry item = new EntityStoreSchemaFilterEntry(tableItem.catalogName,
-                            tableItem.schemaName, tableItem.tableOrViewName, EntityStoreSchemaFilterObjectTypes.Table,
+                        EntityStoreSchemaFilterEntry item = new EntityStoreSchemaFilterEntry(tableItem.CatalogName,
+                            tableItem.SchemaName, tableItem.TableOrViewName, EntityStoreSchemaFilterObjectTypes.Table,
                             EntityStoreSchemaFilterEffect.Allow);
                         schemaFilterEntryBag.IncludedTableEntries.Add(item);
                     }
@@ -72,8 +72,8 @@ namespace Microsoft.RESTier.Cli.Commands
                     for (int i = 0; i < databaseViews.Count; i++)
                     {
                         viewItem = (DatabaseTableOrView)(databaseViews[i]);
-                        EntityStoreSchemaFilterEntry item = new EntityStoreSchemaFilterEntry(viewItem.catalogName,
-                            viewItem.schemaName, viewItem.tableOrViewName, EntityStoreSchemaFilterObjectTypes.View,
+                        EntityStoreSchemaFilterEntry item = new EntityStoreSchemaFilterEntry(viewItem.CatalogName,
+                            viewItem.SchemaName, viewItem.TableOrViewName, EntityStoreSchemaFilterObjectTypes.View,
                             EntityStoreSchemaFilterEffect.Allow);
                         schemaFilterEntryBag.IncludedViewEntries.Add(item);
                     }

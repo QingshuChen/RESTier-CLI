@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Common;
 using System.Data.Entity.Core.Common;
 using System.Data.Entity.Infrastructure.DependencyResolution;
@@ -9,7 +10,6 @@ using Microsoft.Data.Entity.Design.CodeGeneration;
 using Microsoft.Data.Entity.Design.VersioningFacade;
 using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
 using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
-using Microsoft.RESTier.Cli.Commands;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -79,8 +79,10 @@ namespace Microsoft.RESTier.Cli
 
                 var modelBuilderSettings = new ModelBuilderSettings();
                 modelBuilderSettings._designTimeConnectionString = connectionString;
-                modelBuilderSettings._designTimeProviderInvariantName = Config.providerInvariantName;
-                modelBuilderSettings._runtimeProviderInvariantName = Config.providerInvariantName;
+                modelBuilderSettings._designTimeProviderInvariantName =
+                    ConfigurationManager.AppSettings["ProviderInvariantName"];
+                modelBuilderSettings._runtimeProviderInvariantName =
+                    ConfigurationManager.AppSettings["ProviderInvariantName"];
                 modelBuilderSettings.UsePluralizationService = true;
                 modelBuilderSettings.IncludeForeignKeysInModel = true;
 
@@ -92,8 +94,9 @@ namespace Microsoft.RESTier.Cli
 
                 // Get the providerManifestTokern 
                 IDbDependencyResolver resolver = DependencyResolver.Instance;
-                var providerServices = resolver.GetService<DbProviderServices>(Config.providerInvariantName);
-                var factory = DbProviderFactories.GetFactory(Config.providerInvariantName);
+                var providerServices =
+                    resolver.GetService<DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
+                var factory = DbProviderFactories.GetFactory(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var dbconnection = factory.CreateConnection();
                 dbconnection.ConnectionString = connectionString;
                 Debug.Assert(providerServices != null, "Trying to get unregistered provider.");

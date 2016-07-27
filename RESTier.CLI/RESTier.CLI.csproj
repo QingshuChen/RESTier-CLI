@@ -60,14 +60,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnsiColorExtensions.cs" />
+    <Compile Include="CodeGenerationEngine.cs" />
     <Compile Include="Commands\BuildCommand.cs" />
-    <Compile Include="Check.cs" />
     <Compile Include="Commands\CodeGenerationEngine.cs" />
-    <Compile Include="Commands\DatabaseTableOrView.cs" />
-    <Compile Include="Commands\FileContent.cs" />
-    <Compile Include="Commands\SQLServerDatabaseManager.cs" />
-    <Compile Include="Commands\RESTierProjectBuilder.cs" />
     <Compile Include="ConsoleHelper.cs" />
     <Compile Include="CoreStrings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -75,12 +70,16 @@
       <DependentUpon>CoreStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="CommandExecutor.cs" />
+    <Compile Include="DatabaseTableOrView.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
+    <Compile Include="FileContent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\RunCommand.cs" />
+    <Compile Include="RESTierProjectBuilder.cs" />
+    <Compile Include="SQLServerDatabaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
