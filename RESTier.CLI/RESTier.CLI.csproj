@@ -62,7 +62,9 @@
   <ItemGroup>
     <Compile Include="CodeGenerationEngine.cs" />
     <Compile Include="Commands\BuildCommand.cs" />
+    <Compile Include="Commands\CheckDependenciesCommand.cs" />
     <Compile Include="Commands\CodeGenerationEngine.cs" />
+    <Compile Include="Dependency.cs" />
     <Compile Include="ConsoleHelper.cs" />
     <Compile Include="CoreStrings.Designer.cs">
       <AutoGen>True</AutoGen>
