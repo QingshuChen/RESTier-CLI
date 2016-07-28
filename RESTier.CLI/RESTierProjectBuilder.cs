@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Xml;
+using Microsoft.RESTier.Cli.TextTemplate;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -64,103 +65,96 @@ namespace Microsoft.RESTier.Cli
         private void CreateSolutionFile()
         {
             string filename = projectPath + "\\" + projectName + ".sln";
-            CreateFile(filename, FileContent.solutionFileContent.Replace("{0}", projectName));
+            SolutionFile solutionFile = new SolutionFile(projectName);
+            CreateFile(filename, solutionFile.TransformText());
         }
         // Create applicationhost.config file for the IIS Express
         private void CreateApplicationhostConfigFile()
         {
             string filename = projectPath + @"\.vs\config\applicationhost.config";
-            string content = FileContent.applicationhostConfigFileContent.Replace("{1}", projectPath + "\\" + projectName);
-            int index = content.IndexOf("{0}");
-            content = content.Remove(index, 3);
-            content = content.Insert(index, projectName);          
-            CreateFile(filename, content);
+            ApplicationhostConfigFile template = new ApplicationhostConfigFile(projectName, projectPath + @"\" + projectName);
+            CreateFile(filename, template.TransformText());
         }
 
         private void CreateWebApiConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\App_Start\WebApiConfig.cs";
-            int index = FileContent.webApiConfigFileContent.IndexOf("Register");
-            string content = FileContent.webApiConfigFileContent.Substring(0, index).Replace("{0}", @namespace) +
-                FileContent.webApiConfigFileContent.Substring(index).Replace("{1}", projectName);
-            CreateFile(filename, content);
+            WebApiConfigFile template = new WebApiConfigFile(projectName, @namespace);
+            CreateFile(filename, template.TransformText());
         }
 
         private void CreateAssemblyInfoFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Properties\AssemblyInfo.cs";
-            CreateFile(filename, FileContent.assemblyInfoFileContent);
+            AssemblyInfoFile template = new AssemblyInfoFile(projectName);
+            CreateFile(filename, template.TransformText());
         }
 
         private void CreateAiJSFile()
         {
             string filename = projectPath + "\\" + projectName + @"\scripts\ai.0.22.9-build00167.js";
-            CreateFile(filename, FileContent.aiJsFileContent);
+            CreateFile(filename, new AiJsFile().TransformText());
         }
 
         private void CreateAiJSMinFile()
         {
             string filename = projectPath + "\\" + projectName + @"\scripts\ai.0.22.9-build00167.min.js";
-            CreateFile(filename, FileContent.aiJSMinFileContent);
+            CreateFile(filename, new AiJsMinFile().TransformText());
         }
 
         private void CreateApplicationInsightsConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\ApplicationInsights.config";
-            CreateFile(filename, FileContent.applicationInsightsConfigFileContent);
+            CreateFile(filename, new ApplicationInsightsConfigFile().TransformText());
         }
 
         private void CreateGlobalAsaxFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Global.asax";
-            CreateFile(filename, FileContent.globalAsaxFileContent.Replace("{0}", @namespace));
+            CreateFile(filename, new GlobalAsaxFile(@namespace).TransformText());
         }
 
         private void CreateGlobalAsaxCSFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Global.asax.cs";
-            CreateFile(filename, FileContent.globalAsaxCSFileContent.Replace("{0}", @namespace));
+            CreateFile(filename, new GlobalAsaxCSFile(@namespace).TransformText());
         }
 
         private void CreatePackagesConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\packages.config";
-            CreateFile(filename, FileContent.packagesConfigFileContent);
+            CreateFile(filename, new PackagesConfigFile().TransformText());
         }
 
         private void CreateCSPROJFile()
         {
             string filename = projectPath + "\\" + projectName + @"\" + projectName + ".csproj";
-            CreateFile(filename, FileContent.CSPROJFileContent.Replace("{0}", projectName));
+            CreateFile(filename, new CSPROJFile(projectName).TransformText()) ;
         }
 
         private void CreateCSPROJUserFile()
         {
             string filename = projectPath + "\\" + projectName + @"\" + projectName + ".csproj.user";
-            CreateFile(filename, FileContent.CSPROJUserFileContent);
+            CreateFile(filename, new CSPROJUserFile().TransformText());
         }
 
         private void CreateWebConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Web.config";
-            string content = FileContent.webConfigFileContent.Replace("{1}", connectionString);
-            int index = content.IndexOf("{0}");
-            content = content.Remove(index, 3);
-            content = content.Insert(index, projectName);
-            CreateFile(filename, content);
+            CreateFile(filename, new WebConfigFile(projectName, connectionString).TransformText());
         }
 
         private void CreateWebDebugConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Web.Debug.config";
-            CreateFile(filename, FileContent.webDebugConfigFileContent);
+            CreateFile(filename, new WebDebugConfigFile().TransformText());
         }
 
 
         private void CreateWebReleaseConfigFile()
         {
             string filename = projectPath + "\\" + projectName + @"\Web.Release.config";
-            CreateFile(filename, FileContent.webReleaseConfigFileContent);
+            CreateFile(filename, new WebReleaseConfigFile().TransformText());
         }
 
 
