@@ -18,9 +18,9 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\PackagesConfigFile.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class WebApiConfigFile : WebApiConfigFileBase
+    public partial class PackagesConfigFile : PackagesConfigFileBase
     {
 #line hidden
         /// <summary>
@@ -28,57 +28,53 @@ namespace Microsoft.RESTier.Cli.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing Syste" +
-                    "m.Web.Http;\r\nusing ");
-            
-            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@".Models;
-using Microsoft.Restier.Providers.EntityFramework;
-using Microsoft.Restier.Publishers.OData;
-using Microsoft.Restier.Publishers.OData.Batch;
-using Microsoft.Restier.Publishers.OData.Routing;
-using Microsoft.OData.Core;
-using Microsoft.OData.Edm;
-using Microsoft.OData.Core.UriBuilder;
-using Microsoft.OData.Core.UriParser;
-using Microsoft.OData.Core.Atom;
-using System.Web.OData.Extensions;
-
-namespace ");
-            
-            #line 22 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@"
-{
-    public static class WebApiConfig
-    {
-        public async static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-            config.SetUrlConventions(ODataUrlConventions.ODataSimplified);
-            await config.MapRestierRoute<EntityFrameworkApi<");
-            
-            #line 30 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("DbContext>>(\r\n                \"");
-            
-            #line 31 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("\",\r\n                \"\",\r\n                new RestierBatchHandler(GlobalConfigurat" +
-                    "ion.DefaultServer));\r\n\r\n        }\r\n}\r\n}\r\n");
+            this.Write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<packages>\r\n  <package id=\"EntityFramewor" +
+                    "k\" version=\"6.1.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.Applica" +
+                    "tionInsights\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Micros" +
+                    "oft.ApplicationInsights.Agent.Intercept\" version=\"1.2.1\" targetFramework=\"net452" +
+                    "\" />\r\n  <package id=\"Microsoft.ApplicationInsights.DependencyCollector\" version=" +
+                    "\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsight" +
+                    "s.JavaScript\" version=\"0.22.19-build00125\" targetFramework=\"net452\" />\r\n  <packa" +
+                    "ge id=\"Microsoft.ApplicationInsights.PerfCounterCollector\" version=\"2.1.0\" targe" +
+                    "tFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsights.Web\" versio" +
+                    "n=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsig" +
+                    "hts.WindowsServer\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"M" +
+                    "icrosoft.ApplicationInsights.WindowsServer.TelemetryChannel\" version=\"2.1.0\" tar" +
+                    "getFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.OData\" version=\"5.9.0\"" +
+                    " targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi\" version=\"5" +
+                    ".2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi.Client" +
+                    "\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.W" +
+                    "ebApi.Core\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsof" +
+                    "t.AspNet.WebApi.WebHost\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package" +
+                    " id=\"Microsoft.CodeDom.Providers.DotNetCompilerPlatform\" version=\"1.0.0\" targetF" +
+                    "ramework=\"net452\" />\r\n  <package id=\"Microsoft.Extensions.DependencyInjection\" v" +
+                    "ersion=\"1.0.0-rc2-final\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.E" +
+                    "xtensions.DependencyInjection.Abstractions\" version=\"1.0.0-rc2-final\" targetFram" +
+                    "ework=\"net452\" />\r\n  <package id=\"Microsoft.Net.Compilers\" version=\"1.0.0\" targe" +
+                    "tFramework=\"net452\" developmentDependency=\"true\" />\r\n  <package id=\"Microsoft.OD" +
+                    "ata.Core\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft" +
+                    ".OData.Edm\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microso" +
+                    "ft.Restier\" version=\"0.5.0-beta\" targetFramework=\"net452\" />\r\n  <package id=\"Mic" +
+                    "rosoft.Restier.Core\" version=\"0.5.0-beta\" targetFramework=\"net452\" />\r\n  <packag" +
+                    "e id=\"Microsoft.Restier.Providers.EntityFramework\" version=\"0.5.0-beta\" targetFr" +
+                    "amework=\"net452\" />\r\n  <package id=\"Microsoft.Restier.Publishers.OData\" version=" +
+                    "\"0.5.0-beta\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.Spatial\" vers" +
+                    "ion=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Newtonsoft.Json\" versio" +
+                    "n=\"6.0.4\" targetFramework=\"net452\" />\r\n  <package id=\"System.Collections\" versio" +
+                    "n=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Collecti" +
+                    "ons.Concurrent\" version=\"4.0.12-rc2-24027\" targetFramework=\"net452\" />\r\n  <packa" +
+                    "ge id=\"System.ComponentModel\" version=\"4.0.1-rc2-24027\" targetFramework=\"net452\"" +
+                    " />\r\n  <package id=\"System.Diagnostics.Debug\" version=\"4.0.11-rc2-24027\" targetF" +
+                    "ramework=\"net452\" />\r\n  <package id=\"System.Globalization\" version=\"4.0.11-rc2-2" +
+                    "4027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Linq\" version=\"4.1.0-rc" +
+                    "2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Linq.Expressions\" ve" +
+                    "rsion=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Refl" +
+                    "ection\" version=\"4.1.0-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"Sy" +
+                    "stem.Resources.ResourceManager\" version=\"4.0.1-rc2-24027\" targetFramework=\"net45" +
+                    "2\" />\r\n  <package id=\"System.Runtime.Extensions\" version=\"4.1.0-rc2-24027\" targe" +
+                    "tFramework=\"net452\" />\r\n  <package id=\"System.Threading\" version=\"4.0.11-rc2-240" +
+                    "27\" targetFramework=\"net452\" />\r\n  <package id=\"System.Threading.Tasks\" version=" +
+                    "\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n</packages>");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -90,7 +86,7 @@ namespace ");
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class WebApiConfigFileBase
+    public class PackagesConfigFileBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

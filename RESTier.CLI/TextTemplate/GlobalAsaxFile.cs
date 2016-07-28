@@ -18,9 +18,9 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\GlobalAsaxFile.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class WebApiConfigFile : WebApiConfigFileBase
+    public partial class GlobalAsaxFile : GlobalAsaxFileBase
     {
 #line hidden
         /// <summary>
@@ -28,57 +28,14 @@ namespace Microsoft.RESTier.Cli.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing Syste" +
-                    "m.Web.Http;\r\nusing ");
+            this.Write("<%@ Application Codebehind=\"Global.asax.cs\" Inherits=\"");
             
-            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+            #line 6 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\GlobalAsaxFile.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
             
             #line default
             #line hidden
-            this.Write(@".Models;
-using Microsoft.Restier.Providers.EntityFramework;
-using Microsoft.Restier.Publishers.OData;
-using Microsoft.Restier.Publishers.OData.Batch;
-using Microsoft.Restier.Publishers.OData.Routing;
-using Microsoft.OData.Core;
-using Microsoft.OData.Edm;
-using Microsoft.OData.Core.UriBuilder;
-using Microsoft.OData.Core.UriParser;
-using Microsoft.OData.Core.Atom;
-using System.Web.OData.Extensions;
-
-namespace ");
-            
-            #line 22 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@"
-{
-    public static class WebApiConfig
-    {
-        public async static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-            config.SetUrlConventions(ODataUrlConventions.ODataSimplified);
-            await config.MapRestierRoute<EntityFrameworkApi<");
-            
-            #line 30 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("DbContext>>(\r\n                \"");
-            
-            #line 31 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("\",\r\n                \"\",\r\n                new RestierBatchHandler(GlobalConfigurat" +
-                    "ion.DefaultServer));\r\n\r\n        }\r\n}\r\n}\r\n");
+            this.Write(".WebApiApplication\" Language=\"C#\" %>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -90,7 +47,7 @@ namespace ");
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class WebApiConfigFileBase
+    public class GlobalAsaxFileBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

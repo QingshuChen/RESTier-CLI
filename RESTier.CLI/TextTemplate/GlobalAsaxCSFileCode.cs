@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace Microsoft.RESTier.Cli.TextTemplate
 {
-    partial class WebApiConfigFile
+    partial class GlobalAsaxCSFile
     {
         private string @namespace;
-        private string projectName;
-
-        public WebApiConfigFile(string projectName, string @namespace)
+        public GlobalAsaxCSFile(string @namespace)
         {
-            this.projectName = projectName;
             this.@namespace = @namespace;
         }
     }

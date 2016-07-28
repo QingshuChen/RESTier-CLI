@@ -18,9 +18,9 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationInsightsConfigFile.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class WebApiConfigFile : WebApiConfigFileBase
+    public partial class ApplicationInsightsConfigFile : ApplicationInsightsConfigFileBase
     {
 #line hidden
         /// <summary>
@@ -28,57 +28,86 @@ namespace Microsoft.RESTier.Cli.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing Syste" +
-                    "m.Web.Http;\r\nusing ");
-            
-            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@".Models;
-using Microsoft.Restier.Providers.EntityFramework;
-using Microsoft.Restier.Publishers.OData;
-using Microsoft.Restier.Publishers.OData.Batch;
-using Microsoft.Restier.Publishers.OData.Routing;
-using Microsoft.OData.Core;
-using Microsoft.OData.Edm;
-using Microsoft.OData.Core.UriBuilder;
-using Microsoft.OData.Core.UriParser;
-using Microsoft.OData.Core.Atom;
-using System.Web.OData.Extensions;
-
-namespace ");
-            
-            #line 22 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@"
-{
-    public static class WebApiConfig
-    {
-        public async static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-            config.SetUrlConventions(ODataUrlConventions.ODataSimplified);
-            await config.MapRestierRoute<EntityFrameworkApi<");
-            
-            #line 30 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("DbContext>>(\r\n                \"");
-            
-            #line 31 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
-            
-            #line default
-            #line hidden
-            this.Write("\",\r\n                \"\",\r\n                new RestierBatchHandler(GlobalConfigurat" +
-                    "ion.DefaultServer));\r\n\r\n        }\r\n}\r\n}\r\n");
+            this.Write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<ApplicationInsights xmlns=\"http://schema" +
+                    "s.microsoft.com/ApplicationInsights/2013/Settings\">\r\n\t<TelemetryModules>\r\n\t\t<Add" +
+                    " Type=\"Microsoft.ApplicationInsights.DependencyCollector.DependencyTrackingTelem" +
+                    "etryModule, Microsoft.AI.DependencyCollector\"/>\r\n\t\t<Add Type=\"Microsoft.Applicat" +
+                    "ionInsights.Extensibility.PerfCounterCollector.PerformanceCollectorModule, Micro" +
+                    "soft.AI.PerfCounterCollector\">\r\n\t\t\t<!--\r\n      Use the following syntax here to " +
+                    "collect additional performance counters:\r\n      \r\n      <Counters>\r\n        <Add" +
+                    " PerformanceCounter=\"\\Process(??APP_WIN32_PROC??)\\Handle Count\" ReportAs=\"Proces" +
+                    "s handle count\" />\r\n        ...\r\n      </Counters>\r\n      \r\n      PerformanceCou" +
+                    "nter must be either \\CategoryName(InstanceName)\\CounterName or \\CategoryName\\Cou" +
+                    "nterName\r\n      \r\n      Counter names may only contain letters, round brackets, " +
+                    "forward slashes, hyphens, underscores, spaces and dots.\r\n      You may provide a" +
+                    "n optional ReportAs attribute which will be used as the metric name when reporti" +
+                    "ng counter data.\r\n      For the purposes of reporting, metric names will be sani" +
+                    "tized by removing all invalid characters from the resulting metric name.\r\n      " +
+                    "\r\n      NOTE: performance counters configuration will be lost upon NuGet upgrade" +
+                    ".\r\n      \r\n      The following placeholders are supported as InstanceName:\r\n    " +
+                    "    ??APP_WIN32_PROC?? - instance name of the application process  for Win32 cou" +
+                    "nters.\r\n        ??APP_W3SVC_PROC?? - instance name of the application IIS worker" +
+                    " process for IIS/ASP.NET counters.\r\n        ??APP_CLR_PROC?? - instance name of " +
+                    "the application CLR process for .NET counters.\r\n      -->\r\n\t\t</Add>\r\n\t\t<Add Type" +
+                    "=\"Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector.QuickPulse.Qu" +
+                    "ickPulseTelemetryModule, Microsoft.AI.PerfCounterCollector\"/>\r\n\t\t<Add Type=\"Micr" +
+                    "osoft.ApplicationInsights.WindowsServer.DeveloperModeWithDebuggerAttachedTelemet" +
+                    "ryModule, Microsoft.AI.WindowsServer\"/>\r\n\t\t<Add Type=\"Microsoft.ApplicationInsig" +
+                    "hts.WindowsServer.UnhandledExceptionTelemetryModule, Microsoft.AI.WindowsServer\"" +
+                    "/>\r\n\t\t<Add Type=\"Microsoft.ApplicationInsights.WindowsServer.UnobservedException" +
+                    "TelemetryModule, Microsoft.AI.WindowsServer\"/>\r\n\t\t<Add Type=\"Microsoft.Applicati" +
+                    "onInsights.Web.RequestTrackingTelemetryModule, Microsoft.AI.Web\">\r\n\t\t\t<Handlers>" +
+                    "\r\n\t\t\t\t<!-- \r\n        Add entries here to filter out additional handlers: \r\n     " +
+                    "   \r\n        NOTE: handler configuration will be lost upon NuGet upgrade.\r\n     " +
+                    "   -->\r\n\t\t\t\t<Add>System.Web.Handlers.TransferRequestHandler</Add>\r\n\t\t\t\t<Add>Micr" +
+                    "osoft.VisualStudio.Web.PageInspector.Runtime.Tracing.RequestDataHttpHandler</Add" +
+                    ">\r\n\t\t\t\t<Add>System.Web.StaticFileHandler</Add>\r\n\t\t\t\t<Add>System.Web.Handlers.Ass" +
+                    "emblyResourceLoader</Add>\r\n\t\t\t\t<Add>System.Web.Optimization.BundleHandler</Add>\r" +
+                    "\n\t\t\t\t<Add>System.Web.Script.Services.ScriptHandlerFactory</Add>\r\n\t\t\t\t<Add>System" +
+                    ".Web.Handlers.TraceHandler</Add>\r\n\t\t\t\t<Add>System.Web.Services.Discovery.Discove" +
+                    "ryRequestHandler</Add>\r\n\t\t\t\t<Add>System.Web.HttpDebugHandler</Add>\r\n\t\t\t</Handler" +
+                    "s>\r\n\t\t</Add>\r\n\t\t<Add Type=\"Microsoft.ApplicationInsights.Web.ExceptionTrackingTe" +
+                    "lemetryModule, Microsoft.AI.Web\"/>\r\n\t</TelemetryModules>\r\n\t<TelemetryProcessors>" +
+                    "\r\n\t\t<Add Type=\"Microsoft.ApplicationInsights.Extensibility.PerfCounterCollector." +
+                    "QuickPulse.QuickPulseTelemetryProcessor, Microsoft.AI.PerfCounterCollector\"/>\r\n\t" +
+                    "\t<Add Type=\"Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.Adaptiv" +
+                    "eSamplingTelemetryProcessor, Microsoft.AI.ServerTelemetryChannel\">\r\n\t\t\t<MaxTelem" +
+                    "etryItemsPerSecond>5</MaxTelemetryItemsPerSecond>\r\n\t\t</Add>\r\n\t</TelemetryProcess" +
+                    "ors>\r\n\t<TelemetryChannel Type=\"Microsoft.ApplicationInsights.WindowsServer.Telem" +
+                    "etryChannel.ServerTelemetryChannel, Microsoft.AI.ServerTelemetryChannel\"/>\r\n<!--" +
+                    " \r\n    Learn more about Application Insights configuration with ApplicationInsig" +
+                    "hts.config here: \r\n    http://go.microsoft.com/fwlink/?LinkID=513840\r\n    \r\n    " +
+                    "Note: If not present, please add <InstrumentationKey>Your Key</InstrumentationKe" +
+                    "y> to the top of this file.\r\n  -->\r\n<TelemetryInitializers>\r\n<Add Type=\"Microsof" +
+                    "t.ApplicationInsights.WindowsServer.AzureRoleEnvironmentTelemetryInitializer, Mi" +
+                    "crosoft.AI.WindowsServer\"/>\r\n<Add Type=\"Microsoft.ApplicationInsights.WindowsSer" +
+                    "ver.DomainNameRoleInstanceTelemetryInitializer, Microsoft.AI.WindowsServer\"/>\r\n<" +
+                    "Add Type=\"Microsoft.ApplicationInsights.WindowsServer.BuildInfoConfigComponentVe" +
+                    "rsionTelemetryInitializer, Microsoft.AI.WindowsServer\"/>\r\n<Add Type=\"Microsoft.A" +
+                    "pplicationInsights.Web.WebTestTelemetryInitializer, Microsoft.AI.Web\"/>\r\n<Add Ty" +
+                    "pe=\"Microsoft.ApplicationInsights.Web.SyntheticUserAgentTelemetryInitializer, Mi" +
+                    "crosoft.AI.Web\">\r\n<Filters>\r\n<Add Pattern=\"(YottaaMonitor|BrowserMob|HttpMonitor" +
+                    "|YandexBot|BingPreview|PagePeeker|ThumbShotsBot|WebThumb|URL2PNG|ZooShot|GomezA|" +
+                    "Catchpoint bot|Willow Internet Crawler|Google SketchUp|Read%20Later|KTXN|Pingdom" +
+                    "|AlwaysOn)\"/>\r\n<Add Pattern=\"Slurp\" SourceName=\"Yahoo Bot\"/>\r\n<Add Pattern=\"(bot" +
+                    "|zao|borg|Bot|oegp|silk|Xenu|zeal|^NING|crawl|Crawl|htdig|lycos|slurp|teoma|voil" +
+                    "a|yahoo|Sogou|CiBra|Nutch|^Java/|^JNLP/|Daumoa|Genieo|ichiro|larbin|pompos|Scrap" +
+                    "y|snappy|speedy|spider|Spider|vortex|favicon|indexer|Riddler|scooter|scraper|scr" +
+                    "ubby|WhatWeb|WinHTTP|^voyager|archiver|Icarus6j|mogimogi|Netvibes|altavista|char" +
+                    "lotte|findlinks|Retreiver|TLSProber|WordPress|wsr\\-agent|Squrl Java|A6\\-Indexer|" +
+                    "netresearch|searchsight|http%20client|Python-urllib|dataparksearch|Screaming Fro" +
+                    "g|AppEngine-Google|YahooCacheSystem|semanticdiscovery|facebookexternalhit|Google" +
+                    ".*/\\+/web/snippet|Google-HTTP-Java-Client)\"\r\nSourceName=\"Spider\"/>\r\n</Filters>\r\n" +
+                    "</Add>\r\n<Add Type=\"Microsoft.ApplicationInsights.Web.ClientIpHeaderTelemetryInit" +
+                    "ializer, Microsoft.AI.Web\"/>\r\n<Add Type=\"Microsoft.ApplicationInsights.Web.Opera" +
+                    "tionNameTelemetryInitializer, Microsoft.AI.Web\"/>\r\n<Add Type=\"Microsoft.Applicat" +
+                    "ionInsights.Web.OperationCorrelationTelemetryInitializer, Microsoft.AI.Web\"/>\r\n<" +
+                    "Add Type=\"Microsoft.ApplicationInsights.Web.UserTelemetryInitializer, Microsoft." +
+                    "AI.Web\"/>\r\n<Add Type=\"Microsoft.ApplicationInsights.Web.AuthenticatedUserIdTelem" +
+                    "etryInitializer, Microsoft.AI.Web\"/>\r\n<Add Type=\"Microsoft.ApplicationInsights.W" +
+                    "eb.AccountIdTelemetryInitializer, Microsoft.AI.Web\"/>\r\n<Add Type=\"Microsoft.Appl" +
+                    "icationInsights.Web.SessionTelemetryInitializer, Microsoft.AI.Web\"/>\r\n</Telemetr" +
+                    "yInitializers>\r\n</ApplicationInsights>");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -90,7 +119,7 @@ namespace ");
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class WebApiConfigFileBase
+    public class ApplicationInsightsConfigFileBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

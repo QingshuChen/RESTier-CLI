@@ -6,15 +6,12 @@ using System.Threading.Tasks;
 
 namespace Microsoft.RESTier.Cli.TextTemplate
 {
-    partial class WebApiConfigFile
+    partial class AssemblyInfoFile
     {
-        private string @namespace;
         private string projectName;
-
-        public WebApiConfigFile(string projectName, string @namespace)
+        public AssemblyInfoFile(string projectName)
         {
             this.projectName = projectName;
-            this.@namespace = @namespace;
         }
     }
 }

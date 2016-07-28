@@ -18,9 +18,9 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebConfigFile.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public partial class WebApiConfigFile : WebApiConfigFileBase
+    public partial class WebConfigFile : WebConfigFileBase
     {
 #line hidden
         /// <summary>
@@ -28,57 +28,73 @@ namespace Microsoft.RESTier.Cli.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("using System;\r\nusing System.Collections.Generic;\r\nusing System.Linq;\r\nusing Syste" +
-                    "m.Web.Http;\r\nusing ");
+            this.Write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<!--\r\n  For more information on how to co" +
+                    "nfigure your ASP.NET application, please visit\r\n  http://go.microsoft.com/fwlink" +
+                    "/?LinkId=301879\r\n  -->\r\n<configuration>\r\n  <configSections>\r\n    <!-- For more i" +
+                    "nformation on Entity Framework configuration, visit http://go.microsoft.com/fwli" +
+                    "nk/?LinkID=237468 -->\r\n    <section name=\"entityFramework\" type=\"System.Data.Ent" +
+                    "ity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0" +
+                    ", Culture=neutral, PublicKeyToken=b77a5c561934e089\" requirePermission=\"false\" />" +
+                    "\r\n  </configSections>\r\n  <appSettings></appSettings>\r\n  <system.web>\r\n    <compi" +
+                    "lation debug=\"true\" targetFramework=\"4.5.2\" />\r\n    <httpRuntime targetFramework" +
+                    "=\"4.5.2\" />\r\n    <httpModules>\r\n      <add name=\"ApplicationInsightsWebTracking\"" +
+                    " type=\"Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsof" +
+                    "t.AI.Web\" />\r\n    </httpModules>\r\n  </system.web>\r\n  <system.webServer>\r\n    <ha" +
+                    "ndlers>\r\n      <remove name=\"ExtensionlessUrlHandler-Integrated-4.0\" />\r\n      <" +
+                    "remove name=\"OPTIONSVerbHandler\" />\r\n      <remove name=\"TRACEVerbHandler\" />\r\n " +
+                    "     <add name=\"ExtensionlessUrlHandler-Integrated-4.0\" path=\"*.\" verb=\"*\" type=" +
+                    "\"System.Web.Handlers.TransferRequestHandler\" preCondition=\"integratedMode,runtim" +
+                    "eVersionv4.0\" />\r\n    </handlers>\r\n    <validation validateIntegratedModeConfigu" +
+                    "ration=\"false\" />\r\n    <modules>\r\n      <remove name=\"ApplicationInsightsWebTrac" +
+                    "king\" />\r\n      <add name=\"ApplicationInsightsWebTracking\" type=\"Microsoft.Appli" +
+                    "cationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web\" preCondition" +
+                    "=\"managedHandler\" />\r\n    </modules>\r\n  </system.webServer>\r\n  <runtime>\r\n    <a" +
+                    "ssemblyBinding xmlns=\"urn:schemas-microsoft-com:asm.v1\">\r\n      <dependentAssemb" +
+                    "ly>\r\n        <assemblyIdentity name=\"System.Web.Helpers\" publicKeyToken=\"31bf385" +
+                    "6ad364e35\" />\r\n        <bindingRedirect oldVersion=\"1.0.0.0-3.0.0.0\" newVersion=" +
+                    "\"3.0.0.0\" />\r\n      </dependentAssembly>\r\n      <dependentAssembly>\r\n        <as" +
+                    "semblyIdentity name=\"System.Web.Mvc\" publicKeyToken=\"31bf3856ad364e35\" />\r\n     " +
+                    "   <bindingRedirect oldVersion=\"1.0.0.0-5.2.3.0\" newVersion=\"5.2.3.0\" />\r\n      " +
+                    "</dependentAssembly>\r\n      <dependentAssembly>\r\n        <assemblyIdentity name=" +
+                    "\"System.Web.WebPages\" publicKeyToken=\"31bf3856ad364e35\" />\r\n        <bindingRedi" +
+                    "rect oldVersion=\"1.0.0.0-3.0.0.0\" newVersion=\"3.0.0.0\" />\r\n      </dependentAsse" +
+                    "mbly>\r\n      <dependentAssembly>\r\n        <assemblyIdentity name=\"System.Web.Htt" +
+                    "p\" publicKeyToken=\"31bf3856ad364e35\" culture=\"neutral\" />\r\n        <bindingRedir" +
+                    "ect oldVersion=\"0.0.0.0-5.2.3.0\" newVersion=\"5.2.3.0\" />\r\n      </dependentAssem" +
+                    "bly>\r\n      <dependentAssembly>\r\n        <assemblyIdentity name=\"System.Net.Http" +
+                    ".Formatting\" publicKeyToken=\"31bf3856ad364e35\" culture=\"neutral\" />\r\n        <bi" +
+                    "ndingRedirect oldVersion=\"0.0.0.0-5.2.3.0\" newVersion=\"5.2.3.0\" />\r\n      </depe" +
+                    "ndentAssembly>\r\n    </assemblyBinding>\r\n  </runtime>\r\n  <system.codedom>\r\n    <c" +
+                    "ompilers>\r\n      <compiler language=\"c#;cs;csharp\" extension=\".cs\" type=\"Microso" +
+                    "ft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDo" +
+                    "m.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyT" +
+                    "oken=31bf3856ad364e35\" warningLevel=\"4\" compilerOptions=\"/langversion:6 /nowarn:" +
+                    "1659;1699;1701\" />\r\n      <compiler language=\"vb;vbs;visualbasic;vbscript\" exten" +
+                    "sion=\".vb\" type=\"Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvid" +
+                    "er, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture" +
+                    "=neutral, PublicKeyToken=31bf3856ad364e35\" warningLevel=\"4\" compilerOptions=\"/la" +
+                    "ngversion:14 /nowarn:41008 /define:_MYTYPE=\\&quot;Web\\&quot; /optionInfer+\" />\r\n" +
+                    "    </compilers>\r\n  </system.codedom>\r\n  <entityFramework>\r\n    <defaultConnecti" +
+                    "onFactory type=\"System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFr" +
+                    "amework\" />\r\n    <providers>\r\n      <provider invariantName=\"System.Data.SqlClie" +
+                    "nt\" type=\"System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlS" +
+                    "erver\" />\r\n    </providers>\r\n  </entityFramework>\r\n  <connectionStrings>\r\n    <a" +
+                    "dd name=\"");
             
-            #line 10 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@".Models;
-using Microsoft.Restier.Providers.EntityFramework;
-using Microsoft.Restier.Publishers.OData;
-using Microsoft.Restier.Publishers.OData.Batch;
-using Microsoft.Restier.Publishers.OData.Routing;
-using Microsoft.OData.Core;
-using Microsoft.OData.Edm;
-using Microsoft.OData.Core.UriBuilder;
-using Microsoft.OData.Core.UriParser;
-using Microsoft.OData.Core.Atom;
-using System.Web.OData.Extensions;
-
-namespace ");
-            
-            #line 22 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(@namespace));
-            
-            #line default
-            #line hidden
-            this.Write(@"
-{
-    public static class WebApiConfig
-    {
-        public async static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-            config.SetUrlConventions(ODataUrlConventions.ODataSimplified);
-            await config.MapRestierRoute<EntityFrameworkApi<");
-            
-            #line 30 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
+            #line 74 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebConfigFile.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
             
             #line default
             #line hidden
-            this.Write("DbContext>>(\r\n                \"");
+            this.Write("\" connectionString=\"");
             
-            #line 31 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebApiConfigFile.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
+            #line 74 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\WebConfigFile.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(connectionString));
             
             #line default
             #line hidden
-            this.Write("\",\r\n                \"\",\r\n                new RestierBatchHandler(GlobalConfigurat" +
-                    "ion.DefaultServer));\r\n\r\n        }\r\n}\r\n}\r\n");
+            this.Write("\" providerName=\"System.Data.SqlClient\" />\r\n  </connectionStrings>\r\n</configuratio" +
+                    "n>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
@@ -90,7 +106,7 @@ namespace ");
     /// Base class for this transformation
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
-    public class WebApiConfigFileBase
+    public class WebConfigFileBase
     {
         #region Fields
         private global::System.Text.StringBuilder generationEnvironmentField;

@@ -3,12 +3,11 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
-using <#= namespace #>.Models;
+using <#= @namespace #>.Models;
 using Microsoft.Restier.Providers.EntityFramework;
 using Microsoft.Restier.Publishers.OData;
 using Microsoft.Restier.Publishers.OData.Batch;
@@ -20,7 +19,7 @@ using Microsoft.OData.Core.UriParser;
 using Microsoft.OData.Core.Atom;
 using System.Web.OData.Extensions;
 
-namespace <#= namespace #>
+namespace <#= @namespace #>
 {
     public static class WebApiConfig
     {
