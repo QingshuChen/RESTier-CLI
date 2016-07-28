@@ -22,11 +22,11 @@ RESTier new -c "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=AdventureWorksLT2
 This will reverse-engineer the database and create a default RESTier Visual Studio project named `Foo` for it in the current directory.  
 2. Execute
 ~~~
-RESTier.exe build -p Foo/Foo.sln
+RESTier.exe build -p AdventureWorksLT2012_Data/AdventureWorksLT2012_Data.sln
 ~~~
 This builds the created RESTier project and produces the OData service.  
 3. Execute
 ~~~
-RESTier.exe run -p Foo/Foo.sln
+RESTier.exe run -p AdventureWorksLT2012_Data/AdventureWorksLT2012_Data.sln
 ~~~
 This puts the created OData service into action at the default port which is 3447. Now, you can access the service from a browser with the service root URL `http://localhost:3447`. What you will get is a service document for the database :smile:
