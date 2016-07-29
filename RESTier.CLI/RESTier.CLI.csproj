@@ -71,6 +71,37 @@
     </Compile>
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="DatabaseTableOrView.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\IAttributeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\IConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\IFluentConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\CascadeDeleteConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\ForeignKeyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\JoinTableConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\MultiplicityConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\ColumnConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\DatabaseGeneratedConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\FixedLengthConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\KeyPropertyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\MaxLengthConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\MaxLengthStringConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\NonUnicodeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\PrecisionDateTimeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\PrecisionDecimalConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\RequiredConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Property\TimestampConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Type\KeyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\Configuration\Type\TableConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CSharpCodeHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeFirstModelGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\DefaultCSharpContextGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\EdmHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\GeneratedCode\DefaultCSharpContextGenerator.cs">
+      <DependentUpon>DefaultCSharpContextGenerator.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="EFTools\EntityDesign\IContextGenerator.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
@@ -191,6 +222,11 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="EFTools\EntityDesign\GeneratedCode\DefaultCSharpContextGenerator.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>DefaultCSharpContextGenerator.cs</LastGenOutput>
+      <CustomToolNamespace>Microsoft.Data.Entity.Design.CodeGeneration</CustomToolNamespace>
+    </None>
     <Content Include="TextTemplate\AiJsFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AiJsFile1.cs</LastGenOutput>
