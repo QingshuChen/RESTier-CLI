@@ -28,9 +28,7 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
             }
             catch (Exception ex)
             {
-                throw new CodeFirstModelGenerationException(
-                    string.Format(Resources.ErrorGeneratingCodeFirstModel, contextFileName),
-                    ex);
+                throw ex;
             }
 
             yield return new KeyValuePair<string, string>(contextFileName, contextFileContents);
@@ -49,9 +47,7 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
                     }
                     catch (Exception ex)
                     {
-                        throw new CodeFirstModelGenerationException(
-                            string.Format(Resources.ErrorGeneratingCodeFirstModel, entityTypeFileName),
-                            ex);
+                        throw ex;
                     }
 
                     yield return new KeyValuePair<string, string>(entityTypeFileName, entityTypeFileContents);

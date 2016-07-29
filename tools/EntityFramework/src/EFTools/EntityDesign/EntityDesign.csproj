@@ -348,6 +348,7 @@
     <Compile Include="VisualStudio\TextTemplating\TemplateActivity.cs" />
     <Compile Include="VisualStudio\TextTemplating\TemplateCallback.cs" />
     <Compile Include="VisualStudio\VsUtilsWrapper.cs" />
+    <None Include="app.config" />
     <None Include="CodeGeneration\Generators\GeneratedCode\DefaultCSharpContextGenerator.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>DefaultCSharpContextGenerator.cs</LastGenOutput>
