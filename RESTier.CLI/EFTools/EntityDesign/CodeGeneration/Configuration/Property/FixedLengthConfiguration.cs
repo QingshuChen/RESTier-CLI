@@ -2,6 +2,7 @@
 
 namespace MMicrosoft.RESTier.Cli.EFTools.EntityDesign
 {
+    using Microsoft.RESTier.Cli.EFTools.EntityDesign;
     using System.Diagnostics;
 
     /// <summary>

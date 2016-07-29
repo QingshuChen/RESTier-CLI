@@ -1,5 +1,6 @@
 namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
 {
+    using MMicrosoft.RESTier.Cli.EFTools.EntityDesign;
     using System.Data.Entity.Core.Metadata.Edm;
     using System.Data.Entity.Infrastructure;
     using System.Diagnostics;

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.Extensions.CommandLineUtils, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.CommandLineUtils.1.0.0\lib\net451\Microsoft.Extensions.CommandLineUtils.dll</HintPath>
       <Private>True</Private>
@@ -50,8 +53,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,65 +77,62 @@
     </Compile>
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="DatabaseTableOrView.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\IAttributeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\IConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\IFluentConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\CascadeDeleteConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\ForeignKeyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\JoinTableConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\NavigationProperty\MultiplicityConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\ColumnConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\DatabaseGeneratedConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\FixedLengthConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\KeyPropertyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\MaxLengthConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\MaxLengthStringConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\NonUnicodeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\PrecisionDateTimeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\PrecisionDecimalConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\RequiredConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Property\TimestampConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Type\KeyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\Configuration\Type\TableConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CSharpCodeHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeFirstModelGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\DefaultCSharpContextGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\DefaultCSharpEntityTypeGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\INavigationPropertyConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\IPropertyConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\ITypeConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\NavigationProperty\CascadeDeleteDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\NavigationProperty\ForeignKeyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\NavigationProperty\JoinTableDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\NavigationProperty\MultiplicityDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\ColumnDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\DatabaseGeneratedDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\FixedLengthDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\KeyPropertyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\LengthDiscovererBase.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\MaxLengthDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\NonUnicodeDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\PrecisionDateTimeDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\PrecisionDecimalDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\RequiredDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Property\TimestampDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Type\KeyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\Discoverers\Type\TableDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\EdmHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\DbModelExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\EdmMemberExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\EntitySetExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\StoreGeneratedPatternExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\Extensions\StringExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\GeneratedCode\DefaultCSharpContextGenerator.cs">
-      <DependentUpon>DefaultCSharpContextGenerator.tt</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="EFTools\EntityDesign\IContextGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\IEntityTypeGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\CodeHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IAttributeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IFluentConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\CascadeDeleteConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\ForeignKeyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\JoinTableConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\MultiplicityConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\ColumnConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\DatabaseGeneratedConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\FixedLengthConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\KeyPropertyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthStringConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\NonUnicodeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDateTimeConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDecimalConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\RequiredConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\TimestampConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Type\KeyConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Type\TableConfiguration.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\CSharpCodeHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\CodeFirstModelGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\DefaultCSharpContextGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\DefaultCSharpEntityTypeGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\INavigationPropertyConfigurationDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\IPropertyConfigurationDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\ITypeConfigurationDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\CascadeDeleteDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\ForeignKeyDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\JoinTableDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\MultiplicityDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\ColumnDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\DatabaseGeneratedDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\FixedLengthDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\KeyPropertyDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\LengthDiscovererBase.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\MaxLengthDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\NonUnicodeDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDateTimeDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDecimalDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\RequiredDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\TimestampDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Type\KeyDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Type\TableDiscoverer.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\EdmHelper.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\EntityFrameworkVersion.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\DbModelExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\EdmMemberExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\EntitySetExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\StoreGeneratedPatternExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\StringExtensions.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\IContextGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\IEntityTypeGenerator.cs" />
+    <Compile Include="EFTools\EntityDesign\CodeGeneration\SchemaManager.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
@@ -250,11 +253,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="EFTools\EntityDesign\GeneratedCode\DefaultCSharpContextGenerator.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>DefaultCSharpContextGenerator.cs</LastGenOutput>
-      <CustomToolNamespace>Microsoft.Data.Entity.Design.CodeGeneration</CustomToolNamespace>
-    </None>
     <Content Include="TextTemplate\AiJsFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AiJsFile1.cs</LastGenOutput>
@@ -316,6 +314,7 @@
       <LastGenOutput>WebReleaseConfigFile.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

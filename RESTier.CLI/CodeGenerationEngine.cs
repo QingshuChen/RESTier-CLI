@@ -10,6 +10,7 @@ using Microsoft.Data.Entity.Design.CodeGeneration;
 using Microsoft.Data.Entity.Design.VersioningFacade;
 using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
 using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
+using Microsoft.RESTier.Cli.EFTools.EntityDesign;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -107,7 +108,7 @@ namespace Microsoft.RESTier.Cli
                 mbe.GenerateModel(modelBuilderSettings);
 
                 // the function provided by EntityFramework to generate code from a model
-                var generator = new MyCodeFirstModelGenerator();
+                var generator = new CodeFirstModelGenerator();
                 return generator.Generate(mbe.Model, @namespace + ".Models", projectName + "DbContext", projectName);
             }
             catch (Exception e)
