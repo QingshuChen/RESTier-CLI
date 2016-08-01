@@ -6,7 +6,6 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
     using System.Data.Entity.Infrastructure;
     using System.Diagnostics;
     using System.Linq;
-    using Microsoft.Data.Entity.Design.CodeGeneration.Extensions;
 
     internal class MaxLengthDiscoverer : LengthDiscovererBase
     {

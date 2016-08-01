@@ -5,7 +5,6 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
     using System.Data.Entity.Core.Metadata.Edm;
     using System.Data.Entity.Infrastructure;
     using System.Diagnostics;
-    using Microsoft.Data.Entity.Design.CodeGeneration.Extensions;
 
     internal class TimestampDiscoverer : IPropertyConfigurationDiscoverer
     {

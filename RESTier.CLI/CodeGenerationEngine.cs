@@ -6,10 +6,8 @@ using System.Data.Common;
 using System.Data.Entity.Core.Common;
 using System.Data.Entity.Infrastructure.DependencyResolution;
 using System.Diagnostics;
-using Microsoft.Data.Entity.Design.CodeGeneration;
 using Microsoft.Data.Entity.Design.VersioningFacade;
 using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
-using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
 using Microsoft.RESTier.Cli.EFTools.EntityDesign;
 
 namespace Microsoft.RESTier.Cli
@@ -89,14 +87,14 @@ namespace Microsoft.RESTier.Cli
 
                 modelBuilderSettings.DatabaseObjectFilters =
                     schemaFilterEntryBag.CollapseAndOptimize(SchemaFilterPolicy.GetByValEdmxPolicy());
-                modelBuilderSettings.ModelBuilderEngine = new MyCodeFirstModelBuilderEngine();
+                modelBuilderSettings.ModelBuilderEngine = new CodeFirstModelBuilderEngine();
                 // The latest EntityFramework version
                 modelBuilderSettings.TargetSchemaVersion = new Version(3, 0, 0, 0);
 
                 // Get the providerManifestTokern 
                 IDbDependencyResolver resolver = DependencyResolver.Instance;
                 var providerServices =
-                    resolver.GetService<DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
+                    resolver.GetService<System.Data.Entity.Core.Common.DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var factory = DbProviderFactories.GetFactory(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var dbconnection = factory.CreateConnection();
                 dbconnection.ConnectionString = connectionString;

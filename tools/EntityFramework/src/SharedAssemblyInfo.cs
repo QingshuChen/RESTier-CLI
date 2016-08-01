@@ -5,12 +5,12 @@ using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyCompany("Microsoft Corporation")]
-[assembly: AssemblyCopyright("© Microsoft Corporation.  All rights reserved.")]
+//[assembly: AssemblyCompany("Microsoft Corporation")]
+//[assembly: AssemblyCopyright("© Microsoft Corporation.  All rights reserved.")]
 [assembly: CLSCompliant(true)]
-[assembly: ComVisible(false)]
+//[assembly: ComVisible(false)]
 [assembly: NeutralResourcesLanguage("en-US")]
-[assembly: AssemblyProduct("Microsoft Entity Framework")]
+//[assembly: AssemblyProduct("Microsoft Entity Framework")]
 [assembly: AssemblyMetadata("Serviceable", "True")]
 
 #if NET40

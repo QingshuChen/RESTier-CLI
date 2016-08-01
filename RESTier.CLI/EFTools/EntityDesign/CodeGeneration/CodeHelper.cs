@@ -11,7 +11,6 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
     using System.Diagnostics.CodeAnalysis;
     using System.Globalization;
     using System.Linq;
-    using Microsoft.Data.Entity.Design.CodeGeneration.Extensions;
 
     /// <summary>
     /// Helper methods for generating code.

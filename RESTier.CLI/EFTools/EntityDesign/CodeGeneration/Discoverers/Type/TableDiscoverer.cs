@@ -7,7 +7,6 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
     using System.Data.Entity.Infrastructure.Pluralization;
     using System.Diagnostics;
     using System.Linq;
-    using Microsoft.Data.Entity.Design.CodeGeneration.Extensions;
     using Microsoft.Data.Entity.Design.VersioningFacade;
 
     internal class TableDiscoverer : ITypeConfigurationDiscoverer

@@ -4,7 +4,6 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
 {
     using System.Data.Entity.Core.Metadata.Edm;
     using System.Diagnostics;
-    using Microsoft.Data.Entity.Design.CodeGeneration.Extensions;
 
     /// <summary>
     /// Represents a model configuration to set the database generated option of a property.
