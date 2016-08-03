@@ -305,6 +305,7 @@
     <EmbeddedResource Include="EFTools\EntityDesignVersioningFacade\Resources.VersioningFacade.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.VersioningFacade.Designer.cs</LastGenOutput>
+      <LogicalName>Microsoft.Data.Entity.Design.VersioningFacade.Resources.VersioningFacade.resources</LogicalName>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -313,6 +314,7 @@
     <EmbeddedResource Include="CoreStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>CoreStrings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -381,9 +383,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntityFramework2\EntityFramework2.csproj">
-      <Project>{af82d5a1-5c8b-4033-9111-86fdfe255d42}</Project>
-      <Name>EntityFramework2</Name>
+    <ProjectReference Include="..\tools\EntityFramework\EntityFramework.csproj">
+      <Project>{7425bd30-6611-4c01-b7d0-2befeabdbfda}</Project>
+      <Name>EntityFramework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

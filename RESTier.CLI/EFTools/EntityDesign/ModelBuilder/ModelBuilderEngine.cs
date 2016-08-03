@@ -37,7 +37,7 @@ namespace Microsoft.RESTier.Cli.EFTools.EntityDesign
             }
             catch (Exception e)
             {
-                throw;
+                throw e;
             }
             finally
             {

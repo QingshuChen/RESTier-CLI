@@ -188,7 +188,6 @@ namespace Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb
         private static EdmItemCollection LoadEdmItemCollection(string csdlName)
         {
             Debug.Assert(!string.IsNullOrWhiteSpace(csdlName), "csdlName cannot be null or empty");
-            Console.WriteLine(System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames());
             using (var csdlReader = DbProviderServices.GetConceptualSchemaDefinition(csdlName))
             {
                 IList<EdmSchemaError> errors;
