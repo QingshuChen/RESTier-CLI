@@ -85,7 +85,7 @@ namespace System.Data.Entity.Core.Metadata.Edm
         /// <param name="metadataProperties">Metadata properties to be associated with the enumeration member.</param>
         /// <returns>The newly created EnumMember instance.</returns>
         /// <exception cref="System.ArgumentException">name is null or empty.</exception>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         public static EnumMember Create(string name, sbyte value,
             IEnumerable<MetadataProperty> metadataProperties)
         {

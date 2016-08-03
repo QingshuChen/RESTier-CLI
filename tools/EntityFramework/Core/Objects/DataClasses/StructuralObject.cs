@@ -389,7 +389,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static sbyte SetValidValue(sbyte value, string propertyName)
         {
             // no checks yet
@@ -405,7 +405,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">
         /// The <see cref="T:System.SByte" /> value.
         /// </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static sbyte SetValidValue(sbyte value)
         {
             // no checks yet
@@ -423,7 +423,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static sbyte? SetValidValue(sbyte? value, string propertyName)
         {
             // no checks yet
@@ -439,7 +439,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">
         /// The nullable <see cref="T:System.SByte" /> value.
         /// </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static sbyte? SetValidValue(sbyte? value)
         {
             // no checks yet
@@ -1093,7 +1093,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt16 SetValidValue(UInt16 value, string propertyName)
         {
             // no checks yet
@@ -1109,7 +1109,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">
         /// The <see cref="T:System.UInt16" /> value.
         /// </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt16 SetValidValue(UInt16 value)
         {
             // no checks yet
@@ -1121,7 +1121,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">The nullable UInt16 value.</param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static ushort? SetValidValue(ushort? value, string propertyName)
         {
             // no checks yet
@@ -1131,7 +1131,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <summary>Makes sure the UInt16 value being set for a property is valid.</summary>
         /// <returns>The nullable UInt16 value being set.</returns>
         /// <param name="value">The nullable UInt16 value.</param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static ushort? SetValidValue(ushort? value)
         {
             // no checks yet
@@ -1149,7 +1149,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt32 SetValidValue(UInt32 value, string propertyName)
         {
             // no checks yet
@@ -1165,7 +1165,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">
         /// The <see cref="T:System.UInt32" /> value.
         /// </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt32 SetValidValue(UInt32 value)
         {
             // no checks yet
@@ -1177,7 +1177,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">The nullable UInt32 value.</param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static uint? SetValidValue(uint? value, string propertyName)
         {
             // no checks yet
@@ -1187,7 +1187,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <summary>Makes sure the UInt32 value being set for a property is valid.</summary>
         /// <returns>The nullable UInt32 value being set.</returns>
         /// <param name="value">The nullable UInt32 value.</param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static uint? SetValidValue(uint? value)
         {
             // no checks yet
@@ -1205,7 +1205,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt64 SetValidValue(UInt64 value, string propertyName)
         {
             // no checks yet
@@ -1221,7 +1221,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">
         /// The <see cref="T:System.UInt64" /> value.
         /// </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static UInt64 SetValidValue(UInt64 value)
         {
             // no checks yet
@@ -1235,7 +1235,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// <param name="value">The nullable UInt64 value.</param>
         /// <param name="propertyName">The name of the property that is being validated.</param>
         [SuppressMessage("Microsoft.Usage", "CA1801:ReviewUnusedParameters", MessageId = "propertyName")]
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static ulong? SetValidValue(ulong? value, string propertyName)
         {
             // no checks yet
@@ -1247,7 +1247,7 @@ namespace System.Data.Entity.Core.Objects.DataClasses
         /// </summary>
         /// <returns>The nullable UInt64 value being set.</returns>
         /// <param name="value">The nullable UInt64 value.</param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         protected internal static ulong? SetValidValue(ulong? value)
         {
             // no checks yet

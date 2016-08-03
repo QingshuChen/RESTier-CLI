@@ -526,7 +526,7 @@ namespace System.Data.Entity.Migrations.Utilities
         /// Writes the text representation of a UInt32, followed by a line terminator, to the text stream.
         /// </summary>
         /// <param name="value"> A UInt32 to output. </param>
-        [CLSCompliant(false)]
+//        [CLSCompliant(false)]
         public override void WriteLine(uint value)
         {
             OutputTabs();
