@@ -1,18 +1,14 @@
 ﻿using System;
-using Microsoft.Data.Entity.Design.CodeGeneration;
 using System.Data.Common;
-using System.Data.Entity.Core.EntityClient;
-using Microsoft.Data.Entity.Design.VersioningFacade;
-using Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine;
-using System.Data;
-using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity.Core.Common;
 using System.Diagnostics;
 using System.Data.Entity.Infrastructure.DependencyResolution;
+using Microsoft.RESTier.Cli.EFTools.EntityDesign;
+using Microsoft.Data.Entity.Design.VersioningFacade.ReverseEngineerDb;
+using Microsoft.Data.Entity.Design.VersioningFacade;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -49,7 +45,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 {
                     return null;
                 }
-                SchemaFilterEntryBag schemaFilterEntryBag = new Microsoft.Data.Entity.Design.VisualStudio.ModelWizard.Engine.SchemaFilterEntryBag();
+                SchemaFilterEntryBag schemaFilterEntryBag = new SchemaFilterEntryBag();
                 ArrayList databaseTables = new ArrayList();
                 databaseTables = sqlManager.GetDatabaseTables();
                 if (databaseTables.Count != 0)
@@ -88,14 +84,14 @@ namespace Microsoft.RESTier.Cli.Commands
                 modelBuilderSettings.IncludeForeignKeysInModel = true;
 
                 modelBuilderSettings.DatabaseObjectFilters = schemaFilterEntryBag.CollapseAndOptimize(SchemaFilterPolicy.GetByValEdmxPolicy());
-                modelBuilderSettings.ModelBuilderEngine = new MyCodeFirstModelBuilderEngine();
+                modelBuilderSettings.ModelBuilderEngine = new CodeFirstModelBuilderEngine();
                 // The latest EntityFramework version
                 modelBuilderSettings.TargetSchemaVersion = new Version(3, 0, 0, 0);
 
                 // Get the providerManifestTokern 
                 IDbDependencyResolver resolver = DependencyResolver.Instance;
                 // TODO: These should be using the value off the modelBuilderSettings, right?
-                var providerServices = resolver.GetService<DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
+                var providerServices = resolver.GetService<System.Data.Entity.Core.Common.DbProviderServices>(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var factory = DbProviderFactories.GetFactory(ConfigurationManager.AppSettings["ProviderInvariantName"]);
                 var dbconnection = factory.CreateConnection();
                 dbconnection.ConnectionString = connectionString;
@@ -107,7 +103,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 mbe.GenerateModel(modelBuilderSettings);
 
                 // the function provided by EntityFramework to generate code from a model
-                var generator = new MyCodeFirstModelGenerator();
+                var generator = new CodeFirstModelGenerator();
                 return generator.Generate(mbe.Model, @namespace + ".Models", projectName + "DbContext", projectName);
             }
             catch (Exception e)
