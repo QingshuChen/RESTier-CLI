@@ -23,7 +23,10 @@ namespace Microsoft.RESTier.Cli.Commands
                 var @namespace = namespaceOption.Value();
                 var connectionString = command.Parent.GetOptionValue("connectionstring");
 
-                ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API.");
+                if (!string.IsNullOrEmpty(name))
+                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API {0}.", name);
+                else
+                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Creating new RESTier API.");
 
                 if (string.IsNullOrEmpty(connectionString))
                 {
