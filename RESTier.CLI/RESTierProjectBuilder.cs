@@ -204,11 +204,21 @@ namespace Microsoft.RESTier.Cli
                 CreateWebDebugConfigFile();
                 CreateWebReleaseConfigFile();
 
-                // restore packages for the RESTier project
-                WebClient t = new WebClient();
-                t.DownloadFile(ConfigurationManager.AppSettings["NuGetClientURL"], "nuget.exe");
-                CmdNugetRestore(projectPath + "\\" + projectName + @".sln");
                 AddModleFile(tableClasses);
+                // restore packages for the RESTier project
+                try
+                {
+                    WebClient t = new WebClient();
+                    t.DownloadFile(ConfigurationManager.AppSettings["NuGetClientURL"], "nuget.exe");
+                    CmdNugetRestore(projectPath + "\\" + projectName + @".sln");
+                }
+                catch (Exception ex)
+                {
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Error when try to get 'nuget.exe' from '{0}'", ConfigurationManager.AppSettings["NuGetClientURL"]);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, ex.Message);
+                    return -1;
+                }
+                
                 return 0;
             }
         }
