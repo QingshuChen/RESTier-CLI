@@ -138,7 +138,7 @@ namespace Microsoft.RESTier.Cli
 
                             if (string.IsNullOrEmpty(name) == false)
                             {
-                                items.Add(new DatabaseTableOrView(catalogName, schemaName, name));
+                                items.Add(new Tuple<string, string, string>(catalogName, schemaName, name));
                             }
                         }
                     }

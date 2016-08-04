@@ -79,7 +79,6 @@
       <DependentUpon>CoreStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="CommandExecutor.cs" />
-    <Compile Include="DatabaseTableOrView.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\DbProviderServicesResolver.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\DependencyResolver.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\EntityFrameworkVersion.cs" />

@@ -50,12 +50,11 @@ namespace Microsoft.RESTier.Cli
                 databaseTables = sqlManager.GetDatabaseTables();
                 if (databaseTables.Count != 0)
                 {
-                    var tableItem = (DatabaseTableOrView) (databaseTables[0]);
                     for (var i = 0; i < databaseTables.Count; i++)
                     {
-                        tableItem = (DatabaseTableOrView) (databaseTables[i]);
-                        var item = new EntityStoreSchemaFilterEntry(tableItem.CatalogName,
-                            tableItem.SchemaName, tableItem.TableOrViewName, EntityStoreSchemaFilterObjectTypes.Table,
+                        var tableItem = (Tuple<string, string, string>)(databaseTables[i]);
+                        var item = new EntityStoreSchemaFilterEntry(tableItem.Item1,
+                            tableItem.Item2, tableItem.Item3, EntityStoreSchemaFilterObjectTypes.Table,
                             EntityStoreSchemaFilterEffect.Allow);
                         schemaFilterEntryBag.IncludedTableEntries.Add(item);
                     }
@@ -64,12 +63,11 @@ namespace Microsoft.RESTier.Cli
                 databaseViews = sqlManager.GetDatabaseViews();
                 if (databaseViews.Count != 0)
                 {
-                    var viewItem = (DatabaseTableOrView) (databaseViews[0]);
                     for (var i = 0; i < databaseViews.Count; i++)
                     {
-                        viewItem = (DatabaseTableOrView) (databaseViews[i]);
-                        var item = new EntityStoreSchemaFilterEntry(viewItem.CatalogName,
-                            viewItem.SchemaName, viewItem.TableOrViewName, EntityStoreSchemaFilterObjectTypes.View,
+                        var viewItem = (Tuple<string, string, string>) (databaseViews[i]);
+                        var item = new EntityStoreSchemaFilterEntry(viewItem.Item1,
+                            viewItem.Item2, viewItem.Item3, EntityStoreSchemaFilterObjectTypes.View,
                             EntityStoreSchemaFilterEffect.Allow);
                         schemaFilterEntryBag.IncludedViewEntries.Add(item);
                     }
