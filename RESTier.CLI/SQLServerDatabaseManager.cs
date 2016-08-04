@@ -69,10 +69,11 @@ namespace Microsoft.RESTier.Cli
             }
             catch (Exception ex)
             {
+                ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't connect to the database with the connection string: '{0}'", connectionString);
                 if (ex.InnerException != null)
-                    Console.WriteLine(ex.InnerException.Message);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, ex.InnerException.Message);
                 else
-                    Console.WriteLine(ex.Message);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, ex.Message);
                 return false;
             }
             return true;
