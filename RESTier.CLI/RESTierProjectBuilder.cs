@@ -205,9 +205,10 @@ namespace Microsoft.RESTier.Cli
                 CreateWebReleaseConfigFile();
 
                 AddModleFile(tableClasses);
-                // restore packages for the RESTier project
+                
                 try
                 {
+                    // restore packages for the RESTier project
                     WebClient t = new WebClient();
                     t.DownloadFile(ConfigurationManager.AppSettings["NuGetClientURL"], "nuget.exe");
                     CmdNugetRestore(projectPath + "\\" + projectName + @".sln");

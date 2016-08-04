@@ -34,20 +34,13 @@ namespace Microsoft.RESTier.Cli.Commands
                         ConsoleHelper.WriteLine("Use \"RESTier run -h\" for more information");
                         return 0;
                     }
-                    int index1 = project.Value().LastIndexOf('/');
-                    int index2 = project.Value().LastIndexOf('\\');
-                    if (index1 == -1 && index2 == -1)
-                    {
-                        projectDirectory = Directory.GetCurrentDirectory();
-                    }
-                    else
-                    {
-                        projectDirectory = project.Value().Substring(0, (index1 > index2 ? index1 : index2));
-                    }
+                    projectDirectory = Path.GetDirectoryName(project.Value());
                 }
-                
+
                 // Set current directory to the directory that contains the RESTier Project
-                Directory.SetCurrentDirectory(projectDirectory);
+                if (!string.IsNullOrEmpty(projectDirectory))
+                    Directory.SetCurrentDirectory(projectDirectory);
+
                 if (!File.Exists(".vs\\config\\applicationhost.config"))
                 {
                     ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find the configration file '" + projectDirectory + 
