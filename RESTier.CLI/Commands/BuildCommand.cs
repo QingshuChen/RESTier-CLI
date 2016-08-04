@@ -21,6 +21,8 @@ namespace Microsoft.RESTier.Cli.Commands
 
             command.OnExecute(() =>
             {
+                ConsoleHelper.WriteLine(ConsoleColor.Green, "Building the RESTier API project.");
+
                 var pName = "";
                 if (string.IsNullOrEmpty(projectName.Value()))
                 {
@@ -57,7 +59,6 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 CmdMSBuild(pName, buildSetting.Value());
 
-                Console.WriteLine("Built {0} successfully.", command.GetOptionValue("p"));
                 return 0;
             });
         }
