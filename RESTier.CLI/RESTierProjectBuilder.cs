@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Xml;
 using Microsoft.RESTier.Cli.TextTemplate;
+using System.Configuration;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -162,49 +163,52 @@ namespace Microsoft.RESTier.Cli
         /// Generate an .NET Web Application Projcet which support a standardized, 
         /// OData V4 based RESTful services on .NET platform from a connection string
         /// </summary>
-        /// <returns>true for success, false for failure</returns>
-        public bool Generate()
+        /// <returns>reuturn 0 for success, -1 for failure</returns>
+        public int Generate()
         {
-            bool flag = true;
-            CreateFolders();
-            CreateSolutionFile();
-            CreateApplicationhostConfigFile();
-            CreateWebApiConfigFile();
-            CreateAssemblyInfoFile();
-            CreateAiJSFile();
-            CreateAiJSMinFile();
-            CreateApplicationInsightsConfigFile();
-            CreateGlobalAsaxFile();
-            CreateGlobalAsaxCSFile();
-            CreatePackagesConfigFile();
-            CreateCSPROJFile();
-            CreateCSPROJUserFile();
-            CreateWebConfigFile();
-            CreateWebDebugConfigFile();
-            CreateWebReleaseConfigFile();
-            
-            // restore packages for the RESTier project
-            WebClient t = new WebClient();
-            t.DownloadFile("https://dist.nuget.org/win-x86-commandline/latest/nuget.exe", "nuget.exe");
-            CmdNugetRestore(projectPath + "\\" + projectName + @".sln");
-
             var engine = new CodeGenerationEngine(connectionString, projectName, @namespace);
-            AddModleFile(engine.GenerateCode());
-            return flag;
+            var tableClasses = engine.GenerateCode();
+            if (tableClasses == null)
+            {
+                return -1;
+            }
+            else
+            {
+                CreateFolders();
+                CreateSolutionFile();
+                CreateApplicationhostConfigFile();
+                CreateWebApiConfigFile();
+                CreateAssemblyInfoFile();
+                CreateAiJSFile();
+                CreateAiJSMinFile();
+                CreateApplicationInsightsConfigFile();
+                CreateGlobalAsaxFile();
+                CreateGlobalAsaxCSFile();
+                CreatePackagesConfigFile();
+                CreateCSPROJFile();
+                CreateCSPROJUserFile();
+                CreateWebConfigFile();
+                CreateWebDebugConfigFile();
+                CreateWebReleaseConfigFile();
+
+                // restore packages for the RESTier project
+                WebClient t = new WebClient();
+                t.DownloadFile(ConfigurationManager.AppSettings["NuGetClientURL"], "nuget.exe");
+                CmdNugetRestore(projectPath + "\\" + projectName + @".sln");
+                AddModleFile(tableClasses);
+                return 0;
+            }
         }
 
         private void CmdNugetRestore(string projectName)
         {
-
             Process p = new Process();
 
             p.StartInfo.FileName = "cmd.exe";
-
             p.StartInfo.UseShellExecute = false;
-
             p.StartInfo.Arguments = "/c " + "nuget.exe restore " + projectName; 
-            p.Start();
 
+            p.Start();
             p.WaitForExit();
         }
 

@@ -47,9 +47,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 }
 
                 var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
-                builder.Generate();
-
-                return 0;
+                return builder.Generate();
             });
         }
     }

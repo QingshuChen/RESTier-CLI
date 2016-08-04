@@ -56,10 +56,10 @@ namespace Microsoft.RESTier.Cli
                     
                     ConsoleHelper.WriteLine(string.Format("Creating new RESTier API for {0}.",
                         connectionStringBuilder.InitialCatalog + connectionStringBuilder.AttachDBFilename));
-                    app.Commands.First(c => c.Name == "new").Execute();
+                    var ret = app.Commands.First(c => c.Name == "new").Execute();
 
                     // execute the build and run command for the -a option
-                    if (app.Options.First(c => (c.LongName == "all" || c.ShortName == "a")).HasValue())
+                    if (ret == 0 && app.Options.First(c => (c.LongName == "all" || c.ShortName == "a")).HasValue())
                     {
                         string projectName = app.Commands.First(c => c.Name == "new").GetOptionValue("name");
                         if (string.IsNullOrEmpty(projectName))
