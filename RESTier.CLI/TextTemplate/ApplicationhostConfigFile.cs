@@ -18,7 +18,7 @@ namespace Microsoft.RESTier.Cli.TextTemplate
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
+    #line 1 "C:\Users\t-qiche\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "14.0.0.0")]
     public partial class ApplicationhostConfigFile : ApplicationhostConfigFileBase
     {
@@ -152,7 +152,7 @@ namespace Microsoft.RESTier.Cli.TextTemplate
                     "istenerAdapters>\r\n            <add name=\"http\" />\r\n        </listenerAdapters>\r\n" +
                     "\r\n        <sites>\r\n            <site name=\"");
             
-            #line 160 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
+            #line 160 "C:\Users\t-qiche\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(projectName));
             
             #line default
@@ -160,7 +160,7 @@ namespace Microsoft.RESTier.Cli.TextTemplate
             this.Write("\" id=\"2\">\r\n                <application path=\"/\" applicationPool=\"Clr4IntegratedA" +
                     "ppPool\">\r\n                    <virtualDirectory path=\"/\" physicalPath=\"");
             
-            #line 162 "C:\Users\t-qiche\Documents\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
+            #line 162 "C:\Users\t-qiche\RESTier-CLI\RESTier.CLI\TextTemplate\ApplicationhostConfigFile.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(projectPath));
             
             #line default
@@ -229,885 +229,883 @@ namespace Microsoft.RESTier.Cli.TextTemplate
                     "ode,runtimeVersionv4.0,bitness32\" />\r\n            <add name=\"ManagedEngineV4.0_6" +
                     "4bit\" image=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\webengine4.dll\" preCo" +
                     "ndition=\"integratedMode,runtimeVersionv4.0,bitness64\" />\r\n            <add name=" +
-                    "\"ApplicationInitializationModule\" image=\"%IIS_BIN%\\warmup.dll\" />\r\n            <" +
-                    "add name=\"AspNetCoreModule\" image=\"%IIS_BIN%\\aspnetcore.dll\" />\r\n        </globa" +
-                    "lModules>\r\n\r\n        <httpCompression directory=\"%TEMP%\\iisexpress\\IIS Temporary" +
-                    " Compressed Files\">\r\n            <scheme name=\"gzip\" dll=\"%IIS_BIN%\\gzip.dll\" />" +
-                    "\r\n            <dynamicTypes>\r\n                <add mimeType=\"text/*\" enabled=\"tr" +
-                    "ue\" />\r\n                <add mimeType=\"message/*\" enabled=\"true\" />\r\n           " +
-                    "     <add mimeType=\"application/javascript\" enabled=\"true\" />\r\n                <" +
-                    "add mimeType=\"application/atom+xml\" enabled=\"true\" />\r\n                <add mime" +
-                    "Type=\"application/xaml+xml\" enabled=\"true\" />\r\n                <add mimeType=\"*/" +
-                    "*\" enabled=\"false\" />\r\n            </dynamicTypes>\r\n            <staticTypes>\r\n " +
-                    "               <add mimeType=\"text/*\" enabled=\"true\" />\r\n                <add mi" +
-                    "meType=\"message/*\" enabled=\"true\" />\r\n                <add mimeType=\"image/svg+x" +
-                    "ml\" enabled=\"true\" />\r\n                <add mimeType=\"application/javascript\" en" +
-                    "abled=\"true\" />\r\n                <add mimeType=\"application/atom+xml\" enabled=\"t" +
-                    "rue\" />\r\n                <add mimeType=\"application/xaml+xml\" enabled=\"true\" />\r" +
-                    "\n                <add mimeType=\"*/*\" enabled=\"false\" />\r\n            </staticTyp" +
-                    "es>\r\n        </httpCompression>\r\n\r\n        <httpErrors lockAttributes=\"allowAbso" +
-                    "lutePathsWhenDelegated,defaultPath\">\r\n            <error statusCode=\"401\" prefix" +
-                    "LanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"401.htm\" />\r\n            <error statu" +
-                    "sCode=\"403\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"403.htm\" />\r\n      " +
-                    "      <error statusCode=\"404\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"4" +
-                    "04.htm\" />\r\n            <error statusCode=\"405\" prefixLanguageFilePath=\"%IIS_BIN" +
-                    "%\\custerr\" path=\"405.htm\" />\r\n            <error statusCode=\"406\" prefixLanguage" +
-                    "FilePath=\"%IIS_BIN%\\custerr\" path=\"406.htm\" />\r\n            <error statusCode=\"4" +
-                    "12\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"412.htm\" />\r\n            <e" +
-                    "rror statusCode=\"500\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"500.htm\" " +
-                    "/>\r\n            <error statusCode=\"501\" prefixLanguageFilePath=\"%IIS_BIN%\\custer" +
-                    "r\" path=\"501.htm\" />\r\n            <error statusCode=\"502\" prefixLanguageFilePath" +
-                    "=\"%IIS_BIN%\\custerr\" path=\"502.htm\" />\r\n        </httpErrors>\r\n\r\n        <httpLo" +
-                    "gging dontLog=\"false\" />\r\n\r\n        <httpProtocol>\r\n            <customHeaders>\r" +
-                    "\n                <clear />\r\n                <add name=\"X-Powered-By\" value=\"ASP." +
-                    "NET\" />\r\n            </customHeaders>\r\n            <redirectHeaders>\r\n          " +
-                    "      <clear />\r\n            </redirectHeaders>\r\n        </httpProtocol>\r\n\r\n    " +
-                    "    <httpRedirect enabled=\"false\" />\r\n\r\n        <httpTracing>\r\n        </httpTra" +
-                    "cing>\r\n\r\n        <isapiFilters>\r\n            <filter name=\"ASP.Net_2.0.50727-64\"" +
-                    " path=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_filter.dll\" enableCa" +
-                    "che=\"true\" preCondition=\"bitness64,runtimeVersionv2.0\" />\r\n            <filter n" +
-                    "ame=\"ASP.Net_2.0.50727.0\" path=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspn" +
-                    "et_filter.dll\" enableCache=\"true\" preCondition=\"bitness32,runtimeVersionv2.0\" />" +
-                    "\r\n            <filter name=\"ASP.Net_2.0_for_v1.1\" path=\"%windir%\\Microsoft.NET\\F" +
-                    "ramework\\v2.0.50727\\aspnet_filter.dll\" enableCache=\"true\" preCondition=\"runtimeV" +
-                    "ersionv1.1\" />\r\n            <filter name=\"ASP.Net_4.0_32bit\" path=\"%windir%\\Micr" +
-                    "osoft.NET\\Framework\\v4.0.30319\\aspnet_filter.dll\" enableCache=\"true\" preConditio" +
-                    "n=\"bitness32,runtimeVersionv4.0\" />\r\n            <filter name=\"ASP.Net_4.0_64bit" +
-                    "\" path=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_filter.dll\" enableC" +
-                    "ache=\"true\" preCondition=\"bitness64,runtimeVersionv4.0\" />\r\n        </isapiFilte" +
-                    "rs>\r\n\r\n        <odbcLogging />\r\n\r\n        <security>\r\n\r\n            <access sslF" +
-                    "lags=\"None\" />\r\n\r\n            <applicationDependencies>\r\n                <applic" +
-                    "ation name=\"Active Server Pages\" groupId=\"ASP\" />\r\n            </applicationDepe" +
-                    "ndencies>\r\n\r\n            <authentication>\r\n\r\n                <anonymousAuthentic" +
-                    "ation enabled=\"true\" userName=\"\" />\r\n\r\n                <basicAuthentication enab" +
-                    "led=\"false\" />\r\n\r\n                <clientCertificateMappingAuthentication enable" +
-                    "d=\"false\" />\r\n\r\n                <digestAuthentication enabled=\"false\" />\r\n\r\n    " +
-                    "            <iisClientCertificateMappingAuthentication enabled=\"false\">\r\n       " +
-                    "         </iisClientCertificateMappingAuthentication>\r\n\r\n                <window" +
-                    "sAuthentication enabled=\"false\">\r\n                    <providers>\r\n             " +
-                    "           <add value=\"Negotiate\" />\r\n                        <add value=\"NTLM\" " +
-                    "/>\r\n                    </providers>\r\n                </windowsAuthentication>\r\n" +
-                    "\r\n            </authentication>\r\n\r\n            <authorization>\r\n                " +
-                    "<add accessType=\"Allow\" users=\"*\" />\r\n            </authorization>\r\n\r\n          " +
-                    "  <ipSecurity allowUnlisted=\"true\" />\r\n\r\n            <isapiCgiRestriction notLis" +
-                    "tedIsapisAllowed=\"true\" notListedCgisAllowed=\"true\">\r\n                <add path=" +
-                    "\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\webengine4.dll\" allowed=\"true\" gr" +
-                    "oupId=\"ASP.NET_v4.0\" description=\"ASP.NET_v4.0\" />\r\n                <add path=\"%" +
-                    "windir%\\Microsoft.NET\\Framework\\v4.0.30319\\webengine4.dll\" allowed=\"true\" groupI" +
-                    "d=\"ASP.NET_v4.0\" description=\"ASP.NET_v4.0\" />\r\n                <add path=\"%wind" +
-                    "ir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" allowed=\"true\" groupI" +
-                    "d=\"ASP.NET v2.0.50727\" description=\"ASP.NET v2.0.50727\" />\r\n                <add" +
-                    " path=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" allowed=\"tr" +
-                    "ue\" groupId=\"ASP.NET v2.0.50727\" description=\"ASP.NET v2.0.50727\" />\r\n          " +
-                    "  </isapiCgiRestriction>\r\n\r\n            <requestFiltering>\r\n                <fil" +
-                    "eExtensions allowUnlisted=\"true\" applyToWebDAV=\"true\">\r\n                    <add" +
-                    " fileExtension=\".asa\" allowed=\"false\" />\r\n                    <add fileExtension" +
-                    "=\".asax\" allowed=\"false\" />\r\n                    <add fileExtension=\".ascx\" allo" +
-                    "wed=\"false\" />\r\n                    <add fileExtension=\".master\" allowed=\"false\"" +
-                    " />\r\n                    <add fileExtension=\".skin\" allowed=\"false\" />\r\n        " +
-                    "            <add fileExtension=\".browser\" allowed=\"false\" />\r\n                  " +
-                    "  <add fileExtension=\".sitemap\" allowed=\"false\" />\r\n                    <add fil" +
-                    "eExtension=\".config\" allowed=\"false\" />\r\n                    <add fileExtension=" +
-                    "\".cs\" allowed=\"false\" />\r\n                    <add fileExtension=\".csproj\" allow" +
-                    "ed=\"false\" />\r\n                    <add fileExtension=\".vb\" allowed=\"false\" />\r\n" +
-                    "                    <add fileExtension=\".vbproj\" allowed=\"false\" />\r\n           " +
-                    "         <add fileExtension=\".webinfo\" allowed=\"false\" />\r\n                    <" +
-                    "add fileExtension=\".licx\" allowed=\"false\" />\r\n                    <add fileExten" +
-                    "sion=\".resx\" allowed=\"false\" />\r\n                    <add fileExtension=\".resour" +
-                    "ces\" allowed=\"false\" />\r\n                    <add fileExtension=\".mdb\" allowed=\"" +
-                    "false\" />\r\n                    <add fileExtension=\".vjsproj\" allowed=\"false\" />\r" +
-                    "\n                    <add fileExtension=\".java\" allowed=\"false\" />\r\n            " +
-                    "        <add fileExtension=\".jsl\" allowed=\"false\" />\r\n                    <add f" +
-                    "ileExtension=\".ldb\" allowed=\"false\" />\r\n                    <add fileExtension=\"" +
-                    ".dsdgm\" allowed=\"false\" />\r\n                    <add fileExtension=\".ssdgm\" allo" +
-                    "wed=\"false\" />\r\n                    <add fileExtension=\".lsad\" allowed=\"false\" /" +
-                    ">\r\n                    <add fileExtension=\".ssmap\" allowed=\"false\" />\r\n         " +
-                    "           <add fileExtension=\".cd\" allowed=\"false\" />\r\n                    <add" +
-                    " fileExtension=\".dsprototype\" allowed=\"false\" />\r\n                    <add fileE" +
-                    "xtension=\".lsaprototype\" allowed=\"false\" />\r\n                    <add fileExtens" +
-                    "ion=\".sdm\" allowed=\"false\" />\r\n                    <add fileExtension=\".sdmDocum" +
-                    "ent\" allowed=\"false\" />\r\n                    <add fileExtension=\".mdf\" allowed=\"" +
-                    "false\" />\r\n                    <add fileExtension=\".ldf\" allowed=\"false\" />\r\n   " +
-                    "                 <add fileExtension=\".ad\" allowed=\"false\" />\r\n                  " +
-                    "  <add fileExtension=\".dd\" allowed=\"false\" />\r\n                    <add fileExte" +
-                    "nsion=\".ldd\" allowed=\"false\" />\r\n                    <add fileExtension=\".sd\" al" +
-                    "lowed=\"false\" />\r\n                    <add fileExtension=\".adprototype\" allowed=" +
-                    "\"false\" />\r\n                    <add fileExtension=\".lddprototype\" allowed=\"fals" +
-                    "e\" />\r\n                    <add fileExtension=\".exclude\" allowed=\"false\" />\r\n   " +
-                    "                 <add fileExtension=\".refresh\" allowed=\"false\" />\r\n             " +
-                    "       <add fileExtension=\".compiled\" allowed=\"false\" />\r\n                    <a" +
-                    "dd fileExtension=\".msgx\" allowed=\"false\" />\r\n                    <add fileExtens" +
-                    "ion=\".vsdisco\" allowed=\"false\" />\r\n                    <add fileExtension=\".rule" +
-                    "s\" allowed=\"false\" />\r\n                </fileExtensions>\r\n                <verbs" +
-                    " allowUnlisted=\"true\" applyToWebDAV=\"true\" />\r\n                <hiddenSegments a" +
-                    "pplyToWebDAV=\"true\">\r\n                    <add segment=\"web.config\" />\r\n        " +
-                    "            <add segment=\"bin\" />\r\n                    <add segment=\"App_code\" /" +
-                    ">\r\n                    <add segment=\"App_GlobalResources\" />\r\n                  " +
-                    "  <add segment=\"App_LocalResources\" />\r\n                    <add segment=\"App_We" +
-                    "bReferences\" />\r\n                    <add segment=\"App_Data\" />\r\n               " +
-                    "     <add segment=\"App_Browsers\" />\r\n                </hiddenSegments>\r\n        " +
-                    "    </requestFiltering>\r\n\r\n        </security>\r\n\r\n        <serverSideInclude ssi" +
-                    "ExecDisable=\"false\" />\r\n\r\n        <staticContent lockAttributes=\"isDocFooterFile" +
-                    "Name\">\r\n            <mimeMap fileExtension=\".323\" mimeType=\"text/h323\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".3g2\" mimeType=\"video/3gpp2\" />\r\n            <mim" +
-                    "eMap fileExtension=\".3gp2\" mimeType=\"video/3gpp2\" />\r\n            <mimeMap fileE" +
-                    "xtension=\".3gp\" mimeType=\"video/3gpp\" />\r\n            <mimeMap fileExtension=\".3" +
-                    "gpp\" mimeType=\"video/3gpp\" />\r\n            <mimeMap fileExtension=\".aac\" mimeTyp" +
-                    "e=\"audio/aac\" />\r\n            <mimeMap fileExtension=\".aaf\" mimeType=\"applicatio" +
-                    "n/octet-stream\" />\r\n            <mimeMap fileExtension=\".aca\" mimeType=\"applicat" +
-                    "ion/octet-stream\" />\r\n            <mimeMap fileExtension=\".accdb\" mimeType=\"appl" +
-                    "ication/msaccess\" />\r\n            <mimeMap fileExtension=\".accde\" mimeType=\"appl" +
-                    "ication/msaccess\" />\r\n            <mimeMap fileExtension=\".accdt\" mimeType=\"appl" +
-                    "ication/msaccess\" />\r\n            <mimeMap fileExtension=\".acx\" mimeType=\"applic" +
-                    "ation/internet-property-stream\" />\r\n            <mimeMap fileExtension=\".adt\" mi" +
-                    "meType=\"audio/vnd.dlna.adts\" />\r\n            <mimeMap fileExtension=\".adts\" mime" +
-                    "Type=\"audio/vnd.dlna.adts\" />\r\n            <mimeMap fileExtension=\".afm\" mimeTyp" +
-                    "e=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".ai\" mimeTy" +
-                    "pe=\"application/postscript\" />\r\n            <mimeMap fileExtension=\".aif\" mimeTy" +
-                    "pe=\"audio/x-aiff\" />\r\n            <mimeMap fileExtension=\".aifc\" mimeType=\"audio" +
-                    "/aiff\" />\r\n            <mimeMap fileExtension=\".aiff\" mimeType=\"audio/aiff\" />\r\n" +
-                    "            <mimeMap fileExtension=\".appcache\" mimeType=\"text/cache-manifest\" />" +
-                    "\r\n            <mimeMap fileExtension=\".application\" mimeType=\"application/x-ms-a" +
-                    "pplication\" />\r\n            <mimeMap fileExtension=\".art\" mimeType=\"image/x-jg\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".asd\" mimeType=\"application/octet-stream" +
-                    "\" />\r\n            <mimeMap fileExtension=\".asf\" mimeType=\"video/x-ms-asf\" />\r\n  " +
-                    "          <mimeMap fileExtension=\".asi\" mimeType=\"application/octet-stream\" />\r\n" +
-                    "            <mimeMap fileExtension=\".asm\" mimeType=\"text/plain\" />\r\n            " +
-                    "<mimeMap fileExtension=\".asr\" mimeType=\"video/x-ms-asf\" />\r\n            <mimeMap" +
-                    " fileExtension=\".asx\" mimeType=\"video/x-ms-asf\" />\r\n            <mimeMap fileExt" +
-                    "ension=\".atom\" mimeType=\"application/atom+xml\" />\r\n            <mimeMap fileExte" +
-                    "nsion=\".au\" mimeType=\"audio/basic\" />\r\n            <mimeMap fileExtension=\".avi\"" +
-                    " mimeType=\"video/msvideo\" />\r\n            <mimeMap fileExtension=\".axs\" mimeType" +
-                    "=\"application/olescript\" />\r\n            <mimeMap fileExtension=\".bas\" mimeType=" +
-                    "\"text/plain\" />\r\n            <mimeMap fileExtension=\".bcpio\" mimeType=\"applicati" +
-                    "on/x-bcpio\" />\r\n            <mimeMap fileExtension=\".bin\" mimeType=\"application/" +
-                    "octet-stream\" />\r\n            <mimeMap fileExtension=\".bmp\" mimeType=\"image/bmp\"" +
-                    " />\r\n            <mimeMap fileExtension=\".c\" mimeType=\"text/plain\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".cab\" mimeType=\"application/vnd.ms-cab-compressed\" />" +
-                    "\r\n            <mimeMap fileExtension=\".calx\" mimeType=\"application/vnd.ms-office" +
-                    ".calx\" />\r\n            <mimeMap fileExtension=\".cat\" mimeType=\"application/vnd.m" +
-                    "s-pki.seccat\" />\r\n            <mimeMap fileExtension=\".cdf\" mimeType=\"applicatio" +
-                    "n/x-cdf\" />\r\n            <mimeMap fileExtension=\".chm\" mimeType=\"application/oct" +
-                    "et-stream\" />\r\n            <mimeMap fileExtension=\".class\" mimeType=\"application" +
-                    "/x-java-applet\" />\r\n            <mimeMap fileExtension=\".clp\" mimeType=\"applicat" +
-                    "ion/x-msclip\" />\r\n            <mimeMap fileExtension=\".cmx\" mimeType=\"image/x-cm" +
-                    "x\" />\r\n            <mimeMap fileExtension=\".cnf\" mimeType=\"text/plain\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".cod\" mimeType=\"image/cis-cod\" />\r\n            <m" +
-                    "imeMap fileExtension=\".cpio\" mimeType=\"application/x-cpio\" />\r\n            <mime" +
-                    "Map fileExtension=\".cpp\" mimeType=\"text/plain\" />\r\n            <mimeMap fileExte" +
-                    "nsion=\".crd\" mimeType=\"application/x-mscardfile\" />\r\n            <mimeMap fileEx" +
-                    "tension=\".crl\" mimeType=\"application/pkix-crl\" />\r\n            <mimeMap fileExte" +
-                    "nsion=\".crt\" mimeType=\"application/x-x509-ca-cert\" />\r\n            <mimeMap file" +
-                    "Extension=\".csh\" mimeType=\"application/x-csh\" />\r\n            <mimeMap fileExten" +
-                    "sion=\".css\" mimeType=\"text/css\" />\r\n            <mimeMap fileExtension=\".csv\" mi" +
-                    "meType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".cur\" " +
-                    "mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".dcr" +
-                    "\" mimeType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\".dep" +
-                    "loy\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=" +
-                    "\".der\" mimeType=\"application/x-x509-ca-cert\" />\r\n            <mimeMap fileExtens" +
-                    "ion=\".dib\" mimeType=\"image/bmp\" />\r\n            <mimeMap fileExtension=\".dir\" mi" +
-                    "meType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\".disco\" " +
-                    "mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".dll\" mimeType=\"appl" +
-                    "ication/x-msdownload\" />\r\n            <mimeMap fileExtension=\".dll.config\" mimeT" +
-                    "ype=\"text/xml\" />\r\n            <mimeMap fileExtension=\".dlm\" mimeType=\"text/dlm\"" +
-                    " />\r\n            <mimeMap fileExtension=\".doc\" mimeType=\"application/msword\" />\r" +
-                    "\n            <mimeMap fileExtension=\".docm\" mimeType=\"application/vnd.ms-word.do" +
-                    "cument.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".docx\" mimeType=" +
-                    "\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" />\r\n  " +
-                    "          <mimeMap fileExtension=\".dot\" mimeType=\"application/msword\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".dotm\" mimeType=\"application/vnd.ms-word.template." +
-                    "macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".dotx\" mimeType=\"applic" +
-                    "ation/vnd.openxmlformats-officedocument.wordprocessingml.template\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".dsp\" mimeType=\"application/octet-stream\" />\r\n       " +
-                    "     <mimeMap fileExtension=\".dtd\" mimeType=\"text/xml\" />\r\n            <mimeMap " +
-                    "fileExtension=\".dvi\" mimeType=\"application/x-dvi\" />\r\n            <mimeMap fileE" +
-                    "xtension=\".dvr-ms\" mimeType=\"video/x-ms-dvr\" />\r\n            <mimeMap fileExtens" +
-                    "ion=\".dwf\" mimeType=\"drawing/x-dwf\" />\r\n            <mimeMap fileExtension=\".dwp" +
+                    "\"ApplicationInitializationModule\" image=\"%IIS_BIN%\\warmup.dll\" />\r\n        </glo" +
+                    "balModules>\r\n\r\n        <httpCompression directory=\"%TEMP%\\iisexpress\\IIS Tempora" +
+                    "ry Compressed Files\">\r\n            <scheme name=\"gzip\" dll=\"%IIS_BIN%\\gzip.dll\" " +
+                    "/>\r\n            <dynamicTypes>\r\n                <add mimeType=\"text/*\" enabled=\"" +
+                    "true\" />\r\n                <add mimeType=\"message/*\" enabled=\"true\" />\r\n         " +
+                    "       <add mimeType=\"application/javascript\" enabled=\"true\" />\r\n               " +
+                    " <add mimeType=\"application/atom+xml\" enabled=\"true\" />\r\n                <add mi" +
+                    "meType=\"application/xaml+xml\" enabled=\"true\" />\r\n                <add mimeType=\"" +
+                    "*/*\" enabled=\"false\" />\r\n            </dynamicTypes>\r\n            <staticTypes>\r" +
+                    "\n                <add mimeType=\"text/*\" enabled=\"true\" />\r\n                <add " +
+                    "mimeType=\"message/*\" enabled=\"true\" />\r\n                <add mimeType=\"image/svg" +
+                    "+xml\" enabled=\"true\" />\r\n                <add mimeType=\"application/javascript\" " +
+                    "enabled=\"true\" />\r\n                <add mimeType=\"application/atom+xml\" enabled=" +
+                    "\"true\" />\r\n                <add mimeType=\"application/xaml+xml\" enabled=\"true\" /" +
+                    ">\r\n                <add mimeType=\"*/*\" enabled=\"false\" />\r\n            </staticT" +
+                    "ypes>\r\n        </httpCompression>\r\n\r\n        <httpErrors lockAttributes=\"allowAb" +
+                    "solutePathsWhenDelegated,defaultPath\">\r\n            <error statusCode=\"401\" pref" +
+                    "ixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"401.htm\" />\r\n            <error sta" +
+                    "tusCode=\"403\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"403.htm\" />\r\n    " +
+                    "        <error statusCode=\"404\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=" +
+                    "\"404.htm\" />\r\n            <error statusCode=\"405\" prefixLanguageFilePath=\"%IIS_B" +
+                    "IN%\\custerr\" path=\"405.htm\" />\r\n            <error statusCode=\"406\" prefixLangua" +
+                    "geFilePath=\"%IIS_BIN%\\custerr\" path=\"406.htm\" />\r\n            <error statusCode=" +
+                    "\"412\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"412.htm\" />\r\n            " +
+                    "<error statusCode=\"500\" prefixLanguageFilePath=\"%IIS_BIN%\\custerr\" path=\"500.htm" +
+                    "\" />\r\n            <error statusCode=\"501\" prefixLanguageFilePath=\"%IIS_BIN%\\cust" +
+                    "err\" path=\"501.htm\" />\r\n            <error statusCode=\"502\" prefixLanguageFilePa" +
+                    "th=\"%IIS_BIN%\\custerr\" path=\"502.htm\" />\r\n        </httpErrors>\r\n\r\n        <http" +
+                    "Logging dontLog=\"false\" />\r\n\r\n        <httpProtocol>\r\n            <customHeaders" +
+                    ">\r\n                <clear />\r\n                <add name=\"X-Powered-By\" value=\"AS" +
+                    "P.NET\" />\r\n            </customHeaders>\r\n            <redirectHeaders>\r\n        " +
+                    "        <clear />\r\n            </redirectHeaders>\r\n        </httpProtocol>\r\n\r\n  " +
+                    "      <httpRedirect enabled=\"false\" />\r\n\r\n        <httpTracing>\r\n        </httpT" +
+                    "racing>\r\n\r\n        <isapiFilters>\r\n            <filter name=\"ASP.Net_2.0.50727-6" +
+                    "4\" path=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_filter.dll\" enable" +
+                    "Cache=\"true\" preCondition=\"bitness64,runtimeVersionv2.0\" />\r\n            <filter" +
+                    " name=\"ASP.Net_2.0.50727.0\" path=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\as" +
+                    "pnet_filter.dll\" enableCache=\"true\" preCondition=\"bitness32,runtimeVersionv2.0\" " +
+                    "/>\r\n            <filter name=\"ASP.Net_2.0_for_v1.1\" path=\"%windir%\\Microsoft.NET" +
+                    "\\Framework\\v2.0.50727\\aspnet_filter.dll\" enableCache=\"true\" preCondition=\"runtim" +
+                    "eVersionv1.1\" />\r\n            <filter name=\"ASP.Net_4.0_32bit\" path=\"%windir%\\Mi" +
+                    "crosoft.NET\\Framework\\v4.0.30319\\aspnet_filter.dll\" enableCache=\"true\" preCondit" +
+                    "ion=\"bitness32,runtimeVersionv4.0\" />\r\n            <filter name=\"ASP.Net_4.0_64b" +
+                    "it\" path=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_filter.dll\" enabl" +
+                    "eCache=\"true\" preCondition=\"bitness64,runtimeVersionv4.0\" />\r\n        </isapiFil" +
+                    "ters>\r\n\r\n        <odbcLogging />\r\n\r\n        <security>\r\n\r\n            <access ss" +
+                    "lFlags=\"None\" />\r\n\r\n            <applicationDependencies>\r\n                <appl" +
+                    "ication name=\"Active Server Pages\" groupId=\"ASP\" />\r\n            </applicationDe" +
+                    "pendencies>\r\n\r\n            <authentication>\r\n\r\n                <anonymousAuthent" +
+                    "ication enabled=\"true\" userName=\"\" />\r\n\r\n                <basicAuthentication en" +
+                    "abled=\"false\" />\r\n\r\n                <clientCertificateMappingAuthentication enab" +
+                    "led=\"false\" />\r\n\r\n                <digestAuthentication enabled=\"false\" />\r\n\r\n  " +
+                    "              <iisClientCertificateMappingAuthentication enabled=\"false\">\r\n     " +
+                    "           </iisClientCertificateMappingAuthentication>\r\n\r\n                <wind" +
+                    "owsAuthentication enabled=\"false\">\r\n                    <providers>\r\n           " +
+                    "             <add value=\"Negotiate\" />\r\n                        <add value=\"NTLM" +
+                    "\" />\r\n                    </providers>\r\n                </windowsAuthentication>" +
+                    "\r\n\r\n            </authentication>\r\n\r\n            <authorization>\r\n              " +
+                    "  <add accessType=\"Allow\" users=\"*\" />\r\n            </authorization>\r\n\r\n        " +
+                    "    <ipSecurity allowUnlisted=\"true\" />\r\n\r\n            <isapiCgiRestriction notL" +
+                    "istedIsapisAllowed=\"true\" notListedCgisAllowed=\"true\">\r\n                <add pat" +
+                    "h=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\webengine4.dll\" allowed=\"true\" " +
+                    "groupId=\"ASP.NET_v4.0\" description=\"ASP.NET_v4.0\" />\r\n                <add path=" +
+                    "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\webengine4.dll\" allowed=\"true\" grou" +
+                    "pId=\"ASP.NET_v4.0\" description=\"ASP.NET_v4.0\" />\r\n                <add path=\"%wi" +
+                    "ndir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" allowed=\"true\" grou" +
+                    "pId=\"ASP.NET v2.0.50727\" description=\"ASP.NET v2.0.50727\" />\r\n                <a" +
+                    "dd path=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" allowed=\"" +
+                    "true\" groupId=\"ASP.NET v2.0.50727\" description=\"ASP.NET v2.0.50727\" />\r\n        " +
+                    "    </isapiCgiRestriction>\r\n\r\n            <requestFiltering>\r\n                <f" +
+                    "ileExtensions allowUnlisted=\"true\" applyToWebDAV=\"true\">\r\n                    <a" +
+                    "dd fileExtension=\".asa\" allowed=\"false\" />\r\n                    <add fileExtensi" +
+                    "on=\".asax\" allowed=\"false\" />\r\n                    <add fileExtension=\".ascx\" al" +
+                    "lowed=\"false\" />\r\n                    <add fileExtension=\".master\" allowed=\"fals" +
+                    "e\" />\r\n                    <add fileExtension=\".skin\" allowed=\"false\" />\r\n      " +
+                    "              <add fileExtension=\".browser\" allowed=\"false\" />\r\n                " +
+                    "    <add fileExtension=\".sitemap\" allowed=\"false\" />\r\n                    <add f" +
+                    "ileExtension=\".config\" allowed=\"false\" />\r\n                    <add fileExtensio" +
+                    "n=\".cs\" allowed=\"false\" />\r\n                    <add fileExtension=\".csproj\" all" +
+                    "owed=\"false\" />\r\n                    <add fileExtension=\".vb\" allowed=\"false\" />" +
+                    "\r\n                    <add fileExtension=\".vbproj\" allowed=\"false\" />\r\n         " +
+                    "           <add fileExtension=\".webinfo\" allowed=\"false\" />\r\n                   " +
+                    " <add fileExtension=\".licx\" allowed=\"false\" />\r\n                    <add fileExt" +
+                    "ension=\".resx\" allowed=\"false\" />\r\n                    <add fileExtension=\".reso" +
+                    "urces\" allowed=\"false\" />\r\n                    <add fileExtension=\".mdb\" allowed" +
+                    "=\"false\" />\r\n                    <add fileExtension=\".vjsproj\" allowed=\"false\" /" +
+                    ">\r\n                    <add fileExtension=\".java\" allowed=\"false\" />\r\n          " +
+                    "          <add fileExtension=\".jsl\" allowed=\"false\" />\r\n                    <add" +
+                    " fileExtension=\".ldb\" allowed=\"false\" />\r\n                    <add fileExtension" +
+                    "=\".dsdgm\" allowed=\"false\" />\r\n                    <add fileExtension=\".ssdgm\" al" +
+                    "lowed=\"false\" />\r\n                    <add fileExtension=\".lsad\" allowed=\"false\"" +
+                    " />\r\n                    <add fileExtension=\".ssmap\" allowed=\"false\" />\r\n       " +
+                    "             <add fileExtension=\".cd\" allowed=\"false\" />\r\n                    <a" +
+                    "dd fileExtension=\".dsprototype\" allowed=\"false\" />\r\n                    <add fil" +
+                    "eExtension=\".lsaprototype\" allowed=\"false\" />\r\n                    <add fileExte" +
+                    "nsion=\".sdm\" allowed=\"false\" />\r\n                    <add fileExtension=\".sdmDoc" +
+                    "ument\" allowed=\"false\" />\r\n                    <add fileExtension=\".mdf\" allowed" +
+                    "=\"false\" />\r\n                    <add fileExtension=\".ldf\" allowed=\"false\" />\r\n " +
+                    "                   <add fileExtension=\".ad\" allowed=\"false\" />\r\n                " +
+                    "    <add fileExtension=\".dd\" allowed=\"false\" />\r\n                    <add fileEx" +
+                    "tension=\".ldd\" allowed=\"false\" />\r\n                    <add fileExtension=\".sd\" " +
+                    "allowed=\"false\" />\r\n                    <add fileExtension=\".adprototype\" allowe" +
+                    "d=\"false\" />\r\n                    <add fileExtension=\".lddprototype\" allowed=\"fa" +
+                    "lse\" />\r\n                    <add fileExtension=\".exclude\" allowed=\"false\" />\r\n " +
+                    "                   <add fileExtension=\".refresh\" allowed=\"false\" />\r\n           " +
+                    "         <add fileExtension=\".compiled\" allowed=\"false\" />\r\n                    " +
+                    "<add fileExtension=\".msgx\" allowed=\"false\" />\r\n                    <add fileExte" +
+                    "nsion=\".vsdisco\" allowed=\"false\" />\r\n                    <add fileExtension=\".ru" +
+                    "les\" allowed=\"false\" />\r\n                </fileExtensions>\r\n                <ver" +
+                    "bs allowUnlisted=\"true\" applyToWebDAV=\"true\" />\r\n                <hiddenSegments" +
+                    " applyToWebDAV=\"true\">\r\n                    <add segment=\"web.config\" />\r\n      " +
+                    "              <add segment=\"bin\" />\r\n                    <add segment=\"App_code\"" +
+                    " />\r\n                    <add segment=\"App_GlobalResources\" />\r\n                " +
+                    "    <add segment=\"App_LocalResources\" />\r\n                    <add segment=\"App_" +
+                    "WebReferences\" />\r\n                    <add segment=\"App_Data\" />\r\n             " +
+                    "       <add segment=\"App_Browsers\" />\r\n                </hiddenSegments>\r\n      " +
+                    "      </requestFiltering>\r\n\r\n        </security>\r\n\r\n        <serverSideInclude s" +
+                    "siExecDisable=\"false\" />\r\n\r\n        <staticContent lockAttributes=\"isDocFooterFi" +
+                    "leName\">\r\n            <mimeMap fileExtension=\".323\" mimeType=\"text/h323\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".3g2\" mimeType=\"video/3gpp2\" />\r\n            <m" +
+                    "imeMap fileExtension=\".3gp2\" mimeType=\"video/3gpp2\" />\r\n            <mimeMap fil" +
+                    "eExtension=\".3gp\" mimeType=\"video/3gpp\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".3gpp\" mimeType=\"video/3gpp\" />\r\n            <mimeMap fileExtension=\".aac\" mimeT" +
+                    "ype=\"audio/aac\" />\r\n            <mimeMap fileExtension=\".aaf\" mimeType=\"applicat" +
+                    "ion/octet-stream\" />\r\n            <mimeMap fileExtension=\".aca\" mimeType=\"applic" +
+                    "ation/octet-stream\" />\r\n            <mimeMap fileExtension=\".accdb\" mimeType=\"ap" +
+                    "plication/msaccess\" />\r\n            <mimeMap fileExtension=\".accde\" mimeType=\"ap" +
+                    "plication/msaccess\" />\r\n            <mimeMap fileExtension=\".accdt\" mimeType=\"ap" +
+                    "plication/msaccess\" />\r\n            <mimeMap fileExtension=\".acx\" mimeType=\"appl" +
+                    "ication/internet-property-stream\" />\r\n            <mimeMap fileExtension=\".adt\" " +
+                    "mimeType=\"audio/vnd.dlna.adts\" />\r\n            <mimeMap fileExtension=\".adts\" mi" +
+                    "meType=\"audio/vnd.dlna.adts\" />\r\n            <mimeMap fileExtension=\".afm\" mimeT" +
+                    "ype=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".ai\" mime" +
+                    "Type=\"application/postscript\" />\r\n            <mimeMap fileExtension=\".aif\" mime" +
+                    "Type=\"audio/x-aiff\" />\r\n            <mimeMap fileExtension=\".aifc\" mimeType=\"aud" +
+                    "io/aiff\" />\r\n            <mimeMap fileExtension=\".aiff\" mimeType=\"audio/aiff\" />" +
+                    "\r\n            <mimeMap fileExtension=\".appcache\" mimeType=\"text/cache-manifest\" " +
+                    "/>\r\n            <mimeMap fileExtension=\".application\" mimeType=\"application/x-ms" +
+                    "-application\" />\r\n            <mimeMap fileExtension=\".art\" mimeType=\"image/x-jg" +
+                    "\" />\r\n            <mimeMap fileExtension=\".asd\" mimeType=\"application/octet-stre" +
+                    "am\" />\r\n            <mimeMap fileExtension=\".asf\" mimeType=\"video/x-ms-asf\" />\r\n" +
+                    "            <mimeMap fileExtension=\".asi\" mimeType=\"application/octet-stream\" />" +
+                    "\r\n            <mimeMap fileExtension=\".asm\" mimeType=\"text/plain\" />\r\n          " +
+                    "  <mimeMap fileExtension=\".asr\" mimeType=\"video/x-ms-asf\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".asx\" mimeType=\"video/x-ms-asf\" />\r\n            <mimeMap fileE" +
+                    "xtension=\".atom\" mimeType=\"application/atom+xml\" />\r\n            <mimeMap fileEx" +
+                    "tension=\".au\" mimeType=\"audio/basic\" />\r\n            <mimeMap fileExtension=\".av" +
+                    "i\" mimeType=\"video/msvideo\" />\r\n            <mimeMap fileExtension=\".axs\" mimeTy" +
+                    "pe=\"application/olescript\" />\r\n            <mimeMap fileExtension=\".bas\" mimeTyp" +
+                    "e=\"text/plain\" />\r\n            <mimeMap fileExtension=\".bcpio\" mimeType=\"applica" +
+                    "tion/x-bcpio\" />\r\n            <mimeMap fileExtension=\".bin\" mimeType=\"applicatio" +
+                    "n/octet-stream\" />\r\n            <mimeMap fileExtension=\".bmp\" mimeType=\"image/bm" +
+                    "p\" />\r\n            <mimeMap fileExtension=\".c\" mimeType=\"text/plain\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".cab\" mimeType=\"application/vnd.ms-cab-compressed\" " +
+                    "/>\r\n            <mimeMap fileExtension=\".calx\" mimeType=\"application/vnd.ms-offi" +
+                    "ce.calx\" />\r\n            <mimeMap fileExtension=\".cat\" mimeType=\"application/vnd" +
+                    ".ms-pki.seccat\" />\r\n            <mimeMap fileExtension=\".cdf\" mimeType=\"applicat" +
+                    "ion/x-cdf\" />\r\n            <mimeMap fileExtension=\".chm\" mimeType=\"application/o" +
+                    "ctet-stream\" />\r\n            <mimeMap fileExtension=\".class\" mimeType=\"applicati" +
+                    "on/x-java-applet\" />\r\n            <mimeMap fileExtension=\".clp\" mimeType=\"applic" +
+                    "ation/x-msclip\" />\r\n            <mimeMap fileExtension=\".cmx\" mimeType=\"image/x-" +
+                    "cmx\" />\r\n            <mimeMap fileExtension=\".cnf\" mimeType=\"text/plain\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".cod\" mimeType=\"image/cis-cod\" />\r\n            " +
+                    "<mimeMap fileExtension=\".cpio\" mimeType=\"application/x-cpio\" />\r\n            <mi" +
+                    "meMap fileExtension=\".cpp\" mimeType=\"text/plain\" />\r\n            <mimeMap fileEx" +
+                    "tension=\".crd\" mimeType=\"application/x-mscardfile\" />\r\n            <mimeMap file" +
+                    "Extension=\".crl\" mimeType=\"application/pkix-crl\" />\r\n            <mimeMap fileEx" +
+                    "tension=\".crt\" mimeType=\"application/x-x509-ca-cert\" />\r\n            <mimeMap fi" +
+                    "leExtension=\".csh\" mimeType=\"application/x-csh\" />\r\n            <mimeMap fileExt" +
+                    "ension=\".css\" mimeType=\"text/css\" />\r\n            <mimeMap fileExtension=\".csv\" " +
+                    "mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".cur" +
                     "\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".d" +
-                    "xr\" mimeType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\".e" +
-                    "ml\" mimeType=\"message/rfc822\" />\r\n            <mimeMap fileExtension=\".emz\" mime" +
-                    "Type=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".eot\" mi" +
-                    "meType=\"application/vnd.ms-fontobject\" />\r\n            <mimeMap fileExtension=\"." +
-                    "eps\" mimeType=\"application/postscript\" />\r\n            <mimeMap fileExtension=\"." +
-                    "etx\" mimeType=\"text/x-setext\" />\r\n            <mimeMap fileExtension=\".evy\" mime" +
-                    "Type=\"application/envoy\" />\r\n            <mimeMap fileExtension=\".exe\" mimeType=" +
-                    "\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".exe.config\" " +
-                    "mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".fdf\" mimeType=\"appl" +
-                    "ication/vnd.fdf\" />\r\n            <mimeMap fileExtension=\".fif\" mimeType=\"applica" +
-                    "tion/fractals\" />\r\n            <mimeMap fileExtension=\".fla\" mimeType=\"applicati" +
-                    "on/octet-stream\" />\r\n            <mimeMap fileExtension=\".flr\" mimeType=\"x-world" +
-                    "/x-vrml\" />\r\n            <mimeMap fileExtension=\".flv\" mimeType=\"video/x-flv\" />" +
-                    "\r\n            <mimeMap fileExtension=\".gif\" mimeType=\"image/gif\" />\r\n           " +
-                    " <mimeMap fileExtension=\".gtar\" mimeType=\"application/x-gtar\" />\r\n            <m" +
-                    "imeMap fileExtension=\".gz\" mimeType=\"application/x-gzip\" />\r\n            <mimeMa" +
-                    "p fileExtension=\".h\" mimeType=\"text/plain\" />\r\n            <mimeMap fileExtensio" +
-                    "n=\".hdf\" mimeType=\"application/x-hdf\" />\r\n            <mimeMap fileExtension=\".h" +
-                    "dml\" mimeType=\"text/x-hdml\" />\r\n            <mimeMap fileExtension=\".hhc\" mimeTy" +
-                    "pe=\"application/x-oleobject\" />\r\n            <mimeMap fileExtension=\".hhk\" mimeT" +
-                    "ype=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".hhp\" mim" +
-                    "eType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".hlp\" m" +
-                    "imeType=\"application/winhlp\" />\r\n            <mimeMap fileExtension=\".hqx\" mimeT" +
-                    "ype=\"application/mac-binhex40\" />\r\n            <mimeMap fileExtension=\".hta\" mim" +
-                    "eType=\"application/hta\" />\r\n            <mimeMap fileExtension=\".htc\" mimeType=\"" +
-                    "text/x-component\" />\r\n            <mimeMap fileExtension=\".htm\" mimeType=\"text/h" +
-                    "tml\" />\r\n            <mimeMap fileExtension=\".html\" mimeType=\"text/html\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".htt\" mimeType=\"text/webviewhtml\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".hxt\" mimeType=\"text/html\" />\r\n            <mimeMap f" +
-                    "ileExtension=\".ico\" mimeType=\"image/x-icon\" />\r\n            <mimeMap fileExtensi" +
-                    "on=\".ics\" mimeType=\"text/calendar\" />\r\n            <mimeMap fileExtension=\".ief\"" +
-                    " mimeType=\"image/ief\" />\r\n            <mimeMap fileExtension=\".iii\" mimeType=\"ap" +
-                    "plication/x-iphone\" />\r\n            <mimeMap fileExtension=\".inf\" mimeType=\"appl" +
-                    "ication/octet-stream\" />\r\n            <mimeMap fileExtension=\".ins\" mimeType=\"ap" +
-                    "plication/x-internet-signup\" />\r\n            <mimeMap fileExtension=\".isp\" mimeT" +
-                    "ype=\"application/x-internet-signup\" />\r\n            <mimeMap fileExtension=\".IVF" +
-                    "\" mimeType=\"video/x-ivf\" />\r\n            <mimeMap fileExtension=\".jar\" mimeType=" +
-                    "\"application/java-archive\" />\r\n            <mimeMap fileExtension=\".java\" mimeTy" +
-                    "pe=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".jck\" mime" +
-                    "Type=\"application/liquidmotion\" />\r\n            <mimeMap fileExtension=\".jcz\" mi" +
-                    "meType=\"application/liquidmotion\" />\r\n            <mimeMap fileExtension=\".jfif\"" +
-                    " mimeType=\"image/pjpeg\" />\r\n            <mimeMap fileExtension=\".jpb\" mimeType=\"" +
-                    "application/octet-stream\" />\r\n            <mimeMap fileExtension=\".jpe\" mimeType" +
-                    "=\"image/jpeg\" />\r\n            <mimeMap fileExtension=\".jpeg\" mimeType=\"image/jpe" +
-                    "g\" />\r\n            <mimeMap fileExtension=\".jpg\" mimeType=\"image/jpeg\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".js\" mimeType=\"application/javascript\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".json\" mimeType=\"application/json\" />\r\n           " +
-                    " <mimeMap fileExtension=\".jsonld\" mimeType=\"application/ld+json\" />\r\n           " +
-                    " <mimeMap fileExtension=\".jsx\" mimeType=\"text/jscript\" />\r\n            <mimeMap " +
-                    "fileExtension=\".latex\" mimeType=\"application/x-latex\" />\r\n            <mimeMap f" +
-                    "ileExtension=\".less\" mimeType=\"text/css\" />\r\n            <mimeMap fileExtension=" +
-                    "\".lit\" mimeType=\"application/x-ms-reader\" />\r\n            <mimeMap fileExtension" +
-                    "=\".lpk\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtensi" +
-                    "on=\".lsf\" mimeType=\"video/x-la-asf\" />\r\n            <mimeMap fileExtension=\".lsx" +
-                    "\" mimeType=\"video/x-la-asf\" />\r\n            <mimeMap fileExtension=\".lzh\" mimeTy" +
-                    "pe=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".m13\" mime" +
-                    "Type=\"application/x-msmediaview\" />\r\n            <mimeMap fileExtension=\".m14\" m" +
-                    "imeType=\"application/x-msmediaview\" />\r\n            <mimeMap fileExtension=\".m1v" +
-                    "\" mimeType=\"video/mpeg\" />\r\n            <mimeMap fileExtension=\".m2ts\" mimeType=" +
-                    "\"video/vnd.dlna.mpeg-tts\" />\r\n            <mimeMap fileExtension=\".m3u\" mimeType" +
-                    "=\"audio/x-mpegurl\" />\r\n            <mimeMap fileExtension=\".m4a\" mimeType=\"audio" +
-                    "/mp4\" />\r\n            <mimeMap fileExtension=\".m4v\" mimeType=\"video/mp4\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".man\" mimeType=\"application/x-troff-man\" />\r\n  " +
-                    "          <mimeMap fileExtension=\".manifest\" mimeType=\"application/x-ms-manifest" +
-                    "\" />\r\n            <mimeMap fileExtension=\".map\" mimeType=\"text/plain\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".mdb\" mimeType=\"application/x-msaccess\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".mdp\" mimeType=\"application/octet-stream\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".me\" mimeType=\"application/x-troff-me\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".mht\" mimeType=\"message/rfc822\" />\r\n            <" +
-                    "mimeMap fileExtension=\".mhtml\" mimeType=\"message/rfc822\" />\r\n            <mimeMa" +
-                    "p fileExtension=\".mid\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExtensi" +
-                    "on=\".midi\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExtension=\".mix\" mi" +
-                    "meType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".mmf\" " +
-                    "mimeType=\"application/x-smaf\" />\r\n            <mimeMap fileExtension=\".mno\" mime" +
-                    "Type=\"text/xml\" />\r\n            <mimeMap fileExtension=\".mny\" mimeType=\"applicat" +
-                    "ion/x-msmoney\" />\r\n            <mimeMap fileExtension=\".mov\" mimeType=\"video/qui" +
-                    "cktime\" />\r\n            <mimeMap fileExtension=\".movie\" mimeType=\"video/x-sgi-mo" +
-                    "vie\" />\r\n            <mimeMap fileExtension=\".mp2\" mimeType=\"video/mpeg\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".mp3\" mimeType=\"audio/mpeg\" />\r\n            <mi" +
-                    "meMap fileExtension=\".mp4\" mimeType=\"video/mp4\" />\r\n            <mimeMap fileExt" +
-                    "ension=\".mp4v\" mimeType=\"video/mp4\" />\r\n            <mimeMap fileExtension=\".mpa" +
-                    "\" mimeType=\"video/mpeg\" />\r\n            <mimeMap fileExtension=\".mpe\" mimeType=\"" +
-                    "video/mpeg\" />\r\n            <mimeMap fileExtension=\".mpeg\" mimeType=\"video/mpeg\"" +
-                    " />\r\n            <mimeMap fileExtension=\".mpg\" mimeType=\"video/mpeg\" />\r\n       " +
-                    "     <mimeMap fileExtension=\".mpp\" mimeType=\"application/vnd.ms-project\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".mpv2\" mimeType=\"video/mpeg\" />\r\n            <m" +
-                    "imeMap fileExtension=\".ms\" mimeType=\"application/x-troff-ms\" />\r\n            <mi" +
-                    "meMap fileExtension=\".msi\" mimeType=\"application/octet-stream\" />\r\n            <" +
-                    "mimeMap fileExtension=\".mso\" mimeType=\"application/octet-stream\" />\r\n           " +
-                    " <mimeMap fileExtension=\".mvb\" mimeType=\"application/x-msmediaview\" />\r\n        " +
-                    "    <mimeMap fileExtension=\".mvc\" mimeType=\"application/x-miva-compiled\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".nc\" mimeType=\"application/x-netcdf\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".nsc\" mimeType=\"video/x-ms-asf\" />\r\n            <m" +
-                    "imeMap fileExtension=\".nws\" mimeType=\"message/rfc822\" />\r\n            <mimeMap f" +
-                    "ileExtension=\".ocx\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap" +
-                    " fileExtension=\".oda\" mimeType=\"application/oda\" />\r\n            <mimeMap fileEx" +
-                    "tension=\".odc\" mimeType=\"text/x-ms-odc\" />\r\n            <mimeMap fileExtension=\"" +
-                    ".ods\" mimeType=\"application/oleobject\" />\r\n            <mimeMap fileExtension=\"." +
-                    "oga\" mimeType=\"audio/ogg\" />\r\n            <mimeMap fileExtension=\".ogg\" mimeType" +
-                    "=\"video/ogg\" />\r\n            <mimeMap fileExtension=\".ogv\" mimeType=\"video/ogg\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".one\" mimeType=\"application/onenote\" />\r" +
-                    "\n            <mimeMap fileExtension=\".onea\" mimeType=\"application/onenote\" />\r\n " +
-                    "           <mimeMap fileExtension=\".onetoc\" mimeType=\"application/onenote\" />\r\n " +
-                    "           <mimeMap fileExtension=\".onetoc2\" mimeType=\"application/onenote\" />\r\n" +
-                    "            <mimeMap fileExtension=\".onetmp\" mimeType=\"application/onenote\" />\r\n" +
-                    "            <mimeMap fileExtension=\".onepkg\" mimeType=\"application/onenote\" />\r\n" +
-                    "            <mimeMap fileExtension=\".osdx\" mimeType=\"application/opensearchdescr" +
-                    "iption+xml\" />\r\n            <mimeMap fileExtension=\".otf\" mimeType=\"font/otf\" />" +
-                    "\r\n            <mimeMap fileExtension=\".p10\" mimeType=\"application/pkcs10\" />\r\n  " +
-                    "          <mimeMap fileExtension=\".p12\" mimeType=\"application/x-pkcs12\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".p7b\" mimeType=\"application/x-pkcs7-certificates" +
-                    "\" />\r\n            <mimeMap fileExtension=\".p7c\" mimeType=\"application/pkcs7-mime" +
-                    "\" />\r\n            <mimeMap fileExtension=\".p7m\" mimeType=\"application/pkcs7-mime" +
-                    "\" />\r\n            <mimeMap fileExtension=\".p7r\" mimeType=\"application/x-pkcs7-ce" +
-                    "rtreqresp\" />\r\n            <mimeMap fileExtension=\".p7s\" mimeType=\"application/p" +
-                    "kcs7-signature\" />\r\n            <mimeMap fileExtension=\".pbm\" mimeType=\"image/x-" +
-                    "portable-bitmap\" />\r\n            <mimeMap fileExtension=\".pcx\" mimeType=\"applica" +
-                    "tion/octet-stream\" />\r\n            <mimeMap fileExtension=\".pcz\" mimeType=\"appli" +
-                    "cation/octet-stream\" />\r\n            <mimeMap fileExtension=\".pdf\" mimeType=\"app" +
-                    "lication/pdf\" />\r\n            <mimeMap fileExtension=\".pfb\" mimeType=\"applicatio" +
-                    "n/octet-stream\" />\r\n            <mimeMap fileExtension=\".pfm\" mimeType=\"applicat" +
-                    "ion/octet-stream\" />\r\n            <mimeMap fileExtension=\".pfx\" mimeType=\"applic" +
-                    "ation/x-pkcs12\" />\r\n            <mimeMap fileExtension=\".pgm\" mimeType=\"image/x-" +
-                    "portable-graymap\" />\r\n            <mimeMap fileExtension=\".pko\" mimeType=\"applic" +
-                    "ation/vnd.ms-pki.pko\" />\r\n            <mimeMap fileExtension=\".pma\" mimeType=\"ap" +
-                    "plication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmc\" mimeType=\"app" +
-                    "lication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pml\" mimeType=\"appl" +
-                    "ication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmr\" mimeType=\"appli" +
-                    "cation/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmw\" mimeType=\"applic" +
-                    "ation/x-perfmon\" />\r\n            <mimeMap fileExtension=\".png\" mimeType=\"image/p" +
-                    "ng\" />\r\n            <mimeMap fileExtension=\".pnm\" mimeType=\"image/x-portable-any" +
-                    "map\" />\r\n            <mimeMap fileExtension=\".pnz\" mimeType=\"image/png\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".pot\" mimeType=\"application/vnd.ms-powerpoint\" /" +
-                    ">\r\n            <mimeMap fileExtension=\".potm\" mimeType=\"application/vnd.ms-power" +
-                    "point.template.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".potx\" m" +
-                    "imeType=\"application/vnd.openxmlformats-officedocument.presentationml.template\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".ppam\" mimeType=\"application/vnd.ms-powe" +
-                    "rpoint.addin.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".ppm\" mime" +
-                    "Type=\"image/x-portable-pixmap\" />\r\n            <mimeMap fileExtension=\".pps\" mim" +
-                    "eType=\"application/vnd.ms-powerpoint\" />\r\n            <mimeMap fileExtension=\".p" +
-                    "psm\" mimeType=\"application/vnd.ms-powerpoint.slideshow.macroEnabled.12\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".ppsx\" mimeType=\"application/vnd.openxmlformats-" +
-                    "officedocument.presentationml.slideshow\" />\r\n            <mimeMap fileExtension=" +
-                    "\".ppt\" mimeType=\"application/vnd.ms-powerpoint\" />\r\n            <mimeMap fileExt" +
-                    "ension=\".pptm\" mimeType=\"application/vnd.ms-powerpoint.presentation.macroEnabled" +
-                    ".12\" />\r\n            <mimeMap fileExtension=\".pptx\" mimeType=\"application/vnd.op" +
-                    "enxmlformats-officedocument.presentationml.presentation\" />\r\n            <mimeMa" +
-                    "p fileExtension=\".prf\" mimeType=\"application/pics-rules\" />\r\n            <mimeMa" +
-                    "p fileExtension=\".prm\" mimeType=\"application/octet-stream\" />\r\n            <mime" +
-                    "Map fileExtension=\".prx\" mimeType=\"application/octet-stream\" />\r\n            <mi" +
-                    "meMap fileExtension=\".ps\" mimeType=\"application/postscript\" />\r\n            <mim" +
-                    "eMap fileExtension=\".psd\" mimeType=\"application/octet-stream\" />\r\n            <m" +
-                    "imeMap fileExtension=\".psm\" mimeType=\"application/octet-stream\" />\r\n            " +
-                    "<mimeMap fileExtension=\".psp\" mimeType=\"application/octet-stream\" />\r\n          " +
-                    "  <mimeMap fileExtension=\".pub\" mimeType=\"application/x-mspublisher\" />\r\n       " +
-                    "     <mimeMap fileExtension=\".qt\" mimeType=\"video/quicktime\" />\r\n            <mi" +
-                    "meMap fileExtension=\".qtl\" mimeType=\"application/x-quicktimeplayer\" />\r\n        " +
-                    "    <mimeMap fileExtension=\".qxd\" mimeType=\"application/octet-stream\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".ra\" mimeType=\"audio/x-pn-realaudio\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".ram\" mimeType=\"audio/x-pn-realaudio\" />\r\n           " +
-                    " <mimeMap fileExtension=\".rar\" mimeType=\"application/octet-stream\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".ras\" mimeType=\"image/x-cmu-raster\" />\r\n            <" +
-                    "mimeMap fileExtension=\".rf\" mimeType=\"image/vnd.rn-realflash\" />\r\n            <m" +
-                    "imeMap fileExtension=\".rgb\" mimeType=\"image/x-rgb\" />\r\n            <mimeMap file" +
-                    "Extension=\".rm\" mimeType=\"application/vnd.rn-realmedia\" />\r\n            <mimeMap" +
-                    " fileExtension=\".rmi\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExtensio" +
-                    "n=\".roff\" mimeType=\"application/x-troff\" />\r\n            <mimeMap fileExtension=" +
-                    "\".rpm\" mimeType=\"audio/x-pn-realaudio-plugin\" />\r\n            <mimeMap fileExten" +
-                    "sion=\".rtf\" mimeType=\"application/rtf\" />\r\n            <mimeMap fileExtension=\"." +
-                    "rtx\" mimeType=\"text/richtext\" />\r\n            <mimeMap fileExtension=\".scd\" mime" +
-                    "Type=\"application/x-msschedule\" />\r\n            <mimeMap fileExtension=\".sct\" mi" +
-                    "meType=\"text/scriptlet\" />\r\n            <mimeMap fileExtension=\".sea\" mimeType=\"" +
-                    "application/octet-stream\" />\r\n            <mimeMap fileExtension=\".setpay\" mimeT" +
-                    "ype=\"application/set-payment-initiation\" />\r\n            <mimeMap fileExtension=" +
-                    "\".setreg\" mimeType=\"application/set-registration-initiation\" />\r\n            <mi" +
-                    "meMap fileExtension=\".sgml\" mimeType=\"text/sgml\" />\r\n            <mimeMap fileEx" +
-                    "tension=\".sh\" mimeType=\"application/x-sh\" />\r\n            <mimeMap fileExtension" +
-                    "=\".shar\" mimeType=\"application/x-shar\" />\r\n            <mimeMap fileExtension=\"." +
-                    "sit\" mimeType=\"application/x-stuffit\" />\r\n            <mimeMap fileExtension=\".s" +
-                    "ldm\" mimeType=\"application/vnd.ms-powerpoint.slide.macroEnabled.12\" />\r\n        " +
-                    "    <mimeMap fileExtension=\".sldx\" mimeType=\"application/vnd.openxmlformats-offi" +
-                    "cedocument.presentationml.slide\" />\r\n            <mimeMap fileExtension=\".smd\" m" +
-                    "imeType=\"audio/x-smd\" />\r\n            <mimeMap fileExtension=\".smi\" mimeType=\"ap" +
-                    "plication/octet-stream\" />\r\n            <mimeMap fileExtension=\".smx\" mimeType=\"" +
-                    "audio/x-smd\" />\r\n            <mimeMap fileExtension=\".smz\" mimeType=\"audio/x-smd" +
-                    "\" />\r\n            <mimeMap fileExtension=\".snd\" mimeType=\"audio/basic\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".snp\" mimeType=\"application/octet-stream\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".spc\" mimeType=\"application/x-pkcs7-certificate" +
-                    "s\" />\r\n            <mimeMap fileExtension=\".spl\" mimeType=\"application/futurespl" +
-                    "ash\" />\r\n            <mimeMap fileExtension=\".spx\" mimeType=\"audio/ogg\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".src\" mimeType=\"application/x-wais-source\" />\r\n " +
-                    "           <mimeMap fileExtension=\".ssm\" mimeType=\"application/streamingmedia\" /" +
-                    ">\r\n            <mimeMap fileExtension=\".sst\" mimeType=\"application/vnd.ms-pki.ce" +
-                    "rtstore\" />\r\n            <mimeMap fileExtension=\".stl\" mimeType=\"application/vnd" +
-                    ".ms-pki.stl\" />\r\n            <mimeMap fileExtension=\".sv4cpio\" mimeType=\"applica" +
-                    "tion/x-sv4cpio\" />\r\n            <mimeMap fileExtension=\".sv4crc\" mimeType=\"appli" +
-                    "cation/x-sv4crc\" />\r\n            <mimeMap fileExtension=\".svg\" mimeType=\"image/s" +
-                    "vg+xml\" />\r\n            <mimeMap fileExtension=\".svgz\" mimeType=\"image/svg+xml\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".swf\" mimeType=\"application/x-shockwave-" +
-                    "flash\" />\r\n            <mimeMap fileExtension=\".t\" mimeType=\"application/x-troff" +
-                    "\" />\r\n            <mimeMap fileExtension=\".tar\" mimeType=\"application/x-tar\" />\r" +
-                    "\n            <mimeMap fileExtension=\".tcl\" mimeType=\"application/x-tcl\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".tex\" mimeType=\"application/x-tex\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".texi\" mimeType=\"application/x-texinfo\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".texinfo\" mimeType=\"application/x-texinfo\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".tgz\" mimeType=\"application/x-compressed\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".thmx\" mimeType=\"application/vnd.ms-officetheme\"" +
-                    " />\r\n            <mimeMap fileExtension=\".thn\" mimeType=\"application/octet-strea" +
-                    "m\" />\r\n            <mimeMap fileExtension=\".tif\" mimeType=\"image/tiff\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".tiff\" mimeType=\"image/tiff\" />\r\n            <mim" +
-                    "eMap fileExtension=\".toc\" mimeType=\"application/octet-stream\" />\r\n            <m" +
-                    "imeMap fileExtension=\".tr\" mimeType=\"application/x-troff\" />\r\n            <mimeM" +
-                    "ap fileExtension=\".trm\" mimeType=\"application/x-msterminal\" />\r\n            <mim" +
-                    "eMap fileExtension=\".ts\" mimeType=\"video/vnd.dlna.mpeg-tts\" />\r\n            <mim" +
-                    "eMap fileExtension=\".tsv\" mimeType=\"text/tab-separated-values\" />\r\n            <" +
-                    "mimeMap fileExtension=\".ttf\" mimeType=\"application/octet-stream\" />\r\n           " +
-                    " <mimeMap fileExtension=\".tts\" mimeType=\"video/vnd.dlna.mpeg-tts\" />\r\n          " +
-                    "  <mimeMap fileExtension=\".txt\" mimeType=\"text/plain\" />\r\n            <mimeMap f" +
-                    "ileExtension=\".u32\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap" +
-                    " fileExtension=\".uls\" mimeType=\"text/iuls\" />\r\n            <mimeMap fileExtensio" +
-                    "n=\".ustar\" mimeType=\"application/x-ustar\" />\r\n            <mimeMap fileExtension" +
-                    "=\".vbs\" mimeType=\"text/vbscript\" />\r\n            <mimeMap fileExtension=\".vcf\" m" +
-                    "imeType=\"text/x-vcard\" />\r\n            <mimeMap fileExtension=\".vcs\" mimeType=\"t" +
-                    "ext/plain\" />\r\n            <mimeMap fileExtension=\".vdx\" mimeType=\"application/v" +
-                    "nd.ms-visio.viewer\" />\r\n            <mimeMap fileExtension=\".vml\" mimeType=\"text" +
-                    "/xml\" />\r\n            <mimeMap fileExtension=\".vsd\" mimeType=\"application/vnd.vi" +
-                    "sio\" />\r\n            <mimeMap fileExtension=\".vss\" mimeType=\"application/vnd.vis" +
-                    "io\" />\r\n            <mimeMap fileExtension=\".vst\" mimeType=\"application/vnd.visi" +
-                    "o\" />\r\n            <mimeMap fileExtension=\".vsto\" mimeType=\"application/x-ms-vst" +
-                    "o\" />\r\n            <mimeMap fileExtension=\".vsw\" mimeType=\"application/vnd.visio" +
-                    "\" />\r\n            <mimeMap fileExtension=\".vsx\" mimeType=\"application/vnd.visio\"" +
-                    " />\r\n            <mimeMap fileExtension=\".vtx\" mimeType=\"application/vnd.visio\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".wav\" mimeType=\"audio/wav\" />\r\n         " +
-                    "   <mimeMap fileExtension=\".wax\" mimeType=\"audio/x-ms-wax\" />\r\n            <mime" +
-                    "Map fileExtension=\".wbmp\" mimeType=\"image/vnd.wap.wbmp\" />\r\n            <mimeMap" +
-                    " fileExtension=\".wcm\" mimeType=\"application/vnd.ms-works\" />\r\n            <mimeM" +
-                    "ap fileExtension=\".wdb\" mimeType=\"application/vnd.ms-works\" />\r\n            <mim" +
-                    "eMap fileExtension=\".webm\" mimeType=\"video/webm\" />\r\n            <mimeMap fileEx" +
-                    "tension=\".wks\" mimeType=\"application/vnd.ms-works\" />\r\n            <mimeMap file" +
-                    "Extension=\".wm\" mimeType=\"video/x-ms-wm\" />\r\n            <mimeMap fileExtension=" +
-                    "\".wma\" mimeType=\"audio/x-ms-wma\" />\r\n            <mimeMap fileExtension=\".wmd\" m" +
-                    "imeType=\"application/x-ms-wmd\" />\r\n            <mimeMap fileExtension=\".wmf\" mim" +
-                    "eType=\"application/x-msmetafile\" />\r\n            <mimeMap fileExtension=\".wml\" m" +
-                    "imeType=\"text/vnd.wap.wml\" />\r\n            <mimeMap fileExtension=\".wmlc\" mimeTy" +
-                    "pe=\"application/vnd.wap.wmlc\" />\r\n            <mimeMap fileExtension=\".wmls\" mim" +
-                    "eType=\"text/vnd.wap.wmlscript\" />\r\n            <mimeMap fileExtension=\".wmlsc\" m" +
-                    "imeType=\"application/vnd.wap.wmlscriptc\" />\r\n            <mimeMap fileExtension=" +
-                    "\".wmp\" mimeType=\"video/x-ms-wmp\" />\r\n            <mimeMap fileExtension=\".wmv\" m" +
-                    "imeType=\"video/x-ms-wmv\" />\r\n            <mimeMap fileExtension=\".wmx\" mimeType=" +
-                    "\"video/x-ms-wmx\" />\r\n            <mimeMap fileExtension=\".wmz\" mimeType=\"applica" +
-                    "tion/x-ms-wmz\" />\r\n            <mimeMap fileExtension=\".woff\" mimeType=\"font/x-w" +
-                    "off\" />\r\n            <mimeMap fileExtension=\".woff2\" mimeType=\"application/font-" +
-                    "woff2\" />\r\n            <mimeMap fileExtension=\".wps\" mimeType=\"application/vnd.m" +
-                    "s-works\" />\r\n            <mimeMap fileExtension=\".wri\" mimeType=\"application/x-m" +
-                    "swrite\" />\r\n            <mimeMap fileExtension=\".wrl\" mimeType=\"x-world/x-vrml\" " +
-                    "/>\r\n            <mimeMap fileExtension=\".wrz\" mimeType=\"x-world/x-vrml\" />\r\n    " +
-                    "        <mimeMap fileExtension=\".wsdl\" mimeType=\"text/xml\" />\r\n            <mime" +
-                    "Map fileExtension=\".wtv\" mimeType=\"video/x-ms-wtv\" />\r\n            <mimeMap file" +
-                    "Extension=\".wvx\" mimeType=\"video/x-ms-wvx\" />\r\n            <mimeMap fileExtensio" +
-                    "n=\".x\" mimeType=\"application/directx\" />\r\n            <mimeMap fileExtension=\".x" +
-                    "af\" mimeType=\"x-world/x-vrml\" />\r\n            <mimeMap fileExtension=\".xaml\" mim" +
-                    "eType=\"application/xaml+xml\" />\r\n            <mimeMap fileExtension=\".xap\" mimeT" +
-                    "ype=\"application/x-silverlight-app\" />\r\n            <mimeMap fileExtension=\".xba" +
-                    "p\" mimeType=\"application/x-ms-xbap\" />\r\n            <mimeMap fileExtension=\".xbm" +
-                    "\" mimeType=\"image/x-xbitmap\" />\r\n            <mimeMap fileExtension=\".xdr\" mimeT" +
-                    "ype=\"text/plain\" />\r\n            <mimeMap fileExtension=\".xht\" mimeType=\"applica" +
-                    "tion/xhtml+xml\" />\r\n            <mimeMap fileExtension=\".xhtml\" mimeType=\"applic" +
-                    "ation/xhtml+xml\" />\r\n            <mimeMap fileExtension=\".xla\" mimeType=\"applica" +
-                    "tion/vnd.ms-excel\" />\r\n            <mimeMap fileExtension=\".xlam\" mimeType=\"appl" +
-                    "ication/vnd.ms-excel.addin.macroEnabled.12\" />\r\n            <mimeMap fileExtensi" +
-                    "on=\".xlc\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fileExten" +
-                    "sion=\".xlm\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fileExt" +
-                    "ension=\".xls\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fileE" +
-                    "xtension=\".xlsb\" mimeType=\"application/vnd.ms-excel.sheet.binary.macroEnabled.12" +
-                    "\" />\r\n            <mimeMap fileExtension=\".xlsm\" mimeType=\"application/vnd.ms-ex" +
-                    "cel.sheet.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".xlsx\" mimeTy" +
-                    "pe=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\" />\r\n     " +
-                    "       <mimeMap fileExtension=\".xlt\" mimeType=\"application/vnd.ms-excel\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".xltm\" mimeType=\"application/vnd.ms-excel.templ" +
-                    "ate.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".xltx\" mimeType=\"ap" +
-                    "plication/vnd.openxmlformats-officedocument.spreadsheetml.template\" />\r\n        " +
-                    "    <mimeMap fileExtension=\".xlw\" mimeType=\"application/vnd.ms-excel\" />\r\n      " +
-                    "      <mimeMap fileExtension=\".xml\" mimeType=\"text/xml\" />\r\n            <mimeMap" +
-                    " fileExtension=\".xof\" mimeType=\"x-world/x-vrml\" />\r\n            <mimeMap fileExt" +
-                    "ension=\".xpm\" mimeType=\"image/x-xpixmap\" />\r\n            <mimeMap fileExtension=" +
-                    "\".xps\" mimeType=\"application/vnd.ms-xpsdocument\" />\r\n            <mimeMap fileEx" +
-                    "tension=\".xsd\" mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".xsf\"" +
-                    " mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".xsl\" mimeType=\"tex" +
-                    "t/xml\" />\r\n            <mimeMap fileExtension=\".xslt\" mimeType=\"text/xml\" />\r\n  " +
-                    "          <mimeMap fileExtension=\".xsn\" mimeType=\"application/octet-stream\" />\r\n" +
-                    "            <mimeMap fileExtension=\".xtp\" mimeType=\"application/octet-stream\" />" +
-                    "\r\n            <mimeMap fileExtension=\".xwd\" mimeType=\"image/x-xwindowdump\" />\r\n " +
-                    "           <mimeMap fileExtension=\".z\" mimeType=\"application/x-compress\" />\r\n   " +
-                    "         <mimeMap fileExtension=\".zip\" mimeType=\"application/x-zip-compressed\" /" +
-                    ">\r\n        </staticContent>\r\n\r\n        <tracing>\r\n\r\n             <traceProviderD" +
-                    "efinitions>\r\n                <add name=\"WWW Server\" guid=\"{3a2a4e84-4c21-4981-ae" +
-                    "10-3fda0d9b0f83}\">\r\n                    <areas>\r\n                        <clear " +
-                    "/>\r\n                        <add name=\"Authentication\" value=\"2\" />\r\n           " +
-                    "             <add name=\"Security\" value=\"4\" />\r\n                        <add nam" +
-                    "e=\"Filter\" value=\"8\" />\r\n                        <add name=\"StaticFile\" value=\"1" +
-                    "6\" />\r\n                        <add name=\"CGI\" value=\"32\" />\r\n                  " +
-                    "      <add name=\"Compression\" value=\"64\" />\r\n                        <add name=\"" +
-                    "Cache\" value=\"128\" />\r\n                        <add name=\"RequestNotifications\" " +
-                    "value=\"256\" />\r\n                        <add name=\"Module\" value=\"512\" />\r\n     " +
-                    "                   <add name=\"Rewrite\" value=\"1024\" />\r\n                        " +
-                    "<add name=\"FastCGI\" value=\"4096\" />\r\n                        <add name=\"WebSocke" +
-                    "t\" value=\"16384\" />\r\n                    </areas>\r\n                </add>\r\n     " +
-                    "           <add name=\"ASP\" guid=\"{06b94d9a-b15e-456e-a4ef-37c984a2cb4b}\">\r\n     " +
-                    "               <areas>\r\n                        <clear />\r\n                    <" +
-                    "/areas>\r\n                </add>\r\n                <add name=\"ISAPI Extension\" gui" +
-                    "d=\"{a1c2040e-8840-4c31-ba11-9871031a19ea}\">\r\n                    <areas>\r\n      " +
-                    "                  <clear />\r\n                    </areas>\r\n                </add" +
-                    ">\r\n                <add name=\"ASPNET\" guid=\"{AFF081FE-0247-4275-9C4E-021F3DC1DA3" +
-                    "5}\">\r\n                    <areas>\r\n                        <add name=\"Infrastruc" +
-                    "ture\" value=\"1\" />\r\n                        <add name=\"Module\" value=\"2\" />\r\n   " +
-                    "                     <add name=\"Page\" value=\"4\" />\r\n                        <add" +
-                    " name=\"AppServices\" value=\"8\" />\r\n                    </areas>\r\n                " +
-                    "</add>\r\n            </traceProviderDefinitions>\r\n\r\n            <traceFailedReque" +
-                    "sts>\r\n                <add path=\"*\">\r\n                    <traceAreas>\r\n        " +
-                    "                <add provider=\"ASP\" verbosity=\"Verbose\" />\r\n                    " +
-                    "    <add provider=\"ASPNET\" areas=\"Infrastructure,Module,Page,AppServices\" verbos" +
-                    "ity=\"Verbose\" />\r\n                        <add provider=\"ISAPI Extension\" verbos" +
-                    "ity=\"Verbose\" />\r\n                        <add provider=\"WWW Server\" areas=\"Auth" +
-                    "entication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotifications" +
-                    ",Module,Rewrite,WebSocket\" verbosity=\"Verbose\" />\r\n                    </traceAr" +
-                    "eas>\r\n                    <failureDefinitions statusCodes=\"200-999\" />\r\n        " +
-                    "        </add>\r\n            </traceFailedRequests>\r\n\r\n        </tracing>\r\n\r\n    " +
-                    "    <urlCompression />\r\n\r\n        <validation />\r\n        <webdav>\r\n            " +
-                    "<globalSettings>\r\n                <propertyStores>\r\n                    <add nam" +
-                    "e=\"webdav_simple_prop\" image=\"%IIS_BIN%\\webdav_simple_prop.dll\" image32=\"%IIS_BI" +
-                    "N%\\webdav_simple_prop.dll\" />\r\n                </propertyStores>\r\n              " +
-                    "  <lockStores>\r\n                    <add name=\"webdav_simple_lock\" image=\"%IIS_B" +
-                    "IN%\\webdav_simple_lock.dll\" image32=\"%IIS_BIN%\\webdav_simple_lock.dll\" />\r\n     " +
-                    "           </lockStores>\r\n\r\n            </globalSettings>\r\n            <authorin" +
-                    "g>\r\n                <locks enabled=\"true\" lockStore=\"webdav_simple_lock\" />\r\n   " +
-                    "         </authoring>\r\n            <authoringRules />\r\n        </webdav>\r\n      " +
-                    "  <webSocket />\r\n        <applicationInitialization />\r\n\r\n    </system.webServer" +
-                    ">\r\n    <location path=\"\" overrideMode=\"Allow\">\r\n        <system.webServer>\r\n    " +
-                    "        <modules>\r\n                <add name=\"IsapiFilterModule\" lockItem=\"true\"" +
-                    " />\r\n                <add name=\"BasicAuthenticationModule\" lockItem=\"true\" />\r\n " +
-                    "               <add name=\"IsapiModule\" lockItem=\"true\" />\r\n                <add " +
-                    "name=\"HttpLoggingModule\" lockItem=\"true\" />\r\n                <!--\r\n             " +
-                    "   <add name=\"HttpCacheModule\" lockItem=\"true\" />\r\n-->\r\n                <add nam" +
-                    "e=\"DynamicCompressionModule\" lockItem=\"true\" />\r\n                <add name=\"Stat" +
-                    "icCompressionModule\" lockItem=\"true\" />\r\n                <add name=\"DefaultDocum" +
-                    "entModule\" lockItem=\"true\" />\r\n                <add name=\"DirectoryListingModule" +
-                    "\" lockItem=\"true\" />\r\n\r\n                <add name=\"ProtocolSupportModule\" lockIt" +
-                    "em=\"true\" />\r\n                <add name=\"HttpRedirectionModule\" lockItem=\"true\" " +
-                    "/>\r\n                <add name=\"ServerSideIncludeModule\" lockItem=\"true\" />\r\n    " +
-                    "            <add name=\"StaticFileModule\" lockItem=\"true\" />\r\n                <ad" +
-                    "d name=\"AnonymousAuthenticationModule\" lockItem=\"true\" />\r\n                <add " +
-                    "name=\"CertificateMappingAuthenticationModule\" lockItem=\"true\" />\r\n              " +
-                    "  <add name=\"UrlAuthorizationModule\" lockItem=\"true\" />\r\n                <add na" +
-                    "me=\"WindowsAuthenticationModule\" lockItem=\"true\" />\r\n                <!--\r\n     " +
-                    "           <add name=\"DigestAuthenticationModule\" lockItem=\"true\" />\r\n-->\r\n     " +
-                    "           <add name=\"IISCertificateMappingAuthenticationModule\" lockItem=\"true\"" +
-                    " />\r\n                <add name=\"WebMatrixSupportModule\" lockItem=\"true\" />\r\n    " +
-                    "            <add name=\"IpRestrictionModule\" lockItem=\"true\" />\r\n                " +
-                    "<add name=\"DynamicIpRestrictionModule\" lockItem=\"true\" />\r\n                <add " +
-                    "name=\"RequestFilteringModule\" lockItem=\"true\" />\r\n                <add name=\"Cus" +
-                    "tomLoggingModule\" lockItem=\"true\" />\r\n                <add name=\"CustomErrorModu" +
-                    "le\" lockItem=\"true\" />\r\n                <add name=\"FailedRequestsTracingModule\" " +
-                    "lockItem=\"true\" />\r\n                <add name=\"CgiModule\" lockItem=\"true\" />\r\n  " +
-                    "              <add name=\"FastCgiModule\" lockItem=\"true\" />\r\n                <!--" +
-                    "                <add name=\"WebDAVModule\" /> -->\r\n                <add name=\"Rewr" +
-                    "iteModule\" />\r\n                <add name=\"OutputCache\" type=\"System.Web.Caching." +
-                    "OutputCacheModule\" preCondition=\"managedHandler\" />\r\n                <add name=\"" +
-                    "Session\" type=\"System.Web.SessionState.SessionStateModule\" preCondition=\"managed" +
-                    "Handler\" />\r\n                <add name=\"WindowsAuthentication\" type=\"System.Web." +
-                    "Security.WindowsAuthenticationModule\" preCondition=\"managedHandler\" />\r\n        " +
-                    "        <add name=\"FormsAuthentication\" type=\"System.Web.Security.FormsAuthentic" +
-                    "ationModule\" preCondition=\"managedHandler\" />\r\n                <add name=\"Defaul" +
-                    "tAuthentication\" type=\"System.Web.Security.DefaultAuthenticationModule\" preCondi" +
-                    "tion=\"managedHandler\" />\r\n                <add name=\"RoleManager\" type=\"System.W" +
-                    "eb.Security.RoleManagerModule\" preCondition=\"managedHandler\" />\r\n               " +
-                    " <add name=\"UrlAuthorization\" type=\"System.Web.Security.UrlAuthorizationModule\" " +
-                    "preCondition=\"managedHandler\" />\r\n                <add name=\"FileAuthorization\" " +
-                    "type=\"System.Web.Security.FileAuthorizationModule\" preCondition=\"managedHandler\"" +
-                    " />\r\n                <add name=\"AnonymousIdentification\" type=\"System.Web.Securi" +
-                    "ty.AnonymousIdentificationModule\" preCondition=\"managedHandler\" />\r\n            " +
-                    "    <add name=\"Profile\" type=\"System.Web.Profile.ProfileModule\" preCondition=\"ma" +
-                    "nagedHandler\" />\r\n                <add name=\"UrlMappingsModule\" type=\"System.Web" +
-                    ".UrlMappingsModule\" preCondition=\"managedHandler\" />\r\n                <add name=" +
-                    "\"ConfigurationValidationModule\" lockItem=\"true\" />\r\n                <add name=\"W" +
-                    "ebSocketModule\" lockItem=\"true\" />\r\n                <add name=\"ServiceModel-4.0\"" +
-                    " type=\"System.ServiceModel.Activation.ServiceHttpModule,System.ServiceModel.Acti" +
-                    "vation,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35\" preCondi" +
-                    "tion=\"managedHandler,runtimeVersionv4.0\" />\r\n                <add name=\"UrlRouti" +
-                    "ngModule-4.0\" type=\"System.Web.Routing.UrlRoutingModule\" preCondition=\"managedHa" +
-                    "ndler,runtimeVersionv4.0\" />\r\n                <add name=\"ScriptModule-4.0\" type=" +
-                    "\"System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Cultu" +
-                    "re=neutral, PublicKeyToken=31bf3856ad364e35\" preCondition=\"managedHandler,runtim" +
-                    "eVersionv4.0\" />\r\n                <add name=\"ServiceModel\" type=\"System.ServiceM" +
-                    "odel.Activation.HttpModule, System.ServiceModel, Version=3.0.0.0, Culture=neutra" +
-                    "l, PublicKeyToken=b77a5c561934e089\" preCondition=\"managedHandler,runtimeVersionv" +
-                    "2.0\" />\r\n                <add name=\"ApplicationInitializationModule\" lockItem=\"t" +
-                    "rue\" />\r\n                <add name=\"AspNetCoreModule\" lockItem=\"true\" />\r\n      " +
-                    "      </modules>\r\n            <handlers accessPolicy=\"Read, Script\">\r\n          " +
-                    "      <!--                <add name=\"WebDAV\" path=\"*\" verb=\"PROPFIND,PROPPATCH,M" +
-                    "KCOL,PUT,COPY,DELETE,MOVE,LOCK,UNLOCK\" modules=\"WebDAVModule\" resourceType=\"Unsp" +
-                    "ecified\" requireAccess=\"None\" /> -->\r\n                <add name=\"AXD-ISAPI-4.0_6" +
-                    "4bit\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProces" +
+                    "cr\" mimeType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\".d" +
+                    "eploy\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".der\" mimeType=\"application/x-x509-ca-cert\" />\r\n            <mimeMap fileExte" +
+                    "nsion=\".dib\" mimeType=\"image/bmp\" />\r\n            <mimeMap fileExtension=\".dir\" " +
+                    "mimeType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\".disco" +
+                    "\" mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".dll\" mimeType=\"ap" +
+                    "plication/x-msdownload\" />\r\n            <mimeMap fileExtension=\".dll.config\" mim" +
+                    "eType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".dlm\" mimeType=\"text/dl" +
+                    "m\" />\r\n            <mimeMap fileExtension=\".doc\" mimeType=\"application/msword\" /" +
+                    ">\r\n            <mimeMap fileExtension=\".docm\" mimeType=\"application/vnd.ms-word." +
+                    "document.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".docx\" mimeTyp" +
+                    "e=\"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" />\r\n" +
+                    "            <mimeMap fileExtension=\".dot\" mimeType=\"application/msword\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".dotm\" mimeType=\"application/vnd.ms-word.templat" +
+                    "e.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".dotx\" mimeType=\"appl" +
+                    "ication/vnd.openxmlformats-officedocument.wordprocessingml.template\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".dsp\" mimeType=\"application/octet-stream\" />\r\n     " +
+                    "       <mimeMap fileExtension=\".dtd\" mimeType=\"text/xml\" />\r\n            <mimeMa" +
+                    "p fileExtension=\".dvi\" mimeType=\"application/x-dvi\" />\r\n            <mimeMap fil" +
+                    "eExtension=\".dvr-ms\" mimeType=\"video/x-ms-dvr\" />\r\n            <mimeMap fileExte" +
+                    "nsion=\".dwf\" mimeType=\"drawing/x-dwf\" />\r\n            <mimeMap fileExtension=\".d" +
+                    "wp\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".dxr\" mimeType=\"application/x-director\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".eml\" mimeType=\"message/rfc822\" />\r\n            <mimeMap fileExtension=\".emz\" mi" +
+                    "meType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".eot\" " +
+                    "mimeType=\"application/vnd.ms-fontobject\" />\r\n            <mimeMap fileExtension=" +
+                    "\".eps\" mimeType=\"application/postscript\" />\r\n            <mimeMap fileExtension=" +
+                    "\".etx\" mimeType=\"text/x-setext\" />\r\n            <mimeMap fileExtension=\".evy\" mi" +
+                    "meType=\"application/envoy\" />\r\n            <mimeMap fileExtension=\".exe\" mimeTyp" +
+                    "e=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".exe.config" +
+                    "\" mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".fdf\" mimeType=\"ap" +
+                    "plication/vnd.fdf\" />\r\n            <mimeMap fileExtension=\".fif\" mimeType=\"appli" +
+                    "cation/fractals\" />\r\n            <mimeMap fileExtension=\".fla\" mimeType=\"applica" +
+                    "tion/octet-stream\" />\r\n            <mimeMap fileExtension=\".flr\" mimeType=\"x-wor" +
+                    "ld/x-vrml\" />\r\n            <mimeMap fileExtension=\".flv\" mimeType=\"video/x-flv\" " +
+                    "/>\r\n            <mimeMap fileExtension=\".gif\" mimeType=\"image/gif\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".gtar\" mimeType=\"application/x-gtar\" />\r\n            " +
+                    "<mimeMap fileExtension=\".gz\" mimeType=\"application/x-gzip\" />\r\n            <mime" +
+                    "Map fileExtension=\".h\" mimeType=\"text/plain\" />\r\n            <mimeMap fileExtens" +
+                    "ion=\".hdf\" mimeType=\"application/x-hdf\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".hdml\" mimeType=\"text/x-hdml\" />\r\n            <mimeMap fileExtension=\".hhc\" mime" +
+                    "Type=\"application/x-oleobject\" />\r\n            <mimeMap fileExtension=\".hhk\" mim" +
+                    "eType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".hhp\" m" +
+                    "imeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".hlp\"" +
+                    " mimeType=\"application/winhlp\" />\r\n            <mimeMap fileExtension=\".hqx\" mim" +
+                    "eType=\"application/mac-binhex40\" />\r\n            <mimeMap fileExtension=\".hta\" m" +
+                    "imeType=\"application/hta\" />\r\n            <mimeMap fileExtension=\".htc\" mimeType" +
+                    "=\"text/x-component\" />\r\n            <mimeMap fileExtension=\".htm\" mimeType=\"text" +
+                    "/html\" />\r\n            <mimeMap fileExtension=\".html\" mimeType=\"text/html\" />\r\n " +
+                    "           <mimeMap fileExtension=\".htt\" mimeType=\"text/webviewhtml\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".hxt\" mimeType=\"text/html\" />\r\n            <mimeMap" +
+                    " fileExtension=\".ico\" mimeType=\"image/x-icon\" />\r\n            <mimeMap fileExten" +
+                    "sion=\".ics\" mimeType=\"text/calendar\" />\r\n            <mimeMap fileExtension=\".ie" +
+                    "f\" mimeType=\"image/ief\" />\r\n            <mimeMap fileExtension=\".iii\" mimeType=\"" +
+                    "application/x-iphone\" />\r\n            <mimeMap fileExtension=\".inf\" mimeType=\"ap" +
+                    "plication/octet-stream\" />\r\n            <mimeMap fileExtension=\".ins\" mimeType=\"" +
+                    "application/x-internet-signup\" />\r\n            <mimeMap fileExtension=\".isp\" mim" +
+                    "eType=\"application/x-internet-signup\" />\r\n            <mimeMap fileExtension=\".I" +
+                    "VF\" mimeType=\"video/x-ivf\" />\r\n            <mimeMap fileExtension=\".jar\" mimeTyp" +
+                    "e=\"application/java-archive\" />\r\n            <mimeMap fileExtension=\".java\" mime" +
+                    "Type=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".jck\" mi" +
+                    "meType=\"application/liquidmotion\" />\r\n            <mimeMap fileExtension=\".jcz\" " +
+                    "mimeType=\"application/liquidmotion\" />\r\n            <mimeMap fileExtension=\".jfi" +
+                    "f\" mimeType=\"image/pjpeg\" />\r\n            <mimeMap fileExtension=\".jpb\" mimeType" +
+                    "=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".jpe\" mimeTy" +
+                    "pe=\"image/jpeg\" />\r\n            <mimeMap fileExtension=\".jpeg\" mimeType=\"image/j" +
+                    "peg\" />\r\n            <mimeMap fileExtension=\".jpg\" mimeType=\"image/jpeg\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".js\" mimeType=\"application/javascript\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".json\" mimeType=\"application/json\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".jsonld\" mimeType=\"application/ld+json\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".jsx\" mimeType=\"text/jscript\" />\r\n            <mimeMa" +
+                    "p fileExtension=\".latex\" mimeType=\"application/x-latex\" />\r\n            <mimeMap" +
+                    " fileExtension=\".less\" mimeType=\"text/css\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".lit\" mimeType=\"application/x-ms-reader\" />\r\n            <mimeMap fileExtensi" +
+                    "on=\".lpk\" mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExten" +
+                    "sion=\".lsf\" mimeType=\"video/x-la-asf\" />\r\n            <mimeMap fileExtension=\".l" +
+                    "sx\" mimeType=\"video/x-la-asf\" />\r\n            <mimeMap fileExtension=\".lzh\" mime" +
+                    "Type=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".m13\" mi" +
+                    "meType=\"application/x-msmediaview\" />\r\n            <mimeMap fileExtension=\".m14\"" +
+                    " mimeType=\"application/x-msmediaview\" />\r\n            <mimeMap fileExtension=\".m" +
+                    "1v\" mimeType=\"video/mpeg\" />\r\n            <mimeMap fileExtension=\".m2ts\" mimeTyp" +
+                    "e=\"video/vnd.dlna.mpeg-tts\" />\r\n            <mimeMap fileExtension=\".m3u\" mimeTy" +
+                    "pe=\"audio/x-mpegurl\" />\r\n            <mimeMap fileExtension=\".m4a\" mimeType=\"aud" +
+                    "io/mp4\" />\r\n            <mimeMap fileExtension=\".m4v\" mimeType=\"video/mp4\" />\r\n " +
+                    "           <mimeMap fileExtension=\".man\" mimeType=\"application/x-troff-man\" />\r\n" +
+                    "            <mimeMap fileExtension=\".manifest\" mimeType=\"application/x-ms-manife" +
+                    "st\" />\r\n            <mimeMap fileExtension=\".map\" mimeType=\"text/plain\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".mdb\" mimeType=\"application/x-msaccess\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".mdp\" mimeType=\"application/octet-stream\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".me\" mimeType=\"application/x-troff-me\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".mht\" mimeType=\"message/rfc822\" />\r\n           " +
+                    " <mimeMap fileExtension=\".mhtml\" mimeType=\"message/rfc822\" />\r\n            <mime" +
+                    "Map fileExtension=\".mid\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExten" +
+                    "sion=\".midi\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExtension=\".mix\" " +
+                    "mimeType=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".mmf" +
+                    "\" mimeType=\"application/x-smaf\" />\r\n            <mimeMap fileExtension=\".mno\" mi" +
+                    "meType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".mny\" mimeType=\"applic" +
+                    "ation/x-msmoney\" />\r\n            <mimeMap fileExtension=\".mov\" mimeType=\"video/q" +
+                    "uicktime\" />\r\n            <mimeMap fileExtension=\".movie\" mimeType=\"video/x-sgi-" +
+                    "movie\" />\r\n            <mimeMap fileExtension=\".mp2\" mimeType=\"video/mpeg\" />\r\n " +
+                    "           <mimeMap fileExtension=\".mp3\" mimeType=\"audio/mpeg\" />\r\n            <" +
+                    "mimeMap fileExtension=\".mp4\" mimeType=\"video/mp4\" />\r\n            <mimeMap fileE" +
+                    "xtension=\".mp4v\" mimeType=\"video/mp4\" />\r\n            <mimeMap fileExtension=\".m" +
+                    "pa\" mimeType=\"video/mpeg\" />\r\n            <mimeMap fileExtension=\".mpe\" mimeType" +
+                    "=\"video/mpeg\" />\r\n            <mimeMap fileExtension=\".mpeg\" mimeType=\"video/mpe" +
+                    "g\" />\r\n            <mimeMap fileExtension=\".mpg\" mimeType=\"video/mpeg\" />\r\n     " +
+                    "       <mimeMap fileExtension=\".mpp\" mimeType=\"application/vnd.ms-project\" />\r\n " +
+                    "           <mimeMap fileExtension=\".mpv2\" mimeType=\"video/mpeg\" />\r\n            " +
+                    "<mimeMap fileExtension=\".ms\" mimeType=\"application/x-troff-ms\" />\r\n            <" +
+                    "mimeMap fileExtension=\".msi\" mimeType=\"application/octet-stream\" />\r\n           " +
+                    " <mimeMap fileExtension=\".mso\" mimeType=\"application/octet-stream\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".mvb\" mimeType=\"application/x-msmediaview\" />\r\n      " +
+                    "      <mimeMap fileExtension=\".mvc\" mimeType=\"application/x-miva-compiled\" />\r\n " +
+                    "           <mimeMap fileExtension=\".nc\" mimeType=\"application/x-netcdf\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".nsc\" mimeType=\"video/x-ms-asf\" />\r\n            " +
+                    "<mimeMap fileExtension=\".nws\" mimeType=\"message/rfc822\" />\r\n            <mimeMap" +
+                    " fileExtension=\".ocx\" mimeType=\"application/octet-stream\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".oda\" mimeType=\"application/oda\" />\r\n            <mimeMap file" +
+                    "Extension=\".odc\" mimeType=\"text/x-ms-odc\" />\r\n            <mimeMap fileExtension" +
+                    "=\".ods\" mimeType=\"application/oleobject\" />\r\n            <mimeMap fileExtension=" +
+                    "\".oga\" mimeType=\"audio/ogg\" />\r\n            <mimeMap fileExtension=\".ogg\" mimeTy" +
+                    "pe=\"video/ogg\" />\r\n            <mimeMap fileExtension=\".ogv\" mimeType=\"video/ogg" +
+                    "\" />\r\n            <mimeMap fileExtension=\".one\" mimeType=\"application/onenote\" /" +
+                    ">\r\n            <mimeMap fileExtension=\".onea\" mimeType=\"application/onenote\" />\r" +
+                    "\n            <mimeMap fileExtension=\".onetoc\" mimeType=\"application/onenote\" />\r" +
+                    "\n            <mimeMap fileExtension=\".onetoc2\" mimeType=\"application/onenote\" />" +
+                    "\r\n            <mimeMap fileExtension=\".onetmp\" mimeType=\"application/onenote\" />" +
+                    "\r\n            <mimeMap fileExtension=\".onepkg\" mimeType=\"application/onenote\" />" +
+                    "\r\n            <mimeMap fileExtension=\".osdx\" mimeType=\"application/opensearchdes" +
+                    "cription+xml\" />\r\n            <mimeMap fileExtension=\".otf\" mimeType=\"font/otf\" " +
+                    "/>\r\n            <mimeMap fileExtension=\".p10\" mimeType=\"application/pkcs10\" />\r\n" +
+                    "            <mimeMap fileExtension=\".p12\" mimeType=\"application/x-pkcs12\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".p7b\" mimeType=\"application/x-pkcs7-certificat" +
+                    "es\" />\r\n            <mimeMap fileExtension=\".p7c\" mimeType=\"application/pkcs7-mi" +
+                    "me\" />\r\n            <mimeMap fileExtension=\".p7m\" mimeType=\"application/pkcs7-mi" +
+                    "me\" />\r\n            <mimeMap fileExtension=\".p7r\" mimeType=\"application/x-pkcs7-" +
+                    "certreqresp\" />\r\n            <mimeMap fileExtension=\".p7s\" mimeType=\"application" +
+                    "/pkcs7-signature\" />\r\n            <mimeMap fileExtension=\".pbm\" mimeType=\"image/" +
+                    "x-portable-bitmap\" />\r\n            <mimeMap fileExtension=\".pcx\" mimeType=\"appli" +
+                    "cation/octet-stream\" />\r\n            <mimeMap fileExtension=\".pcz\" mimeType=\"app" +
+                    "lication/octet-stream\" />\r\n            <mimeMap fileExtension=\".pdf\" mimeType=\"a" +
+                    "pplication/pdf\" />\r\n            <mimeMap fileExtension=\".pfb\" mimeType=\"applicat" +
+                    "ion/octet-stream\" />\r\n            <mimeMap fileExtension=\".pfm\" mimeType=\"applic" +
+                    "ation/octet-stream\" />\r\n            <mimeMap fileExtension=\".pfx\" mimeType=\"appl" +
+                    "ication/x-pkcs12\" />\r\n            <mimeMap fileExtension=\".pgm\" mimeType=\"image/" +
+                    "x-portable-graymap\" />\r\n            <mimeMap fileExtension=\".pko\" mimeType=\"appl" +
+                    "ication/vnd.ms-pki.pko\" />\r\n            <mimeMap fileExtension=\".pma\" mimeType=\"" +
+                    "application/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmc\" mimeType=\"a" +
+                    "pplication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pml\" mimeType=\"ap" +
+                    "plication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmr\" mimeType=\"app" +
+                    "lication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".pmw\" mimeType=\"appl" +
+                    "ication/x-perfmon\" />\r\n            <mimeMap fileExtension=\".png\" mimeType=\"image" +
+                    "/png\" />\r\n            <mimeMap fileExtension=\".pnm\" mimeType=\"image/x-portable-a" +
+                    "nymap\" />\r\n            <mimeMap fileExtension=\".pnz\" mimeType=\"image/png\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".pot\" mimeType=\"application/vnd.ms-powerpoint\"" +
+                    " />\r\n            <mimeMap fileExtension=\".potm\" mimeType=\"application/vnd.ms-pow" +
+                    "erpoint.template.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".potx\"" +
+                    " mimeType=\"application/vnd.openxmlformats-officedocument.presentationml.template" +
+                    "\" />\r\n            <mimeMap fileExtension=\".ppam\" mimeType=\"application/vnd.ms-po" +
+                    "werpoint.addin.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".ppm\" mi" +
+                    "meType=\"image/x-portable-pixmap\" />\r\n            <mimeMap fileExtension=\".pps\" m" +
+                    "imeType=\"application/vnd.ms-powerpoint\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".ppsm\" mimeType=\"application/vnd.ms-powerpoint.slideshow.macroEnabled.12\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".ppsx\" mimeType=\"application/vnd.openxmlformat" +
+                    "s-officedocument.presentationml.slideshow\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".ppt\" mimeType=\"application/vnd.ms-powerpoint\" />\r\n            <mimeMap fileE" +
+                    "xtension=\".pptm\" mimeType=\"application/vnd.ms-powerpoint.presentation.macroEnabl" +
+                    "ed.12\" />\r\n            <mimeMap fileExtension=\".pptx\" mimeType=\"application/vnd." +
+                    "openxmlformats-officedocument.presentationml.presentation\" />\r\n            <mime" +
+                    "Map fileExtension=\".prf\" mimeType=\"application/pics-rules\" />\r\n            <mime" +
+                    "Map fileExtension=\".prm\" mimeType=\"application/octet-stream\" />\r\n            <mi" +
+                    "meMap fileExtension=\".prx\" mimeType=\"application/octet-stream\" />\r\n            <" +
+                    "mimeMap fileExtension=\".ps\" mimeType=\"application/postscript\" />\r\n            <m" +
+                    "imeMap fileExtension=\".psd\" mimeType=\"application/octet-stream\" />\r\n            " +
+                    "<mimeMap fileExtension=\".psm\" mimeType=\"application/octet-stream\" />\r\n          " +
+                    "  <mimeMap fileExtension=\".psp\" mimeType=\"application/octet-stream\" />\r\n        " +
+                    "    <mimeMap fileExtension=\".pub\" mimeType=\"application/x-mspublisher\" />\r\n     " +
+                    "       <mimeMap fileExtension=\".qt\" mimeType=\"video/quicktime\" />\r\n            <" +
+                    "mimeMap fileExtension=\".qtl\" mimeType=\"application/x-quicktimeplayer\" />\r\n      " +
+                    "      <mimeMap fileExtension=\".qxd\" mimeType=\"application/octet-stream\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".ra\" mimeType=\"audio/x-pn-realaudio\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".ram\" mimeType=\"audio/x-pn-realaudio\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".rar\" mimeType=\"application/octet-stream\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".ras\" mimeType=\"image/x-cmu-raster\" />\r\n           " +
+                    " <mimeMap fileExtension=\".rf\" mimeType=\"image/vnd.rn-realflash\" />\r\n            " +
+                    "<mimeMap fileExtension=\".rgb\" mimeType=\"image/x-rgb\" />\r\n            <mimeMap fi" +
+                    "leExtension=\".rm\" mimeType=\"application/vnd.rn-realmedia\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".rmi\" mimeType=\"audio/mid\" />\r\n            <mimeMap fileExtens" +
+                    "ion=\".roff\" mimeType=\"application/x-troff\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".rpm\" mimeType=\"audio/x-pn-realaudio-plugin\" />\r\n            <mimeMap fileExt" +
+                    "ension=\".rtf\" mimeType=\"application/rtf\" />\r\n            <mimeMap fileExtension=" +
+                    "\".rtx\" mimeType=\"text/richtext\" />\r\n            <mimeMap fileExtension=\".scd\" mi" +
+                    "meType=\"application/x-msschedule\" />\r\n            <mimeMap fileExtension=\".sct\" " +
+                    "mimeType=\"text/scriptlet\" />\r\n            <mimeMap fileExtension=\".sea\" mimeType" +
+                    "=\"application/octet-stream\" />\r\n            <mimeMap fileExtension=\".setpay\" mim" +
+                    "eType=\"application/set-payment-initiation\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".setreg\" mimeType=\"application/set-registration-initiation\" />\r\n            <" +
+                    "mimeMap fileExtension=\".sgml\" mimeType=\"text/sgml\" />\r\n            <mimeMap file" +
+                    "Extension=\".sh\" mimeType=\"application/x-sh\" />\r\n            <mimeMap fileExtensi" +
+                    "on=\".shar\" mimeType=\"application/x-shar\" />\r\n            <mimeMap fileExtension=" +
+                    "\".sit\" mimeType=\"application/x-stuffit\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".sldm\" mimeType=\"application/vnd.ms-powerpoint.slide.macroEnabled.12\" />\r\n      " +
+                    "      <mimeMap fileExtension=\".sldx\" mimeType=\"application/vnd.openxmlformats-of" +
+                    "ficedocument.presentationml.slide\" />\r\n            <mimeMap fileExtension=\".smd\"" +
+                    " mimeType=\"audio/x-smd\" />\r\n            <mimeMap fileExtension=\".smi\" mimeType=\"" +
+                    "application/octet-stream\" />\r\n            <mimeMap fileExtension=\".smx\" mimeType" +
+                    "=\"audio/x-smd\" />\r\n            <mimeMap fileExtension=\".smz\" mimeType=\"audio/x-s" +
+                    "md\" />\r\n            <mimeMap fileExtension=\".snd\" mimeType=\"audio/basic\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".snp\" mimeType=\"application/octet-stream\" />\r\n " +
+                    "           <mimeMap fileExtension=\".spc\" mimeType=\"application/x-pkcs7-certifica" +
+                    "tes\" />\r\n            <mimeMap fileExtension=\".spl\" mimeType=\"application/futures" +
+                    "plash\" />\r\n            <mimeMap fileExtension=\".spx\" mimeType=\"audio/ogg\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".src\" mimeType=\"application/x-wais-source\" />\r" +
+                    "\n            <mimeMap fileExtension=\".ssm\" mimeType=\"application/streamingmedia\"" +
+                    " />\r\n            <mimeMap fileExtension=\".sst\" mimeType=\"application/vnd.ms-pki." +
+                    "certstore\" />\r\n            <mimeMap fileExtension=\".stl\" mimeType=\"application/v" +
+                    "nd.ms-pki.stl\" />\r\n            <mimeMap fileExtension=\".sv4cpio\" mimeType=\"appli" +
+                    "cation/x-sv4cpio\" />\r\n            <mimeMap fileExtension=\".sv4crc\" mimeType=\"app" +
+                    "lication/x-sv4crc\" />\r\n            <mimeMap fileExtension=\".svg\" mimeType=\"image" +
+                    "/svg+xml\" />\r\n            <mimeMap fileExtension=\".svgz\" mimeType=\"image/svg+xml" +
+                    "\" />\r\n            <mimeMap fileExtension=\".swf\" mimeType=\"application/x-shockwav" +
+                    "e-flash\" />\r\n            <mimeMap fileExtension=\".t\" mimeType=\"application/x-tro" +
+                    "ff\" />\r\n            <mimeMap fileExtension=\".tar\" mimeType=\"application/x-tar\" /" +
+                    ">\r\n            <mimeMap fileExtension=\".tcl\" mimeType=\"application/x-tcl\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".tex\" mimeType=\"application/x-tex\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".texi\" mimeType=\"application/x-texinfo\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".texinfo\" mimeType=\"application/x-texinfo\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".tgz\" mimeType=\"application/x-compressed\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".thmx\" mimeType=\"application/vnd.ms-officethem" +
+                    "e\" />\r\n            <mimeMap fileExtension=\".thn\" mimeType=\"application/octet-str" +
+                    "eam\" />\r\n            <mimeMap fileExtension=\".tif\" mimeType=\"image/tiff\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".tiff\" mimeType=\"image/tiff\" />\r\n            <m" +
+                    "imeMap fileExtension=\".toc\" mimeType=\"application/octet-stream\" />\r\n            " +
+                    "<mimeMap fileExtension=\".tr\" mimeType=\"application/x-troff\" />\r\n            <mim" +
+                    "eMap fileExtension=\".trm\" mimeType=\"application/x-msterminal\" />\r\n            <m" +
+                    "imeMap fileExtension=\".ts\" mimeType=\"video/vnd.dlna.mpeg-tts\" />\r\n            <m" +
+                    "imeMap fileExtension=\".tsv\" mimeType=\"text/tab-separated-values\" />\r\n           " +
+                    " <mimeMap fileExtension=\".ttf\" mimeType=\"application/octet-stream\" />\r\n         " +
+                    "   <mimeMap fileExtension=\".tts\" mimeType=\"video/vnd.dlna.mpeg-tts\" />\r\n        " +
+                    "    <mimeMap fileExtension=\".txt\" mimeType=\"text/plain\" />\r\n            <mimeMap" +
+                    " fileExtension=\".u32\" mimeType=\"application/octet-stream\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".uls\" mimeType=\"text/iuls\" />\r\n            <mimeMap fileExtens" +
+                    "ion=\".ustar\" mimeType=\"application/x-ustar\" />\r\n            <mimeMap fileExtensi" +
+                    "on=\".vbs\" mimeType=\"text/vbscript\" />\r\n            <mimeMap fileExtension=\".vcf\"" +
+                    " mimeType=\"text/x-vcard\" />\r\n            <mimeMap fileExtension=\".vcs\" mimeType=" +
+                    "\"text/plain\" />\r\n            <mimeMap fileExtension=\".vdx\" mimeType=\"application" +
+                    "/vnd.ms-visio.viewer\" />\r\n            <mimeMap fileExtension=\".vml\" mimeType=\"te" +
+                    "xt/xml\" />\r\n            <mimeMap fileExtension=\".vsd\" mimeType=\"application/vnd." +
+                    "visio\" />\r\n            <mimeMap fileExtension=\".vss\" mimeType=\"application/vnd.v" +
+                    "isio\" />\r\n            <mimeMap fileExtension=\".vst\" mimeType=\"application/vnd.vi" +
+                    "sio\" />\r\n            <mimeMap fileExtension=\".vsto\" mimeType=\"application/x-ms-v" +
+                    "sto\" />\r\n            <mimeMap fileExtension=\".vsw\" mimeType=\"application/vnd.vis" +
+                    "io\" />\r\n            <mimeMap fileExtension=\".vsx\" mimeType=\"application/vnd.visi" +
+                    "o\" />\r\n            <mimeMap fileExtension=\".vtx\" mimeType=\"application/vnd.visio" +
+                    "\" />\r\n            <mimeMap fileExtension=\".wav\" mimeType=\"audio/wav\" />\r\n       " +
+                    "     <mimeMap fileExtension=\".wax\" mimeType=\"audio/x-ms-wax\" />\r\n            <mi" +
+                    "meMap fileExtension=\".wbmp\" mimeType=\"image/vnd.wap.wbmp\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".wcm\" mimeType=\"application/vnd.ms-works\" />\r\n            <mim" +
+                    "eMap fileExtension=\".wdb\" mimeType=\"application/vnd.ms-works\" />\r\n            <m" +
+                    "imeMap fileExtension=\".webm\" mimeType=\"video/webm\" />\r\n            <mimeMap file" +
+                    "Extension=\".wks\" mimeType=\"application/vnd.ms-works\" />\r\n            <mimeMap fi" +
+                    "leExtension=\".wm\" mimeType=\"video/x-ms-wm\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".wma\" mimeType=\"audio/x-ms-wma\" />\r\n            <mimeMap fileExtension=\".wmd\"" +
+                    " mimeType=\"application/x-ms-wmd\" />\r\n            <mimeMap fileExtension=\".wmf\" m" +
+                    "imeType=\"application/x-msmetafile\" />\r\n            <mimeMap fileExtension=\".wml\"" +
+                    " mimeType=\"text/vnd.wap.wml\" />\r\n            <mimeMap fileExtension=\".wmlc\" mime" +
+                    "Type=\"application/vnd.wap.wmlc\" />\r\n            <mimeMap fileExtension=\".wmls\" m" +
+                    "imeType=\"text/vnd.wap.wmlscript\" />\r\n            <mimeMap fileExtension=\".wmlsc\"" +
+                    " mimeType=\"application/vnd.wap.wmlscriptc\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".wmp\" mimeType=\"video/x-ms-wmp\" />\r\n            <mimeMap fileExtension=\".wmv\"" +
+                    " mimeType=\"video/x-ms-wmv\" />\r\n            <mimeMap fileExtension=\".wmx\" mimeTyp" +
+                    "e=\"video/x-ms-wmx\" />\r\n            <mimeMap fileExtension=\".wmz\" mimeType=\"appli" +
+                    "cation/x-ms-wmz\" />\r\n            <mimeMap fileExtension=\".woff\" mimeType=\"font/x" +
+                    "-woff\" />\r\n            <mimeMap fileExtension=\".woff2\" mimeType=\"application/fon" +
+                    "t-woff2\" />\r\n            <mimeMap fileExtension=\".wps\" mimeType=\"application/vnd" +
+                    ".ms-works\" />\r\n            <mimeMap fileExtension=\".wri\" mimeType=\"application/x" +
+                    "-mswrite\" />\r\n            <mimeMap fileExtension=\".wrl\" mimeType=\"x-world/x-vrml" +
+                    "\" />\r\n            <mimeMap fileExtension=\".wrz\" mimeType=\"x-world/x-vrml\" />\r\n  " +
+                    "          <mimeMap fileExtension=\".wsdl\" mimeType=\"text/xml\" />\r\n            <mi" +
+                    "meMap fileExtension=\".wtv\" mimeType=\"video/x-ms-wtv\" />\r\n            <mimeMap fi" +
+                    "leExtension=\".wvx\" mimeType=\"video/x-ms-wvx\" />\r\n            <mimeMap fileExtens" +
+                    "ion=\".x\" mimeType=\"application/directx\" />\r\n            <mimeMap fileExtension=\"" +
+                    ".xaf\" mimeType=\"x-world/x-vrml\" />\r\n            <mimeMap fileExtension=\".xaml\" m" +
+                    "imeType=\"application/xaml+xml\" />\r\n            <mimeMap fileExtension=\".xap\" mim" +
+                    "eType=\"application/x-silverlight-app\" />\r\n            <mimeMap fileExtension=\".x" +
+                    "bap\" mimeType=\"application/x-ms-xbap\" />\r\n            <mimeMap fileExtension=\".x" +
+                    "bm\" mimeType=\"image/x-xbitmap\" />\r\n            <mimeMap fileExtension=\".xdr\" mim" +
+                    "eType=\"text/plain\" />\r\n            <mimeMap fileExtension=\".xht\" mimeType=\"appli" +
+                    "cation/xhtml+xml\" />\r\n            <mimeMap fileExtension=\".xhtml\" mimeType=\"appl" +
+                    "ication/xhtml+xml\" />\r\n            <mimeMap fileExtension=\".xla\" mimeType=\"appli" +
+                    "cation/vnd.ms-excel\" />\r\n            <mimeMap fileExtension=\".xlam\" mimeType=\"ap" +
+                    "plication/vnd.ms-excel.addin.macroEnabled.12\" />\r\n            <mimeMap fileExten" +
+                    "sion=\".xlc\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fileExt" +
+                    "ension=\".xlm\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fileE" +
+                    "xtension=\".xls\" mimeType=\"application/vnd.ms-excel\" />\r\n            <mimeMap fil" +
+                    "eExtension=\".xlsb\" mimeType=\"application/vnd.ms-excel.sheet.binary.macroEnabled." +
+                    "12\" />\r\n            <mimeMap fileExtension=\".xlsm\" mimeType=\"application/vnd.ms-" +
+                    "excel.sheet.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".xlsx\" mime" +
+                    "Type=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\" />\r\n   " +
+                    "         <mimeMap fileExtension=\".xlt\" mimeType=\"application/vnd.ms-excel\" />\r\n " +
+                    "           <mimeMap fileExtension=\".xltm\" mimeType=\"application/vnd.ms-excel.tem" +
+                    "plate.macroEnabled.12\" />\r\n            <mimeMap fileExtension=\".xltx\" mimeType=\"" +
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.template\" />\r\n      " +
+                    "      <mimeMap fileExtension=\".xlw\" mimeType=\"application/vnd.ms-excel\" />\r\n    " +
+                    "        <mimeMap fileExtension=\".xml\" mimeType=\"text/xml\" />\r\n            <mimeM" +
+                    "ap fileExtension=\".xof\" mimeType=\"x-world/x-vrml\" />\r\n            <mimeMap fileE" +
+                    "xtension=\".xpm\" mimeType=\"image/x-xpixmap\" />\r\n            <mimeMap fileExtensio" +
+                    "n=\".xps\" mimeType=\"application/vnd.ms-xpsdocument\" />\r\n            <mimeMap file" +
+                    "Extension=\".xsd\" mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".xs" +
+                    "f\" mimeType=\"text/xml\" />\r\n            <mimeMap fileExtension=\".xsl\" mimeType=\"t" +
+                    "ext/xml\" />\r\n            <mimeMap fileExtension=\".xslt\" mimeType=\"text/xml\" />\r\n" +
+                    "            <mimeMap fileExtension=\".xsn\" mimeType=\"application/octet-stream\" />" +
+                    "\r\n            <mimeMap fileExtension=\".xtp\" mimeType=\"application/octet-stream\" " +
+                    "/>\r\n            <mimeMap fileExtension=\".xwd\" mimeType=\"image/x-xwindowdump\" />\r" +
+                    "\n            <mimeMap fileExtension=\".z\" mimeType=\"application/x-compress\" />\r\n " +
+                    "           <mimeMap fileExtension=\".zip\" mimeType=\"application/x-zip-compressed\"" +
+                    " />\r\n        </staticContent>\r\n\r\n        <tracing>\r\n\r\n             <traceProvide" +
+                    "rDefinitions>\r\n                <add name=\"WWW Server\" guid=\"{3a2a4e84-4c21-4981-" +
+                    "ae10-3fda0d9b0f83}\">\r\n                    <areas>\r\n                        <clea" +
+                    "r />\r\n                        <add name=\"Authentication\" value=\"2\" />\r\n         " +
+                    "               <add name=\"Security\" value=\"4\" />\r\n                        <add n" +
+                    "ame=\"Filter\" value=\"8\" />\r\n                        <add name=\"StaticFile\" value=" +
+                    "\"16\" />\r\n                        <add name=\"CGI\" value=\"32\" />\r\n                " +
+                    "        <add name=\"Compression\" value=\"64\" />\r\n                        <add name" +
+                    "=\"Cache\" value=\"128\" />\r\n                        <add name=\"RequestNotifications" +
+                    "\" value=\"256\" />\r\n                        <add name=\"Module\" value=\"512\" />\r\n   " +
+                    "                     <add name=\"Rewrite\" value=\"1024\" />\r\n                      " +
+                    "  <add name=\"FastCGI\" value=\"4096\" />\r\n                        <add name=\"WebSoc" +
+                    "ket\" value=\"16384\" />\r\n                    </areas>\r\n                </add>\r\n   " +
+                    "             <add name=\"ASP\" guid=\"{06b94d9a-b15e-456e-a4ef-37c984a2cb4b}\">\r\n   " +
+                    "                 <areas>\r\n                        <clear />\r\n                   " +
+                    " </areas>\r\n                </add>\r\n                <add name=\"ISAPI Extension\" g" +
+                    "uid=\"{a1c2040e-8840-4c31-ba11-9871031a19ea}\">\r\n                    <areas>\r\n    " +
+                    "                    <clear />\r\n                    </areas>\r\n                </a" +
+                    "dd>\r\n                <add name=\"ASPNET\" guid=\"{AFF081FE-0247-4275-9C4E-021F3DC1D" +
+                    "A35}\">\r\n                    <areas>\r\n                        <add name=\"Infrastr" +
+                    "ucture\" value=\"1\" />\r\n                        <add name=\"Module\" value=\"2\" />\r\n " +
+                    "                       <add name=\"Page\" value=\"4\" />\r\n                        <a" +
+                    "dd name=\"AppServices\" value=\"8\" />\r\n                    </areas>\r\n              " +
+                    "  </add>\r\n            </traceProviderDefinitions>\r\n\r\n            <traceFailedReq" +
+                    "uests>\r\n                <add path=\"*\">\r\n                    <traceAreas>\r\n      " +
+                    "                  <add provider=\"ASP\" verbosity=\"Verbose\" />\r\n                  " +
+                    "      <add provider=\"ASPNET\" areas=\"Infrastructure,Module,Page,AppServices\" verb" +
+                    "osity=\"Verbose\" />\r\n                        <add provider=\"ISAPI Extension\" verb" +
+                    "osity=\"Verbose\" />\r\n                        <add provider=\"WWW Server\" areas=\"Au" +
+                    "thentication,Security,Filter,StaticFile,CGI,Compression,Cache,RequestNotificatio" +
+                    "ns,Module,Rewrite,WebSocket\" verbosity=\"Verbose\" />\r\n                    </trace" +
+                    "Areas>\r\n                    <failureDefinitions statusCodes=\"200-999\" />\r\n      " +
+                    "          </add>\r\n            </traceFailedRequests>\r\n\r\n        </tracing>\r\n\r\n  " +
+                    "      <urlCompression />\r\n\r\n        <validation />\r\n        <webdav>\r\n          " +
+                    "  <globalSettings>\r\n                <propertyStores>\r\n                    <add n" +
+                    "ame=\"webdav_simple_prop\" image=\"%IIS_BIN%\\webdav_simple_prop.dll\" image32=\"%IIS_" +
+                    "BIN%\\webdav_simple_prop.dll\" />\r\n                </propertyStores>\r\n            " +
+                    "    <lockStores>\r\n                    <add name=\"webdav_simple_lock\" image=\"%IIS" +
+                    "_BIN%\\webdav_simple_lock.dll\" image32=\"%IIS_BIN%\\webdav_simple_lock.dll\" />\r\n   " +
+                    "             </lockStores>\r\n\r\n            </globalSettings>\r\n            <author" +
+                    "ing>\r\n                <locks enabled=\"true\" lockStore=\"webdav_simple_lock\" />\r\n " +
+                    "           </authoring>\r\n            <authoringRules />\r\n        </webdav>\r\n    " +
+                    "    <webSocket />\r\n        <applicationInitialization />\r\n\r\n    </system.webServ" +
+                    "er>\r\n    <location path=\"\" overrideMode=\"Allow\">\r\n        <system.webServer>\r\n  " +
+                    "          <modules>\r\n                <add name=\"IsapiFilterModule\" lockItem=\"tru" +
+                    "e\" />\r\n                <add name=\"BasicAuthenticationModule\" lockItem=\"true\" />\r" +
+                    "\n                <add name=\"IsapiModule\" lockItem=\"true\" />\r\n                <ad" +
+                    "d name=\"HttpLoggingModule\" lockItem=\"true\" />\r\n                <!--\r\n           " +
+                    "     <add name=\"HttpCacheModule\" lockItem=\"true\" />\r\n-->\r\n                <add n" +
+                    "ame=\"DynamicCompressionModule\" lockItem=\"true\" />\r\n                <add name=\"St" +
+                    "aticCompressionModule\" lockItem=\"true\" />\r\n                <add name=\"DefaultDoc" +
+                    "umentModule\" lockItem=\"true\" />\r\n                <add name=\"DirectoryListingModu" +
+                    "le\" lockItem=\"true\" />\r\n\r\n                <add name=\"ProtocolSupportModule\" lock" +
+                    "Item=\"true\" />\r\n                <add name=\"HttpRedirectionModule\" lockItem=\"true" +
+                    "\" />\r\n                <add name=\"ServerSideIncludeModule\" lockItem=\"true\" />\r\n  " +
+                    "              <add name=\"StaticFileModule\" lockItem=\"true\" />\r\n                <" +
+                    "add name=\"AnonymousAuthenticationModule\" lockItem=\"true\" />\r\n                <ad" +
+                    "d name=\"CertificateMappingAuthenticationModule\" lockItem=\"true\" />\r\n            " +
+                    "    <add name=\"UrlAuthorizationModule\" lockItem=\"true\" />\r\n                <add " +
+                    "name=\"WindowsAuthenticationModule\" lockItem=\"true\" />\r\n                <!--\r\n   " +
+                    "             <add name=\"DigestAuthenticationModule\" lockItem=\"true\" />\r\n-->\r\n   " +
+                    "             <add name=\"IISCertificateMappingAuthenticationModule\" lockItem=\"tru" +
+                    "e\" />\r\n                <add name=\"WebMatrixSupportModule\" lockItem=\"true\" />\r\n  " +
+                    "              <add name=\"IpRestrictionModule\" lockItem=\"true\" />\r\n              " +
+                    "  <add name=\"DynamicIpRestrictionModule\" lockItem=\"true\" />\r\n                <ad" +
+                    "d name=\"RequestFilteringModule\" lockItem=\"true\" />\r\n                <add name=\"C" +
+                    "ustomLoggingModule\" lockItem=\"true\" />\r\n                <add name=\"CustomErrorMo" +
+                    "dule\" lockItem=\"true\" />\r\n                <add name=\"FailedRequestsTracingModule" +
+                    "\" lockItem=\"true\" />\r\n                <add name=\"CgiModule\" lockItem=\"true\" />\r\n" +
+                    "                <add name=\"FastCgiModule\" lockItem=\"true\" />\r\n                <!" +
+                    "--                <add name=\"WebDAVModule\" /> -->\r\n                <add name=\"Re" +
+                    "writeModule\" />\r\n                <add name=\"OutputCache\" type=\"System.Web.Cachin" +
+                    "g.OutputCacheModule\" preCondition=\"managedHandler\" />\r\n                <add name" +
+                    "=\"Session\" type=\"System.Web.SessionState.SessionStateModule\" preCondition=\"manag" +
+                    "edHandler\" />\r\n                <add name=\"WindowsAuthentication\" type=\"System.We" +
+                    "b.Security.WindowsAuthenticationModule\" preCondition=\"managedHandler\" />\r\n      " +
+                    "          <add name=\"FormsAuthentication\" type=\"System.Web.Security.FormsAuthent" +
+                    "icationModule\" preCondition=\"managedHandler\" />\r\n                <add name=\"Defa" +
+                    "ultAuthentication\" type=\"System.Web.Security.DefaultAuthenticationModule\" preCon" +
+                    "dition=\"managedHandler\" />\r\n                <add name=\"RoleManager\" type=\"System" +
+                    ".Web.Security.RoleManagerModule\" preCondition=\"managedHandler\" />\r\n             " +
+                    "   <add name=\"UrlAuthorization\" type=\"System.Web.Security.UrlAuthorizationModule" +
+                    "\" preCondition=\"managedHandler\" />\r\n                <add name=\"FileAuthorization" +
+                    "\" type=\"System.Web.Security.FileAuthorizationModule\" preCondition=\"managedHandle" +
+                    "r\" />\r\n                <add name=\"AnonymousIdentification\" type=\"System.Web.Secu" +
+                    "rity.AnonymousIdentificationModule\" preCondition=\"managedHandler\" />\r\n          " +
+                    "      <add name=\"Profile\" type=\"System.Web.Profile.ProfileModule\" preCondition=\"" +
+                    "managedHandler\" />\r\n                <add name=\"UrlMappingsModule\" type=\"System.W" +
+                    "eb.UrlMappingsModule\" preCondition=\"managedHandler\" />\r\n                <add nam" +
+                    "e=\"ConfigurationValidationModule\" lockItem=\"true\" />\r\n                <add name=" +
+                    "\"WebSocketModule\" lockItem=\"true\" />\r\n                <add name=\"ServiceModel-4." +
+                    "0\" type=\"System.ServiceModel.Activation.ServiceHttpModule,System.ServiceModel.Ac" +
+                    "tivation,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35\" preCon" +
+                    "dition=\"managedHandler,runtimeVersionv4.0\" />\r\n                <add name=\"UrlRou" +
+                    "tingModule-4.0\" type=\"System.Web.Routing.UrlRoutingModule\" preCondition=\"managed" +
+                    "Handler,runtimeVersionv4.0\" />\r\n                <add name=\"ScriptModule-4.0\" typ" +
+                    "e=\"System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Cul" +
+                    "ture=neutral, PublicKeyToken=31bf3856ad364e35\" preCondition=\"managedHandler,runt" +
+                    "imeVersionv4.0\" />\r\n                <add name=\"ServiceModel\" type=\"System.Servic" +
+                    "eModel.Activation.HttpModule, System.ServiceModel, Version=3.0.0.0, Culture=neut" +
+                    "ral, PublicKeyToken=b77a5c561934e089\" preCondition=\"managedHandler,runtimeVersio" +
+                    "nv2.0\" />\r\n                <add name=\"ApplicationInitializationModule\" lockItem=" +
+                    "\"true\" />\r\n            </modules>\r\n            <handlers accessPolicy=\"Read, Scr" +
+                    "ipt\">\r\n                <!--                <add name=\"WebDAV\" path=\"*\" verb=\"PRO" +
+                    "PFIND,PROPPATCH,MKCOL,PUT,COPY,DELETE,MOVE,LOCK,UNLOCK\" modules=\"WebDAVModule\" r" +
+                    "esourceType=\"Unspecified\" requireAccess=\"None\" /> -->\r\n                <add name" +
+                    "=\"AXD-ISAPI-4.0_64bit\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiMod" +
+                    "ule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi" +
+                    ".dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimi" +
+                    "t=\"0\" />\r\n                <add name=\"PageHandlerFactory-ISAPI-4.0_64bit\" path=\"*" +
+                    ".aspx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir" +
+                    "%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMo" +
+                    "de,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <ad" +
+                    "d name=\"SimpleHandlerFactory-ISAPI-4.0_64bit\" path=\"*.ashx\" verb=\"GET,HEAD,POST," +
+                    "DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64" +
+                    "\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitne" +
+                    "ss64\" responseBufferLimit=\"0\" />\r\n                <add name=\"WebServiceHandlerFa" +
+                    "ctory-ISAPI-4.0_64bit\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiMo" +
+                    "dule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isap" +
+                    "i.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLim" +
+                    "it=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-rem-ISAPI-4.0_6" +
+                    "4bit\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProces" +
                     "sor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preConditio" +
                     "n=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n       " +
-                    "         <add name=\"PageHandlerFactory-ISAPI-4.0_64bit\" path=\"*.aspx\" verb=\"GET," +
-                    "HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\F" +
-                    "ramework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersion" +
-                    "v4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add name=\"SimpleHan" +
-                    "dlerFactory-ISAPI-4.0_64bit\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"I" +
-                    "sapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspne" +
-                    "t_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness64\" responseBuf" +
-                    "ferLimit=\"0\" />\r\n                <add name=\"WebServiceHandlerFactory-ISAPI-4.0_6" +
-                    "4bit\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProce" +
-                    "ssor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preConditi" +
-                    "on=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n      " +
-                    "          <add name=\"HttpRemotingHandlerFactory-rem-ISAPI-4.0_64bit\" path=\"*.rem" +
-                    "\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Mic" +
-                    "rosoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,ru" +
-                    "ntimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add nam" +
-                    "e=\"HttpRemotingHandlerFactory-soap-ISAPI-4.0_64bit\" path=\"*.soap\" verb=\"GET,HEAD" +
-                    ",POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Frame" +
-                    "work64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0" +
-                    ",bitness64\" responseBufferLimit=\"0\" />\r\n                <add name=\"svc-ISAPI-4.0" +
-                    "_64bit\" path=\"*.svc\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Mi" +
+                    "         <add name=\"HttpRemotingHandlerFactory-soap-ISAPI-4.0_64bit\" path=\"*.soa" +
+                    "p\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Mi" +
                     "crosoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,r" +
-                    "untimeVersionv4.0,bitness64\" />\r\n                <add name=\"rules-ISAPI-4.0_64bi" +
-                    "t\" path=\"*.rules\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Micro" +
-                    "soft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runt" +
-                    "imeVersionv4.0,bitness64\" />\r\n                <add name=\"xoml-ISAPI-4.0_64bit\" p" +
-                    "ath=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft." +
-                    "NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVe" +
-                    "rsionv4.0,bitness64\" />\r\n                <add name=\"xamlx-ISAPI-4.0_64bit\" path=" +
-                    "\"*.xamlx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%win" +
-                    "dir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classi" +
-                    "cMode,runtimeVersionv4.0,bitness64\" />\r\n                <add name=\"aspq-ISAPI-4." +
-                    "0_64bit\" path=\"*.aspq\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\" +
-                    "Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode" +
-                    ",runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add " +
-                    "name=\"cshtm-ISAPI-4.0_64bit\" path=\"*.cshtm\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"" +
-                    "IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspn" +
-                    "et_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness64\" responseBu" +
-                    "fferLimit=\"0\" />\r\n                <add name=\"cshtml-ISAPI-4.0_64bit\" path=\"*.csh" +
-                    "tml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\" +
-                    "Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode" +
-                    ",runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add " +
-                    "name=\"vbhtm-ISAPI-4.0_64bit\" path=\"*.vbhtm\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"" +
-                    "IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspn" +
-                    "et_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness64\" responseBu" +
-                    "fferLimit=\"0\" />\r\n                <add name=\"vbhtml-ISAPI-4.0_64bit\" path=\"*.vbh" +
-                    "tml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\" +
-                    "Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode" +
-                    ",runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add " +
-                    "name=\"svc-Integrated\" path=\"*.svc\" verb=\"*\" type=\"System.ServiceModel.Activation" +
-                    ".HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKeyTo" +
-                    "ken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n     " +
-                    "           <add name=\"svc-ISAPI-2.0\" path=\"*.svc\" verb=\"*\" modules=\"IsapiModule\"" +
-                    " scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" " +
-                    "preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" />\r\n                <add" +
-                    " name=\"xoml-Integrated\" path=\"*.xoml\" verb=\"*\" type=\"System.ServiceModel.Activat" +
-                    "ion.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, PublicKe" +
-                    "yToken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n  " +
-                    "              <add name=\"xoml-ISAPI-2.0\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiMo" +
-                    "dule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi." +
-                    "dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" />\r\n               " +
-                    " <add name=\"rules-Integrated\" path=\"*.rules\" verb=\"*\" type=\"System.ServiceModel." +
-                    "Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neutral, P" +
-                    "ublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVersionv2.0\"" +
-                    " />\r\n                <add name=\"rules-ISAPI-2.0\" path=\"*.rules\" verb=\"*\" modules" +
-                    "=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspn" +
-                    "et_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" />\r\n      " +
-                    "          <add name=\"AXD-ISAPI-4.0_32bit\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG" +
-                    "\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.3" +
-                    "0319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" r" +
-                    "esponseBufferLimit=\"0\" />\r\n                <add name=\"PageHandlerFactory-ISAPI-4" +
-                    ".0_32bit\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptP" +
-                    "rocessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondi" +
-                    "tion=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n    " +
-                    "            <add name=\"SimpleHandlerFactory-ISAPI-4.0_32bit\" path=\"*.ashx\" verb=" +
-                    "\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft." +
-                    "NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVers" +
-                    "ionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"WebSer" +
-                    "viceHandlerFactory-ISAPI-4.0_32bit\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" mod" +
-                    "ules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\" +
-                    "aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" respon" +
-                    "seBufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-rem-" +
-                    "ISAPI-4.0_32bit\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" s" +
-                    "criptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" pr" +
-                    "eCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />" +
-                    "\r\n                <add name=\"HttpRemotingHandlerFactory-soap-ISAPI-4.0_32bit\" pa" +
-                    "th=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%w" +
+                    "untimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add na" +
+                    "me=\"svc-ISAPI-4.0_64bit\" path=\"*.svc\" verb=\"*\" modules=\"IsapiModule\" scriptProce" +
+                    "ssor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preConditi" +
+                    "on=\"classicMode,runtimeVersionv4.0,bitness64\" />\r\n                <add name=\"rul" +
+                    "es-ISAPI-4.0_64bit\" path=\"*.rules\" verb=\"*\" modules=\"IsapiModule\" scriptProcesso" +
+                    "r=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=" +
+                    "\"classicMode,runtimeVersionv4.0,bitness64\" />\r\n                <add name=\"xoml-I" +
+                    "SAPI-4.0_64bit\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%w" +
+                    "indir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"clas" +
+                    "sicMode,runtimeVersionv4.0,bitness64\" />\r\n                <add name=\"xamlx-ISAPI" +
+                    "-4.0_64bit\" path=\"*.xamlx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scri" +
+                    "ptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" pre" +
+                    "Condition=\"classicMode,runtimeVersionv4.0,bitness64\" />\r\n                <add na" +
+                    "me=\"aspq-ISAPI-4.0_64bit\" path=\"*.aspq\" verb=\"*\" modules=\"IsapiModule\" scriptPro" +
+                    "cessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondi" +
+                    "tion=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n    " +
+                    "            <add name=\"cshtm-ISAPI-4.0_64bit\" path=\"*.cshtm\" verb=\"GET,HEAD,POST" +
+                    ",DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework6" +
+                    "4\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitn" +
+                    "ess64\" responseBufferLimit=\"0\" />\r\n                <add name=\"cshtml-ISAPI-4.0_6" +
+                    "4bit\" path=\"*.cshtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptPro" +
+                    "cessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondi" +
+                    "tion=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n    " +
+                    "            <add name=\"vbhtm-ISAPI-4.0_64bit\" path=\"*.vbhtm\" verb=\"GET,HEAD,POST" +
+                    ",DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework6" +
+                    "4\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitn" +
+                    "ess64\" responseBufferLimit=\"0\" />\r\n                <add name=\"vbhtml-ISAPI-4.0_6" +
+                    "4bit\" path=\"*.vbhtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptPro" +
+                    "cessor=\"%windir%\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondi" +
+                    "tion=\"classicMode,runtimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n    " +
+                    "            <add name=\"svc-Integrated\" path=\"*.svc\" verb=\"*\" type=\"System.Servic" +
+                    "eModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=neu" +
+                    "tral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVersi" +
+                    "onv2.0\" />\r\n                <add name=\"svc-ISAPI-2.0\" path=\"*.svc\" verb=\"*\" modu" +
+                    "les=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\a" +
+                    "spnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" />\r\n   " +
+                    "             <add name=\"xoml-Integrated\" path=\"*.xoml\" verb=\"*\" type=\"System.Ser" +
+                    "viceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, Culture=" +
+                    "neutral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVe" +
+                    "rsionv2.0\" />\r\n                <add name=\"xoml-ISAPI-2.0\" path=\"*.xoml\" verb=\"*\"" +
+                    " modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50" +
+                    "727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" />" +
+                    "\r\n                <add name=\"rules-Integrated\" path=\"*.rules\" verb=\"*\" type=\"Sys" +
+                    "tem.ServiceModel.Activation.HttpHandler, System.ServiceModel, Version=3.0.0.0, C" +
+                    "ulture=neutral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMode,ru" +
+                    "ntimeVersionv2.0\" />\r\n                <add name=\"rules-ISAPI-2.0\" path=\"*.rules\"" +
+                    " verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framewor" +
+                    "k\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitn" +
+                    "ess32\" />\r\n                <add name=\"AXD-ISAPI-4.0_32bit\" path=\"*.axd\" verb=\"GE" +
+                    "T,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET" +
+                    "\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersion" +
+                    "v4.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"PageHandl" +
+                    "erFactory-ISAPI-4.0_32bit\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"Isa" +
+                    "piModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_is" +
+                    "api.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferL" +
+                    "imit=\"0\" />\r\n                <add name=\"SimpleHandlerFactory-ISAPI-4.0_32bit\" pa" +
+                    "th=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%w" +
                     "indir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classi" +
                     "cMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n                " +
-                    "<add name=\"svc-ISAPI-4.0_32bit\" path=\"*.svc\" verb=\"*\" modules=\"IsapiModule\" scri" +
-                    "ptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCo" +
-                    "ndition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n                <add name" +
-                    "=\"rules-ISAPI-4.0_32bit\" path=\"*.rules\" verb=\"*\" modules=\"IsapiModule\" scriptPro" +
-                    "cessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preConditi" +
-                    "on=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n                <add name=\"xom" +
-                    "l-ISAPI-4.0_32bit\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=" +
-                    "\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"cla" +
-                    "ssicMode,runtimeVersionv4.0,bitness32\" />\r\n                <add name=\"xamlx-ISAP" +
-                    "I-4.0_32bit\" path=\"*.xamlx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scr" +
-                    "iptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preC" +
-                    "ondition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n                <add nam" +
-                    "e=\"aspq-ISAPI-4.0_32bit\" path=\"*.aspq\" verb=\"*\" modules=\"IsapiModule\" scriptProc" +
-                    "essor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preConditio" +
-                    "n=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n       " +
-                    "         <add name=\"cshtm-ISAPI-4.0_32bit\" path=\"*.cshtm\" verb=\"GET,HEAD,POST,DE" +
-                    "BUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4." +
-                    "0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32" +
-                    "\" responseBufferLimit=\"0\" />\r\n                <add name=\"cshtml-ISAPI-4.0_32bit\"" +
-                    " path=\"*.cshtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcesso" +
-                    "r=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"c" +
-                    "lassicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n           " +
-                    "     <add name=\"vbhtm-ISAPI-4.0_32bit\" path=\"*.vbhtm\" verb=\"GET,HEAD,POST,DEBUG\"" +
-                    " modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30" +
-                    "319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" re" +
-                    "sponseBufferLimit=\"0\" />\r\n                <add name=\"vbhtml-ISAPI-4.0_32bit\" pat" +
-                    "h=\"*.vbhtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%" +
-                    "windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"class" +
-                    "icMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n               " +
-                    " <add name=\"TraceHandler-Integrated-4.0\" path=\"trace.axd\" verb=\"GET,HEAD,POST,DE" +
-                    "BUG\" type=\"System.Web.Handlers.TraceHandler\" preCondition=\"integratedMode,runtim" +
-                    "eVersionv4.0\" />\r\n                <add name=\"WebAdminHandler-Integrated-4.0\" pat" +
-                    "h=\"WebAdmin.axd\" verb=\"GET,DEBUG\" type=\"System.Web.Handlers.WebAdminHandler\" pre" +
-                    "Condition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"Ass" +
-                    "emblyResourceLoader-Integrated-4.0\" path=\"WebResource.axd\" verb=\"GET,DEBUG\" type" +
-                    "=\"System.Web.Handlers.AssemblyResourceLoader\" preCondition=\"integratedMode,runti" +
-                    "meVersionv4.0\" />\r\n                <add name=\"PageHandlerFactory-Integrated-4.0\"" +
-                    " path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.UI.PageHandlerFactory" +
+                    "<add name=\"WebServiceHandlerFactory-ISAPI-4.0_32bit\" path=\"*.asmx\" verb=\"GET,HEA" +
+                    "D,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Fram" +
+                    "ework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0," +
+                    "bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingHa" +
+                    "ndlerFactory-rem-ISAPI-4.0_32bit\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" module" +
+                    "s=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\asp" +
+                    "net_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseB" +
+                    "ufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-soap-IS" +
+                    "API-4.0_32bit\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" sc" +
+                    "riptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" pre" +
+                    "Condition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r" +
+                    "\n                <add name=\"svc-ISAPI-4.0_32bit\" path=\"*.svc\" verb=\"*\" modules=\"" +
+                    "IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet" +
+                    "_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n        " +
+                    "        <add name=\"rules-ISAPI-4.0_32bit\" path=\"*.rules\" verb=\"*\" modules=\"Isapi" +
+                    "Module\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isap" +
+                    "i.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n             " +
+                    "   <add name=\"xoml-ISAPI-4.0_32bit\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\"" +
+                    " scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" " +
+                    "preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n                <add" +
+                    " name=\"xamlx-ISAPI-4.0_32bit\" path=\"*.xamlx\" verb=\"GET,HEAD,POST,DEBUG\" modules=" +
+                    "\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspne" +
+                    "t_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" />\r\n       " +
+                    "         <add name=\"aspq-ISAPI-4.0_32bit\" path=\"*.aspq\" verb=\"*\" modules=\"IsapiM" +
+                    "odule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi" +
+                    ".dll\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimi" +
+                    "t=\"0\" />\r\n                <add name=\"cshtm-ISAPI-4.0_32bit\" path=\"*.cshtm\" verb=" +
+                    "\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft." +
+                    "NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVers" +
+                    "ionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"cshtml" +
+                    "-ISAPI-4.0_32bit\" path=\"*.cshtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModul" +
+                    "e\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll" +
+                    "\" preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0" +
+                    "\" />\r\n                <add name=\"vbhtm-ISAPI-4.0_32bit\" path=\"*.vbhtm\" verb=\"GET" +
+                    ",HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\" +
+                    "Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv" +
+                    "4.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"vbhtml-ISA" +
+                    "PI-4.0_32bit\" path=\"*.vbhtml\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" s" +
+                    "criptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" pr" +
+                    "eCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />" +
+                    "\r\n                <add name=\"TraceHandler-Integrated-4.0\" path=\"trace.axd\" verb=" +
+                    "\"GET,HEAD,POST,DEBUG\" type=\"System.Web.Handlers.TraceHandler\" preCondition=\"inte" +
+                    "gratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"WebAdminHandler-In" +
+                    "tegrated-4.0\" path=\"WebAdmin.axd\" verb=\"GET,DEBUG\" type=\"System.Web.Handlers.Web" +
+                    "AdminHandler\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n             " +
+                    "   <add name=\"AssemblyResourceLoader-Integrated-4.0\" path=\"WebResource.axd\" verb" +
+                    "=\"GET,DEBUG\" type=\"System.Web.Handlers.AssemblyResourceLoader\" preCondition=\"int" +
+                    "egratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"PageHandlerFactor" +
+                    "y-Integrated-4.0\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.UI.P" +
+                    "ageHandlerFactory\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n        " +
+                    "        <add name=\"SimpleHandlerFactory-Integrated-4.0\" path=\"*.ashx\" verb=\"GET," +
+                    "HEAD,POST,DEBUG\" type=\"System.Web.UI.SimpleHandlerFactory\" preCondition=\"integra" +
+                    "tedMode,runtimeVersionv4.0\" />\r\n                <add name=\"WebServiceHandlerFact" +
+                    "ory-Integrated-4.0\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.Sc" +
+                    "ript.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Cult" +
+                    "ure=neutral, PublicKeyToken=31bf3856ad364e35\" preCondition=\"integratedMode,runti" +
+                    "meVersionv4.0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-rem-Int" +
+                    "egrated-4.0\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Runtime.Remoti" +
+                    "ng.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4." +
+                    "0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integrate" +
+                    "dMode,runtimeVersionv4.0\" />\r\n                <add name=\"HttpRemotingHandlerFact" +
+                    "ory-soap-Integrated-4.0\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.R" +
+                    "untime.Remoting.Channels.Http.HttpRemotingHandlerFactory, System.Runtime.Remotin" +
+                    "g, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" preConditi" +
+                    "on=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"svc-Integr" +
+                    "ated-4.0\" path=\"*.svc\" verb=\"*\" type=\"System.ServiceModel.Activation.ServiceHttp" +
+                    "HandlerFactory, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral" +
+                    ", PublicKeyToken=31bf3856ad364e35\" preCondition=\"integratedMode,runtimeVersionv4" +
+                    ".0\" />\r\n                <add name=\"rules-Integrated-4.0\" path=\"*.rules\" verb=\"*\"" +
+                    " type=\"System.ServiceModel.Activation.ServiceHttpHandlerFactory, System.ServiceM" +
+                    "odel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e" +
+                    "35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add na" +
+                    "me=\"xoml-Integrated-4.0\" path=\"*.xoml\" verb=\"*\" type=\"System.ServiceModel.Activa" +
+                    "tion.ServiceHttpHandlerFactory, System.ServiceModel.Activation, Version=4.0.0.0," +
+                    " Culture=neutral, PublicKeyToken=31bf3856ad364e35\" preCondition=\"integratedMode," +
+                    "runtimeVersionv4.0\" />\r\n                <add name=\"xamlx-Integrated-4.0\" path=\"*" +
+                    ".xamlx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Xaml.Hosting.XamlHttpHandlerFact" +
+                    "ory, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3" +
+                    "856ad364e35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n              " +
+                    "  <add name=\"aspq-Integrated-4.0\" path=\"*.aspq\" verb=\"GET,HEAD,POST,DEBUG\" type=" +
+                    "\"System.Web.HttpForbiddenHandler\" preCondition=\"integratedMode,runtimeVersionv4." +
+                    "0\" />\r\n                <add name=\"cshtm-Integrated-4.0\" path=\"*.cshtm\" verb=\"GET" +
+                    ",HEAD,POST,DEBUG\" type=\"System.Web.HttpForbiddenHandler\" preCondition=\"integrate" +
+                    "dMode,runtimeVersionv4.0\" />\r\n                <add name=\"cshtml-Integrated-4.0\" " +
+                    "path=\"*.cshtml\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.HttpForbiddenHandler" +
                     "\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name" +
-                    "=\"SimpleHandlerFactory-Integrated-4.0\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" " +
-                    "type=\"System.Web.UI.SimpleHandlerFactory\" preCondition=\"integratedMode,runtimeVe" +
-                    "rsionv4.0\" />\r\n                <add name=\"WebServiceHandlerFactory-Integrated-4." +
-                    "0\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.Script.Services.Scr" +
-                    "iptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, Publ" +
-                    "icKeyToken=31bf3856ad364e35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />" +
-                    "\r\n                <add name=\"HttpRemotingHandlerFactory-rem-Integrated-4.0\" path" +
-                    "=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Runtime.Remoting.Channels.Http." +
-                    "HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0.0, Culture=ne" +
-                    "utral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMode,runtimeVers" +
-                    "ionv4.0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-soap-Integrat" +
-                    "ed-4.0\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Runtime.Remoting.C" +
-                    "hannels.Http.HttpRemotingHandlerFactory, System.Runtime.Remoting, Version=4.0.0." +
-                    "0, Culture=neutral, PublicKeyToken=b77a5c561934e089\" preCondition=\"integratedMod" +
-                    "e,runtimeVersionv4.0\" />\r\n                <add name=\"svc-Integrated-4.0\" path=\"*" +
-                    ".svc\" verb=\"*\" type=\"System.ServiceModel.Activation.ServiceHttpHandlerFactory, S" +
-                    "ystem.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=" +
-                    "31bf3856ad364e35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n         " +
-                    "       <add name=\"rules-Integrated-4.0\" path=\"*.rules\" verb=\"*\" type=\"System.Ser" +
-                    "viceModel.Activation.ServiceHttpHandlerFactory, System.ServiceModel.Activation, " +
-                    "Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" preCondition=" +
-                    "\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"xoml-Integrat" +
-                    "ed-4.0\" path=\"*.xoml\" verb=\"*\" type=\"System.ServiceModel.Activation.ServiceHttpH" +
-                    "andlerFactory, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral," +
-                    " PublicKeyToken=31bf3856ad364e35\" preCondition=\"integratedMode,runtimeVersionv4." +
-                    "0\" />\r\n                <add name=\"xamlx-Integrated-4.0\" path=\"*.xamlx\" verb=\"GET" +
-                    ",HEAD,POST,DEBUG\" type=\"System.Xaml.Hosting.XamlHttpHandlerFactory, System.Xaml." +
-                    "Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\" preC" +
-                    "ondition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"aspq" +
-                    "-Integrated-4.0\" path=\"*.aspq\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.HttpF" +
-                    "orbiddenHandler\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n          " +
-                    "      <add name=\"cshtm-Integrated-4.0\" path=\"*.cshtm\" verb=\"GET,HEAD,POST,DEBUG\"" +
-                    " type=\"System.Web.HttpForbiddenHandler\" preCondition=\"integratedMode,runtimeVers" +
-                    "ionv4.0\" />\r\n                <add name=\"cshtml-Integrated-4.0\" path=\"*.cshtml\" v" +
-                    "erb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.HttpForbiddenHandler\" preCondition=\"i" +
-                    "ntegratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"vbhtm-Integrate" +
-                    "d-4.0\" path=\"*.vbhtm\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.HttpForbiddenH" +
-                    "andler\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <ad" +
-                    "d name=\"vbhtml-Integrated-4.0\" path=\"*.vbhtml\" verb=\"GET,HEAD,POST,DEBUG\" type=\"" +
-                    "System.Web.HttpForbiddenHandler\" preCondition=\"integratedMode,runtimeVersionv4.0" +
-                    "\" />\r\n                <add name=\"ScriptHandlerFactoryAppServices-Integrated-4.0\"" +
-                    " path=\"*_AppService.axd\" verb=\"*\" type=\"System.Web.Script.Services.ScriptHandler" +
-                    "Factory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken" +
-                    "=31BF3856AD364E35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n        " +
-                    "        <add name=\"ScriptResourceIntegrated-4.0\" path=\"*ScriptResource.axd\" verb" +
-                    "=\"GET,HEAD\" type=\"System.Web.Handlers.ScriptResourceHandler, System.Web.Extensio" +
-                    "ns, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35\" preCondit" +
-                    "ion=\"integratedMode,runtimeVersionv4.0\" />\r\n                <add name=\"ASPClassi" +
-                    "c\" path=\"*.asp\" verb=\"GET,HEAD,POST\" modules=\"IsapiModule\" scriptProcessor=\"%IIS" +
-                    "_BIN%\\asp.dll\" resourceType=\"File\" />\r\n                <add name=\"SecurityCertif" +
-                    "icate\" path=\"*.cer\" verb=\"GET,HEAD,POST\" modules=\"IsapiModule\" scriptProcessor=\"" +
-                    "%IIS_BIN%\\asp.dll\" resourceType=\"File\" />\r\n                <add name=\"ISAPI-dll\"" +
-                    " path=\"*.dll\" verb=\"*\" modules=\"IsapiModule\" resourceType=\"File\" requireAccess=\"" +
-                    "Execute\" allowPathInfo=\"true\" />\r\n                <add name=\"TraceHandler-Integr" +
-                    "ated\" path=\"trace.axd\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.Handlers.Trac" +
-                    "eHandler\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n                <" +
-                    "add name=\"WebAdminHandler-Integrated\" path=\"WebAdmin.axd\" verb=\"GET,DEBUG\" type=" +
-                    "\"System.Web.Handlers.WebAdminHandler\" preCondition=\"integratedMode,runtimeVersio" +
-                    "nv2.0\" />\r\n                <add name=\"AssemblyResourceLoader-Integrated\" path=\"W" +
-                    "ebResource.axd\" verb=\"GET,DEBUG\" type=\"System.Web.Handlers.AssemblyResourceLoade" +
-                    "r\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n                <add nam" +
-                    "e=\"PageHandlerFactory-Integrated\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" type=" +
-                    "\"System.Web.UI.PageHandlerFactory\" preCondition=\"integratedMode,runtimeVersionv2" +
-                    ".0\" />\r\n                <add name=\"SimpleHandlerFactory-Integrated\" path=\"*.ashx" +
-                    "\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.UI.SimpleHandlerFactory\" preCondit" +
-                    "ion=\"integratedMode,runtimeVersionv2.0\" />\r\n                <add name=\"WebServic" +
-                    "eHandlerFactory-Integrated\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"Syste" +
-                    "m.Web.Services.Protocols.WebServiceHandlerFactory,System.Web.Services,Version=2." +
-                    "0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a\" preCondition=\"integratedM" +
-                    "ode,runtimeVersionv2.0\" />\r\n                <add name=\"HttpRemotingHandlerFactor" +
-                    "y-rem-Integrated\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Runtime.R" +
-                    "emoting.Channels.Http.HttpRemotingHandlerFactory,System.Runtime.Remoting,Version" +
-                    "=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089\" preCondition=\"integrat" +
-                    "edMode,runtimeVersionv2.0\" />\r\n                <add name=\"HttpRemotingHandlerFac" +
-                    "tory-soap-Integrated\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Runt" +
-                    "ime.Remoting.Channels.Http.HttpRemotingHandlerFactory,System.Runtime.Remoting,Ve" +
-                    "rsion=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089\" preCondition=\"int" +
-                    "egratedMode,runtimeVersionv2.0\" />\r\n                <add name=\"AXD-ISAPI-2.0\" pa" +
-                    "th=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%wi" +
-                    "ndir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classic" +
-                    "Mode,runtimeVersionv2.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <" +
-                    "add name=\"PageHandlerFactory-ISAPI-2.0\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\"" +
-                    " modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50" +
-                    "727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" re" +
-                    "sponseBufferLimit=\"0\" />\r\n                <add name=\"SimpleHandlerFactory-ISAPI-" +
-                    "2.0\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProces" +
-                    "sor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=" +
-                    "\"classicMode,runtimeVersionv2.0,bitness32\" responseBufferLimit=\"0\" />\r\n         " +
-                    "       <add name=\"WebServiceHandlerFactory-ISAPI-2.0\" path=\"*.asmx\" verb=\"GET,HE" +
-                    "AD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Fra" +
-                    "mework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0" +
-                    ",bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingH" +
-                    "andlerFactory-rem-ISAPI-2.0\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"Is" +
-                    "apiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_i" +
-                    "sapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" responseBuffer" +
-                    "Limit=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-soap-ISAPI-2" +
-                    ".0\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcess" +
-                    "or=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"" +
-                    "classicMode,runtimeVersionv2.0,bitness32\" responseBufferLimit=\"0\" />\r\n          " +
-                    "      <add name=\"svc-ISAPI-2.0-64\" path=\"*.svc\" verb=\"*\" modules=\"IsapiModule\" s" +
-                    "criptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" " +
-                    "preCondition=\"classicMode,runtimeVersionv2.0,bitness64\" />\r\n                <add" +
-                    " name=\"AXD-ISAPI-2.0-64\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiM" +
-                    "odule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isa" +
-                    "pi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness64\" responseBufferLi" +
-                    "mit=\"0\" />\r\n                <add name=\"PageHandlerFactory-ISAPI-2.0-64\" path=\"*." +
-                    "aspx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%" +
-                    "\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMod" +
-                    "e,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add" +
-                    " name=\"SimpleHandlerFactory-ISAPI-2.0-64\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBU" +
-                    "G\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2." +
-                    "0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness64" +
-                    "\" responseBufferLimit=\"0\" />\r\n                <add name=\"WebServiceHandlerFactor" +
-                    "y-ISAPI-2.0-64\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" s" +
-                    "criptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" " +
-                    "preCondition=\"classicMode,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" " +
-                    "/>\r\n                <add name=\"HttpRemotingHandlerFactory-rem-ISAPI-2.0-64\" path" +
-                    "=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%wind" +
-                    "ir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classic" +
-                    "Mode,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <" +
-                    "add name=\"HttpRemotingHandlerFactory-soap-ISAPI-2.0-64\" path=\"*.soap\" verb=\"GET," +
-                    "HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\F" +
-                    "ramework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersion" +
-                    "v2.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add name=\"rules-64-" +
-                    "ISAPI-2.0\" path=\"*.rules\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windi" +
-                    "r%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicM" +
-                    "ode,runtimeVersionv2.0,bitness64\" />\r\n                <add name=\"xoml-64-ISAPI-2" +
-                    ".0\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Micro" +
-                    "soft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runt" +
-                    "imeVersionv2.0,bitness64\" />\r\n                <add name=\"CGI-exe\" path=\"*.exe\" v" +
-                    "erb=\"*\" modules=\"CgiModule\" resourceType=\"File\" requireAccess=\"Execute\" allowPat" +
-                    "hInfo=\"true\" />\r\n                <add name=\"SSINC-stm\" path=\"*.stm\" verb=\"GET,HE" +
-                    "AD,POST\" modules=\"ServerSideIncludeModule\" resourceType=\"File\" />\r\n             " +
-                    "   <add name=\"SSINC-shtm\" path=\"*.shtm\" verb=\"GET,HEAD,POST\" modules=\"ServerSide" +
-                    "IncludeModule\" resourceType=\"File\" />\r\n                <add name=\"SSINC-shtml\" p" +
-                    "ath=\"*.shtml\" verb=\"GET,HEAD,POST\" modules=\"ServerSideIncludeModule\" resourceTyp" +
-                    "e=\"File\" />\r\n                <add name=\"TRACEVerbHandler\" path=\"*\" verb=\"TRACE\" " +
-                    "modules=\"ProtocolSupportModule\" requireAccess=\"None\" />\r\n                <add na" +
-                    "me=\"OPTIONSVerbHandler\" path=\"*\" verb=\"OPTIONS\" modules=\"ProtocolSupportModule\" " +
-                    "requireAccess=\"None\" />\r\n                <add name=\"ExtensionlessUrl-ISAPI-4.0_3" +
-                    "2bit\" path=\"*.\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor" +
-                    "=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"cl" +
-                    "assicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\" />\r\n            " +
-                    "    <add name=\"ExtensionlessUrlHandler-ISAPI-4.0_64bit\" path=\"*.\" verb=\"GET,HEAD" +
-                    ",POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Frame" +
-                    "work64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv4.0" +
-                    ",bitness64\" responseBufferLimit=\"0\" />\r\n                <add name=\"Extensionless" +
-                    "Url-Integrated-4.0\" path=\"*.\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.Handle" +
-                    "rs.TransferRequestHandler\" preCondition=\"integratedMode,runtimeVersionv4.0\" resp" +
-                    "onseBufferLimit=\"0\" />\r\n                <add name=\"StaticFile\" path=\"*\" verb=\"*\"" +
-                    " modules=\"StaticFileModule,DefaultDocumentModule,DirectoryListingModule\" resourc" +
-                    "eType=\"Either\" requireAccess=\"Read\" />\r\n            </handlers>\r\n        </syste" +
-                    "m.webServer>\r\n    </location>\r\n</configuration>\r\n");
+                    "=\"vbhtm-Integrated-4.0\" path=\"*.vbhtm\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.W" +
+                    "eb.HttpForbiddenHandler\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n  " +
+                    "              <add name=\"vbhtml-Integrated-4.0\" path=\"*.vbhtml\" verb=\"GET,HEAD,P" +
+                    "OST,DEBUG\" type=\"System.Web.HttpForbiddenHandler\" preCondition=\"integratedMode,r" +
+                    "untimeVersionv4.0\" />\r\n                <add name=\"ScriptHandlerFactoryAppService" +
+                    "s-Integrated-4.0\" path=\"*_AppService.axd\" verb=\"*\" type=\"System.Web.Script.Servi" +
+                    "ces.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutra" +
+                    "l, PublicKeyToken=31BF3856AD364E35\" preCondition=\"integratedMode,runtimeVersionv" +
+                    "4.0\" />\r\n                <add name=\"ScriptResourceIntegrated-4.0\" path=\"*ScriptR" +
+                    "esource.axd\" verb=\"GET,HEAD\" type=\"System.Web.Handlers.ScriptResourceHandler, Sy" +
+                    "stem.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD" +
+                    "364E35\" preCondition=\"integratedMode,runtimeVersionv4.0\" />\r\n                <ad" +
+                    "d name=\"ASPClassic\" path=\"*.asp\" verb=\"GET,HEAD,POST\" modules=\"IsapiModule\" scri" +
+                    "ptProcessor=\"%IIS_BIN%\\asp.dll\" resourceType=\"File\" />\r\n                <add nam" +
+                    "e=\"SecurityCertificate\" path=\"*.cer\" verb=\"GET,HEAD,POST\" modules=\"IsapiModule\" " +
+                    "scriptProcessor=\"%IIS_BIN%\\asp.dll\" resourceType=\"File\" />\r\n                <add" +
+                    " name=\"ISAPI-dll\" path=\"*.dll\" verb=\"*\" modules=\"IsapiModule\" resourceType=\"File" +
+                    "\" requireAccess=\"Execute\" allowPathInfo=\"true\" />\r\n                <add name=\"Tr" +
+                    "aceHandler-Integrated\" path=\"trace.axd\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System." +
+                    "Web.Handlers.TraceHandler\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n" +
+                    "                <add name=\"WebAdminHandler-Integrated\" path=\"WebAdmin.axd\" verb=" +
+                    "\"GET,DEBUG\" type=\"System.Web.Handlers.WebAdminHandler\" preCondition=\"integratedM" +
+                    "ode,runtimeVersionv2.0\" />\r\n                <add name=\"AssemblyResourceLoader-In" +
+                    "tegrated\" path=\"WebResource.axd\" verb=\"GET,DEBUG\" type=\"System.Web.Handlers.Asse" +
+                    "mblyResourceLoader\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n       " +
+                    "         <add name=\"PageHandlerFactory-Integrated\" path=\"*.aspx\" verb=\"GET,HEAD," +
+                    "POST,DEBUG\" type=\"System.Web.UI.PageHandlerFactory\" preCondition=\"integratedMode" +
+                    ",runtimeVersionv2.0\" />\r\n                <add name=\"SimpleHandlerFactory-Integra" +
+                    "ted\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" type=\"System.Web.UI.SimpleHandlerF" +
+                    "actory\" preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n                <ad" +
+                    "d name=\"WebServiceHandlerFactory-Integrated\" path=\"*.asmx\" verb=\"GET,HEAD,POST,D" +
+                    "EBUG\" type=\"System.Web.Services.Protocols.WebServiceHandlerFactory,System.Web.Se" +
+                    "rvices,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b03f5f7f11d50a3a\" preCondi" +
+                    "tion=\"integratedMode,runtimeVersionv2.0\" />\r\n                <add name=\"HttpRemo" +
+                    "tingHandlerFactory-rem-Integrated\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" type=" +
+                    "\"System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory,System.Runtime" +
+                    ".Remoting,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089\" preCo" +
+                    "ndition=\"integratedMode,runtimeVersionv2.0\" />\r\n                <add name=\"HttpR" +
+                    "emotingHandlerFactory-soap-Integrated\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" " +
+                    "type=\"System.Runtime.Remoting.Channels.Http.HttpRemotingHandlerFactory,System.Ru" +
+                    "ntime.Remoting,Version=2.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089\" " +
+                    "preCondition=\"integratedMode,runtimeVersionv2.0\" />\r\n                <add name=\"" +
+                    "AXD-ISAPI-2.0\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scr" +
+                    "iptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" preC" +
+                    "ondition=\"classicMode,runtimeVersionv2.0,bitness32\" responseBufferLimit=\"0\" />\r\n" +
+                    "                <add name=\"PageHandlerFactory-ISAPI-2.0\" path=\"*.aspx\" verb=\"GET" +
+                    ",HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\" +
+                    "Framework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv" +
+                    "2.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add name=\"SimpleHand" +
+                    "lerFactory-ISAPI-2.0\" path=\"*.ashx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiMod" +
+                    "ule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.d" +
+                    "ll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" responseBufferLimit=" +
+                    "\"0\" />\r\n                <add name=\"WebServiceHandlerFactory-ISAPI-2.0\" path=\"*.a" +
+                    "smx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\" +
+                    "Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,r" +
+                    "untimeVersionv2.0,bitness32\" responseBufferLimit=\"0\" />\r\n                <add na" +
+                    "me=\"HttpRemotingHandlerFactory-rem-ISAPI-2.0\" path=\"*.rem\" verb=\"GET,HEAD,POST,D" +
+                    "EBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2" +
+                    ".0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness3" +
+                    "2\" responseBufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFac" +
+                    "tory-soap-ISAPI-2.0\" path=\"*.soap\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModu" +
+                    "le\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v2.0.50727\\aspnet_isapi.dl" +
+                    "l\" preCondition=\"classicMode,runtimeVersionv2.0,bitness32\" responseBufferLimit=\"" +
+                    "0\" />\r\n                <add name=\"svc-ISAPI-2.0-64\" path=\"*.svc\" verb=\"*\" module" +
+                    "s=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\a" +
+                    "spnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness64\" />\r\n   " +
+                    "             <add name=\"AXD-ISAPI-2.0-64\" path=\"*.axd\" verb=\"GET,HEAD,POST,DEBUG" +
+                    "\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0" +
+                    ".50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness64\"" +
+                    " responseBufferLimit=\"0\" />\r\n                <add name=\"PageHandlerFactory-ISAPI" +
+                    "-2.0-64\" path=\"*.aspx\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptPr" +
+                    "ocessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCond" +
+                    "ition=\"classicMode,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n   " +
+                    "             <add name=\"SimpleHandlerFactory-ISAPI-2.0-64\" path=\"*.ashx\" verb=\"G" +
+                    "ET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NE" +
+                    "T\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMode,runtimeVers" +
+                    "ionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add name=\"WebSer" +
+                    "viceHandlerFactory-ISAPI-2.0-64\" path=\"*.asmx\" verb=\"GET,HEAD,POST,DEBUG\" module" +
+                    "s=\"IsapiModule\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\a" +
+                    "spnet_isapi.dll\" preCondition=\"classicMode,runtimeVersionv2.0,bitness64\" respons" +
+                    "eBufferLimit=\"0\" />\r\n                <add name=\"HttpRemotingHandlerFactory-rem-I" +
+                    "SAPI-2.0-64\" path=\"*.rem\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scrip" +
+                    "tProcessor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preC" +
+                    "ondition=\"classicMode,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n" +
+                    "                <add name=\"HttpRemotingHandlerFactory-soap-ISAPI-2.0-64\" path=\"*" +
+                    ".soap\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir" +
+                    "%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=\"classicMo" +
+                    "de,runtimeVersionv2.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <ad" +
+                    "d name=\"rules-64-ISAPI-2.0\" path=\"*.rules\" verb=\"*\" modules=\"IsapiModule\" script" +
+                    "Processor=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCo" +
+                    "ndition=\"classicMode,runtimeVersionv2.0,bitness64\" />\r\n                <add name" +
+                    "=\"xoml-64-ISAPI-2.0\" path=\"*.xoml\" verb=\"*\" modules=\"IsapiModule\" scriptProcesso" +
+                    "r=\"%windir%\\Microsoft.NET\\Framework64\\v2.0.50727\\aspnet_isapi.dll\" preCondition=" +
+                    "\"classicMode,runtimeVersionv2.0,bitness64\" />\r\n                <add name=\"CGI-ex" +
+                    "e\" path=\"*.exe\" verb=\"*\" modules=\"CgiModule\" resourceType=\"File\" requireAccess=\"" +
+                    "Execute\" allowPathInfo=\"true\" />\r\n                <add name=\"SSINC-stm\" path=\"*." +
+                    "stm\" verb=\"GET,HEAD,POST\" modules=\"ServerSideIncludeModule\" resourceType=\"File\" " +
+                    "/>\r\n                <add name=\"SSINC-shtm\" path=\"*.shtm\" verb=\"GET,HEAD,POST\" mo" +
+                    "dules=\"ServerSideIncludeModule\" resourceType=\"File\" />\r\n                <add nam" +
+                    "e=\"SSINC-shtml\" path=\"*.shtml\" verb=\"GET,HEAD,POST\" modules=\"ServerSideIncludeMo" +
+                    "dule\" resourceType=\"File\" />\r\n                <add name=\"TRACEVerbHandler\" path=" +
+                    "\"*\" verb=\"TRACE\" modules=\"ProtocolSupportModule\" requireAccess=\"None\" />\r\n      " +
+                    "          <add name=\"OPTIONSVerbHandler\" path=\"*\" verb=\"OPTIONS\" modules=\"Protoc" +
+                    "olSupportModule\" requireAccess=\"None\" />\r\n                <add name=\"Extensionle" +
+                    "ssUrl-ISAPI-4.0_32bit\" path=\"*.\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule" +
+                    "\" scriptProcessor=\"%windir%\\Microsoft.NET\\Framework\\v4.0.30319\\aspnet_isapi.dll\"" +
+                    " preCondition=\"classicMode,runtimeVersionv4.0,bitness32\" responseBufferLimit=\"0\"" +
+                    " />\r\n                <add name=\"ExtensionlessUrlHandler-ISAPI-4.0_64bit\" path=\"*" +
+                    ".\" verb=\"GET,HEAD,POST,DEBUG\" modules=\"IsapiModule\" scriptProcessor=\"%windir%\\Mi" +
+                    "crosoft.NET\\Framework64\\v4.0.30319\\aspnet_isapi.dll\" preCondition=\"classicMode,r" +
+                    "untimeVersionv4.0,bitness64\" responseBufferLimit=\"0\" />\r\n                <add na" +
+                    "me=\"ExtensionlessUrl-Integrated-4.0\" path=\"*.\" verb=\"GET,HEAD,POST,DEBUG\" type=\"" +
+                    "System.Web.Handlers.TransferRequestHandler\" preCondition=\"integratedMode,runtime" +
+                    "Versionv4.0\" responseBufferLimit=\"0\" />\r\n                <add name=\"StaticFile\" " +
+                    "path=\"*\" verb=\"*\" modules=\"StaticFileModule,DefaultDocumentModule,DirectoryListi" +
+                    "ngModule\" resourceType=\"Either\" requireAccess=\"Read\" />\r\n            </handlers>" +
+                    "\r\n        </system.webServer>\r\n    </location>\r\n</configuration>\r\n");
             return this.GenerationEnvironment.ToString();
         }
     }
