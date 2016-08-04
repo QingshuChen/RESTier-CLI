@@ -5,6 +5,7 @@ using System.Net;
 using System.Xml;
 using Microsoft.RESTier.Cli.TextTemplate;
 using System.Configuration;
+using System;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -32,9 +33,17 @@ namespace Microsoft.RESTier.Cli
         }
 
         // Create the folders for the .Net Web Applications
-        private void CreateFolders()
+        private bool CreateFolders()
         {
-            if (!Directory.Exists(projectPath))
+            if (Directory.Exists(projectPath))
+            {
+                if (Directory.GetDirectories(projectPath).Length > 0 || Directory.GetFiles(projectPath).Length > 0)
+                {
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't create RESTier API in {0}, the diretory exists and is not empty.", projectPath);
+                    return false;
+                }
+            }
+            else
             {
                 Directory.CreateDirectory(projectPath);
             }
@@ -50,6 +59,7 @@ namespace Microsoft.RESTier.Cli
             Directory.CreateDirectory(projectPath + "\\" + projectName + "\\obj");
             Directory.CreateDirectory(projectPath + "\\" + projectName + "\\Properties");
             Directory.CreateDirectory(projectPath + "\\" + projectName + "\\scripts");
+            return true;
         }
 
         // Create a file that contains specific content
@@ -174,7 +184,10 @@ namespace Microsoft.RESTier.Cli
             }
             else
             {
-                CreateFolders();
+                if (!CreateFolders())
+                {
+                    return -1;
+                }
                 CreateSolutionFile();
                 CreateApplicationhostConfigFile();
                 CreateWebApiConfigFile();
