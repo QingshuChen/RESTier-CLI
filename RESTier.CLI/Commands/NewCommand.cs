@@ -30,7 +30,10 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 if (string.IsNullOrEmpty(connectionString))
                 {
-                    command.Parent.ShowHelp();
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "A connection string is required to create new RESTier API.");
+                    Console.WriteLine("Use \"RESTier -c connectionstring new\" to create new RESTier API.");
+                    Console.WriteLine("Use \"RESTier new -h\" for more infomation");
+                    return 0;
                 }
                 if (string.IsNullOrEmpty(name))
                 {
