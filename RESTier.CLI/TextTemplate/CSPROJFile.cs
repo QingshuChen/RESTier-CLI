@@ -187,35 +187,34 @@ namespace Microsoft.RESTier.Cli.TextTemplate
                     "</VisualStudioVersion>\r\n    <VSToolsPath Condition=\"\'$(VSToolsPath)\' == \'\'\">$(MS" +
                     "BuildExtensionsPath32)\\Microsoft\\VisualStudio\\v$(VisualStudioVersion)</VSToolsPa" +
                     "th>\r\n  </PropertyGroup>\r\n  <Import Project=\"$(MSBuildBinPath)\\Microsoft.CSharp.t" +
-                    "argets\" />\r\n  <Import Project=\"$(VSToolsPath)\\WebApplications\\Microsoft.WebAppli" +
-                    "cation.targets\" Condition=\"\'$(VSToolsPath)\' != \'\'\" />\r\n  <Import Project=\"$(MSBu" +
-                    "ildExtensionsPath32)\\Microsoft\\VisualStudio\\v10.0\\WebApplications\\Microsoft.WebA" +
-                    "pplication.targets\" Condition=\"false\" />\r\n  <ProjectExtensions>\r\n    <VisualStud" +
-                    "io>\r\n      <FlavorProperties GUID=\"{349c5851-65df-11da-9384-00065b846f21}\">\r\n   " +
-                    "     <WebProjectProperties>\r\n          <UseIIS>True</UseIIS>\r\n          <AutoAss" +
-                    "ignPort>True</AutoAssignPort>\r\n          <DevelopmentServerPort>3447</Developmen" +
-                    "tServerPort>\r\n          <DevelopmentServerVPath>/</DevelopmentServerVPath>\r\n    " +
-                    "      <IISUrl>http://localhost:3447/</IISUrl>\r\n          <NTLMAuthentication>Fal" +
-                    "se</NTLMAuthentication>\r\n          <UseCustomServer>False</UseCustomServer>\r\n   " +
-                    "       <CustomServerUrl>\r\n          </CustomServerUrl>\r\n          <SaveServerSet" +
-                    "tingsInUserFile>False</SaveServerSettingsInUserFile>\r\n        </WebProjectProper" +
-                    "ties>\r\n      </FlavorProperties>\r\n    </VisualStudio>\r\n  </ProjectExtensions>\r\n " +
-                    " <Target Name=\"EnsureNuGetPackageBuildImports\" BeforeTargets=\"PrepareForBuild\">\r" +
-                    "\n    <PropertyGroup>\r\n      <ErrorText>This project references NuGet package(s) " +
-                    "that are missing on this computer. Use NuGet Package Restore to download them.  " +
-                    "For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The mis" +
-                    "sing file is {0}.</ErrorText>\r\n    </PropertyGroup>\r\n    <Error Condition=\"!Exis" +
-                    "ts(\'..\\packages\\Microsoft.Net.Compilers.1.0.0\\build\\Microsoft.Net.Compilers.prop" +
-                    "s\')\" Text=\"$([System.String]::Format(\'$(ErrorText)\', \'..\\packages\\Microsoft.Net." +
-                    "Compilers.1.0.0\\build\\Microsoft.Net.Compilers.props\'))\" />\r\n    <Error Condition" +
-                    "=\"!Exists(\'..\\packages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\\" +
-                    "build\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props\')\" Text=\"$([Syste" +
-                    "m.String]::Format(\'$(ErrorText)\', \'..\\packages\\Microsoft.CodeDom.Providers.DotNe" +
-                    "tCompilerPlatform.1.0.0\\build\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform" +
-                    ".props\'))\" />\r\n  </Target>\r\n  <!-- To modify your build process, add your task i" +
-                    "nside one of the targets below and uncomment it. \r\n       Other similar extensio" +
-                    "n points exist, see Microsoft.Common.targets.\r\n  <Target Name=\"BeforeBuild\">\r\n  " +
-                    "</Target>\r\n  <Target Name=\"AfterBuild\">\r\n  </Target>\r\n  -->\r\n</Project>");
+                    "argets\" />\r\n  \r\n  <Import Project=\"$(MSBuildExtensionsPath32)\\Microsoft\\VisualSt" +
+                    "udio\\v10.0\\WebApplications\\Microsoft.WebApplication.targets\" Condition=\"false\" /" +
+                    ">\r\n  <ProjectExtensions>\r\n    <VisualStudio>\r\n      <FlavorProperties GUID=\"{349" +
+                    "c5851-65df-11da-9384-00065b846f21}\">\r\n        <WebProjectProperties>\r\n          " +
+                    "<UseIIS>True</UseIIS>\r\n          <AutoAssignPort>True</AutoAssignPort>\r\n        " +
+                    "  <DevelopmentServerPort>3447</DevelopmentServerPort>\r\n          <DevelopmentSer" +
+                    "verVPath>/</DevelopmentServerVPath>\r\n          <IISUrl>http://localhost:3447/</I" +
+                    "ISUrl>\r\n          <NTLMAuthentication>False</NTLMAuthentication>\r\n          <Use" +
+                    "CustomServer>False</UseCustomServer>\r\n          <CustomServerUrl>\r\n          </C" +
+                    "ustomServerUrl>\r\n          <SaveServerSettingsInUserFile>False</SaveServerSettin" +
+                    "gsInUserFile>\r\n        </WebProjectProperties>\r\n      </FlavorProperties>\r\n    <" +
+                    "/VisualStudio>\r\n  </ProjectExtensions>\r\n  <Target Name=\"EnsureNuGetPackageBuildI" +
+                    "mports\" BeforeTargets=\"PrepareForBuild\">\r\n    <PropertyGroup>\r\n      <ErrorText>" +
+                    "This project references NuGet package(s) that are missing on this computer. Use " +
+                    "NuGet Package Restore to download them.  For more information, see http://go.mic" +
+                    "rosoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>\r\n    </Pr" +
+                    "opertyGroup>\r\n    <Error Condition=\"!Exists(\'..\\packages\\Microsoft.Net.Compilers" +
+                    ".1.0.0\\build\\Microsoft.Net.Compilers.props\')\" Text=\"$([System.String]::Format(\'$" +
+                    "(ErrorText)\', \'..\\packages\\Microsoft.Net.Compilers.1.0.0\\build\\Microsoft.Net.Com" +
+                    "pilers.props\'))\" />\r\n    <Error Condition=\"!Exists(\'..\\packages\\Microsoft.CodeDo" +
+                    "m.Providers.DotNetCompilerPlatform.1.0.0\\build\\Microsoft.CodeDom.Providers.DotNe" +
+                    "tCompilerPlatform.props\')\" Text=\"$([System.String]::Format(\'$(ErrorText)\', \'..\\p" +
+                    "ackages\\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\\build\\Microsoft" +
+                    ".CodeDom.Providers.DotNetCompilerPlatform.props\'))\" />\r\n  </Target>\r\n  <!-- To m" +
+                    "odify your build process, add your task inside one of the targets below and unco" +
+                    "mment it. \r\n       Other similar extension points exist, see Microsoft.Common.ta" +
+                    "rgets.\r\n  <Target Name=\"BeforeBuild\">\r\n  </Target>\r\n  <Target Name=\"AfterBuild\">" +
+                    "\r\n  </Target>\r\n  -->\r\n</Project>");
             return this.GenerationEnvironment.ToString();
         }
     }
