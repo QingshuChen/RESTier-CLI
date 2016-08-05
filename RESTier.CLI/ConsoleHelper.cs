@@ -51,19 +51,19 @@ namespace Microsoft.RESTier.Cli
             }
         }
 
-        public static void Verbose(string message)
+        public static void WriteVerbose(string message, params object[] args)
         {
             if (IsVerbose)
             {
-                WriteLine(message);
+                WriteLine(ConsoleColor.Yellow, message, args);
             }
         }
 
         public void WriteTrace(string message)
-            => Verbose(message);
+            => WriteVerbose(message);
 
         public void WriteDebug(string message)
-            => Verbose(message);
+            => WriteVerbose(message);
 
         public void WriteInformation(string message)
             => WriteLine(message);

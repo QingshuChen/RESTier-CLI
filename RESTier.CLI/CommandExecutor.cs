@@ -53,7 +53,7 @@ namespace Microsoft.RESTier.Cli
                     {
                         throw new ArgumentException("Invalid connection string: " + e.Message, e);
                     }
-                    
+
                     var ret = app.Commands.First(c => c.Name == "new").Execute();
 
                     // execute the build and run command for the -a option
