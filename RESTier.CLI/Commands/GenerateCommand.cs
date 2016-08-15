@@ -5,6 +5,7 @@ namespace Microsoft.RESTier.Cli.Commands
 {
     public class GenerateCommand
     {
+        // Doesn't support generate command currently
         public static void Configure(CommandLineApplication command)
         {
             command.Description = "Reverse engineers a data access layer from a database.";

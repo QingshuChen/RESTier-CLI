@@ -30,7 +30,6 @@ namespace Microsoft.RESTier.Cli
             app.Option("-a|--all", "Execute the new, build, run commands together", CommandOptionType.NoValue);
 
             app.Command("new", c => NewCommand.Configure(c));
-            app.Command("generate", c => GenerateCommand.Configure(c));
             app.Command("build", c => BuildCommand.Configure(c));
             app.Command("run", c => RunCommand.Configure(c));
 
