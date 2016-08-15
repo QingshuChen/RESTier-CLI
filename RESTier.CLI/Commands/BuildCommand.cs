@@ -112,7 +112,7 @@ namespace Microsoft.RESTier.Cli.Commands
             {
                 try
                 {
-                    double max = 0;
+                    double max = 0; 
                     double version;
                     int index = -1;
                     if (!Directory.Exists(ConfigurationManager.AppSettings["MsBuildDirectory"]))
