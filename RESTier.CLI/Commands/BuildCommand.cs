@@ -96,18 +96,11 @@ namespace Microsoft.RESTier.Cli.Commands
         private static void CmdMSBuild(string projectName, string buildSetting, string msbuildPath)
         {
             var p = new Process();
-
-            p.StartInfo.FileName = "cmd.exe";
-
+            p.StartInfo.FileName = Path.Combine(msbuildPath, @"bin\MSBuild.exe");
             p.StartInfo.UseShellExecute = false;
-
-            p.StartInfo.Arguments = "/c " + "\"" + Path.Combine(msbuildPath, @"bin\MSBuild.exe") + "\" " + projectName +
+            p.StartInfo.Arguments = projectName +
                 (string.IsNullOrEmpty(buildSetting) ? "" : " " + buildSetting);
-
-            Console.WriteLine(p.StartInfo.Arguments);
-
             p.Start();
-
             p.WaitForExit();
         }
 
