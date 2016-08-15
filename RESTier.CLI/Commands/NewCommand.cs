@@ -37,7 +37,6 @@ namespace Microsoft.RESTier.Cli.Commands
                 }
                 if (string.IsNullOrEmpty(name))
                 {
-                    // TODO #4: Need better error handling for connection string.
                     var connectionStringBuilder = new SqlConnectionStringBuilder(connectionString);
                     name = connectionStringBuilder.InitialCatalog;
                     if (string.IsNullOrEmpty(name))
