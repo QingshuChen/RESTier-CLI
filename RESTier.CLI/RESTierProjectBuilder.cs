@@ -143,11 +143,6 @@ namespace Microsoft.RESTier.Cli
             CreateFile(filename, new CSPROJFile(projectName).TransformText()) ;
         }
 
-        private void CreateCSPROJUserFile()
-        {
-            string filename = projectPath + "\\" + projectName + @"\" + projectName + ".csproj.user";
-            CreateFile(filename, new CSPROJUserFile().TransformText());
-        }
 
         private void CreateWebConfigFile()
         {
@@ -199,7 +194,6 @@ namespace Microsoft.RESTier.Cli
                 CreateGlobalAsaxCSFile();
                 CreatePackagesConfigFile();
                 CreateCSPROJFile();
-                CreateCSPROJUserFile();
                 CreateWebConfigFile();
                 CreateWebDebugConfigFile();
                 CreateWebReleaseConfigFile();
