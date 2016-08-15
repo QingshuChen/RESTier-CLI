@@ -275,11 +275,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CSPROJFile.tt</DependentUpon>
     </Compile>
-    <Compile Include="TextTemplate\CSPROJUserFile.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSPROJUserFile.tt</DependentUpon>
-    </Compile>
     <Compile Include="TextTemplate\GlobalAsaxCSFile.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -371,10 +366,6 @@
     <Content Include="TextTemplate\CSPROJFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>CSPROJFile.cs</LastGenOutput>
-    </Content>
-    <Content Include="TextTemplate\CSPROJUserFile.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>CSPROJUserFile.cs</LastGenOutput>
     </Content>
     <Content Include="TextTemplate\GlobalAsaxCSFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
