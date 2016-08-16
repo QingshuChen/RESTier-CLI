@@ -332,6 +332,8 @@
     <Compile Include="Uitls\DetectionUtils\DetectionUtil.cs" />
     <Compile Include="Uitls\DetectionUtils\DetectionUtilForFile.cs" />
     <Compile Include="Uitls\DetectionUtils\DetectionUtilInDirectoryForDifferentVersion.cs" />
+    <Compile Include="Uitls\WebServerUtils\IISExpressUtil.cs" />
+    <Compile Include="Uitls\WebServerUtils\WebServerUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -433,9 +435,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Uitls\WebServerUtils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

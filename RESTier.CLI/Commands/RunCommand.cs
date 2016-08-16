@@ -4,6 +4,8 @@ using Microsoft.Extensions.CommandLineUtils;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
+using Microsoft.RESTier.Cli.Uitls.WebServerUtils;
+using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -23,17 +25,30 @@ namespace Microsoft.RESTier.Cli.Commands
 
             command.OnExecute(() =>
             {
+                DetectionUtil detectionUtil = new DetectionUtilForFile();
+                detectionUtil.SoftwareName = "IISExpress";
+                detectionUtil.ExecutableFileName = "iisexpress.exe";
+                detectionUtil.Path = ConfigurationManager.AppSettings["IISExpressPath"];
+                detectionUtil.DownloadInstructionsUri = ConfigurationManager.AppSettings["IISExpressDownloadInstructionsUri"];
+                bool type;
+                type = Environment.Is64BitOperatingSystem;
+                if (type) 
+                    detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["IISExpressDownloadInstaller64Uri"];
+                else
+                    detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["IISExpressDownloadInstaller32Uri"];
+                WebServerUtil webServer = new IISExpressUtil(detectionUtil);
+                string path = webServer.GetDetectionUtil().Detect();
                 if (download.HasValue())
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install IIS Express.");
-                    if (!IISExpressAutoDetect())
+                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install {0}.", webServer.GetDetectionUtil().SoftwareName);
+                    if (string.IsNullOrEmpty(path))
                     {
-                        DownloadAndInstallIISExpress();
+                        webServer.GetDetectionUtil().Install();
                         return -1;
                     }
                     else
                     {
-                        Console.WriteLine("IIS Express has already been installed in {0}", ConfigurationManager.AppSettings["IISExpressPath"]);
+                        Console.WriteLine("{0} has already been installed in {1}", webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().Path);
                         return -1;
                     }
                 }
@@ -55,68 +70,22 @@ namespace Microsoft.RESTier.Cli.Commands
                     projectDirectory = Path.GetDirectoryName(project.Value());
                 }
 
-                // Set current directory to the directory that contains the RESTier Project
-                if (!string.IsNullOrEmpty(projectDirectory))
-                    Directory.SetCurrentDirectory(projectDirectory);
-
-                if (!File.Exists(".vs\\config\\applicationhost.config"))
+                if (string.IsNullOrEmpty(path))
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find the configration file '" + projectDirectory + 
-                        "\\" + ".vs\\config\\applicationhost.config'");
-                    ConsoleHelper.WriteLine("Make sure you have set the correct project");
-                    ConsoleHelper.WriteLine("Use \"RESTier run -h\" for more information");
-                    return 0;
-                }
-
-                if (!IISExpressAutoDetect())
-                {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a iisexpress.exe in {0}", ConfigurationManager.AppSettings["IISExpressPath"]);
-                    ConsoleHelper.WriteLine("Use \"RESTier run -d\" to download and install IIS Express automatically");
-                    ConsoleHelper.WriteLine("Or you can download and install IIS Express through the URL: {0}", ConfigurationManager.AppSettings["IISExpressDownloadInstructionsUri"]);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a {0} in {1}", webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().Path);
+                    ConsoleHelper.WriteLine("Use \"RESTier run -d\" to download and install {0} automatically", webServer.GetDetectionUtil().SoftwareName);
+                    ConsoleHelper.WriteLine("Or you can download and install {0} through the URL: {1}",
+                        webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().DownloadInstructionsUri);
                     return -1;
                 }
 
-                CmdIISExpress();
+                if (!string.IsNullOrEmpty(projectDirectory))
+                    webServer.Run(projectDirectory);
+                else
+                    webServer.Run(Directory.GetCurrentDirectory());
 
                 return 0;
             });
-        }
-
-        // Execute the msbuild to build a project
-        // Current directory is set to the directory that contains the RESTier Project before executing this function
-        private static void CmdIISExpress()
-        {   
-            Process p = new Process();
-            p.StartInfo.FileName =  Path.Combine(ConfigurationManager.AppSettings["IISExpressPath"], "iisexpress.exe");
-            p.StartInfo.Arguments = @"/config:.vs\config\applicationhost.config";
-            p.StartInfo.UseShellExecute = false;
-            p.Start();
-            p.WaitForExit();
-        }
-
-        private static bool IISExpressAutoDetect()
-        {
-            return File.Exists(Path.Combine(ConfigurationManager.AppSettings["IISExpressPath"], "iisexpress.exe"));
-        }
-
-        private static void DownloadAndInstallIISExpress()
-        {
-            var webClient = new WebClient();
-            String toolName = "iisexpress";
-            int index = 0;
-            while (File.Exists(toolName + index + ".msi"))
-                index++;
-            bool type;
-            type = Environment.Is64BitOperatingSystem;
-            if (type)
-            {
-                webClient.DownloadFile(ConfigurationManager.AppSettings["IISExpressDownloadInstaller64Uri"], toolName + index + ".msi");
-            }
-            else
-            {
-                webClient.DownloadFile(ConfigurationManager.AppSettings["IISExpressDownloadInstaller32Uri"], toolName + index + ".msi");
-            }
-            Process.Start(toolName + index + ".msi");
         }
     }
 }
