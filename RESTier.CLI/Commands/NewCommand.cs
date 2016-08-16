@@ -2,6 +2,8 @@
 using System.Data.SqlClient;
 using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
+using Microsoft.RESTier.Cli.ProjectBuilder;
+using Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -50,9 +52,11 @@ namespace Microsoft.RESTier.Cli.Commands
                     ConsoleHelper.WriteLine("No namespace supplied; defaulting to \"RESTier\".");
                     @namespace = "RESTier";
                 }
-
-                var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
-                return builder.Generate();
+                IProjectBuilder asp = new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory());
+                asp.Create();
+                return 1;
+                //var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
+                //return builder.Generate();
             });
         }
     }

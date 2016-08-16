@@ -114,6 +114,8 @@
       <DependentUpon>CoreStrings.resx</DependentUpon>
     </Compile>
     <Compile Include="CommandExecutor.cs" />
+    <Compile Include="Database\DatabaseSetting.cs" />
+    <Compile Include="Database\DatabaseSettingsFactory.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\DbProviderServicesResolver.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\DependencyResolver.cs" />
     <Compile Include="EFTools\EntityDesignVersioningFacade\EntityFrameworkVersion.cs" />
@@ -245,6 +247,86 @@
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectBuilder\IProjectBuilder.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\AspDotNetProjectBuilder.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsFile1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AiJsFile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsMinFile.cs">
+      <DependentUpon>AiJsMinFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\ApplicationhostConfigFile.cs">
+      <DependentUpon>ApplicationhostConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\ApplicationhostConfigFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\ApplicationInsightsConfigFile.cs">
+      <DependentUpon>ApplicationInsightsConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AssemblyInfoFile.cs">
+      <DependentUpon>AssemblyInfoFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AssemblyInfoFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\CSPROJFile.cs">
+      <DependentUpon>CSPROJFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\CSPROJFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxCSFile.cs">
+      <DependentUpon>GlobalAsaxCSFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxCSFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxFile.cs">
+      <DependentUpon>GlobalAsaxFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\PackagesConfigFile.cs">
+      <DependentUpon>PackagesConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\SolutionFile.cs">
+      <DependentUpon>SolutionFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\SolutionFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebApiConfigFile.cs">
+      <DependentUpon>WebApiConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebApiConfigFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebConfigFile.cs">
+      <DependentUpon>WebConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebConfigFileCode.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebDebugConfigFile.cs">
+      <DependentUpon>WebDebugConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\WebReleaseConfigFile.cs">
+      <DependentUpon>WebReleaseConfigFile.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\RunCommand.cs" />
     <Compile Include="RESTierProjectBuilder.cs" />
@@ -360,6 +442,62 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AiJsFile1.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsMinFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AiJsMinFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\ApplicationhostConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApplicationhostConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\ApplicationInsightsConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>ApplicationInsightsConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\AssemblyInfoFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>AssemblyInfoFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\CSPROJFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>CSPROJFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxCSFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>GlobalAsaxCSFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\GlobalAsaxFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>GlobalAsaxFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\PackagesConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>PackagesConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\SolutionFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>SolutionFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\WebApiConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebApiConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\WebConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\WebDebugConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebDebugConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\WebReleaseConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>WebReleaseConfigFile.cs</LastGenOutput>
+    </Content>
     <Content Include="TextTemplate\AiJsFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>AiJsFile1.cs</LastGenOutput>
