@@ -5,6 +5,8 @@ using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
 using System.Collections.Generic;
 using System.Net;
+using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
+using Microsoft.RESTier.Cli.Uitls.BuildUtils;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -27,14 +29,21 @@ namespace Microsoft.RESTier.Cli.Commands
             {
                 
                 string msbuildPath;
+                DetectionUtil detectionUtil = new DetectionUtilInDirectoryForDifferentVersion();
+                detectionUtil.SoftwareName = "MSBuild";
+                detectionUtil.ExecutableFileName = @"bin\MSBuild.exe";
+                detectionUtil.Path = ConfigurationManager.AppSettings["MsBuildDirectory"];
+                detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["MsBuildDownloadInstallerUri"];
+                detectionUtil.DownloadInstructionsUri = ConfigurationManager.AppSettings["MsBuildDownloadInstructionsUri"];
+                BuildUtil msbuild = new MsBuildUtil(detectionUtil);
 
                 if (download.HasValue())
                 {
                     ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install MsBuild.");
-                    msbuildPath = MsBuildAutoDetect(false);
-                    if (msbuildPath == null)
+                    msbuildPath = msbuild.GetDetectionUtil().Detect();
+                    if (string.IsNullOrEmpty(msbuildPath))
                     {
-                        DownloadAndInstallMsBuild();
+                        msbuild.GetDetectionUtil().Install();
                         return -1;
                     } else
                     {
@@ -47,6 +56,7 @@ namespace Microsoft.RESTier.Cli.Commands
                 var pName = "";
                 if (string.IsNullOrEmpty(projectName.Value()))
                 {
+                    // Get project in current directory
                     var dir = Directory.GetCurrentDirectory();
                     var sDir = new DirectoryInfo(dir);
                     var fileArray = sDir.GetFiles();
@@ -77,90 +87,19 @@ namespace Microsoft.RESTier.Cli.Commands
                     return 0;
                 }
 
-                msbuildPath = MsBuildAutoDetect(true);
-                if (msbuildPath == null)
+                msbuildPath = msbuild.GetDetectionUtil().Detect();
+                if (string.IsNullOrEmpty(msbuildPath))
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a msbuild in {0}", ConfigurationManager.AppSettings["MsBuildDirectory"]);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a msbuild in {0}", msbuild.GetDetectionUtil().Path);
                     ConsoleHelper.WriteLine("Use \"RESTier build -d\" to download and install msbuild automatically");
-                    ConsoleHelper.WriteLine("Or you can download and install msbuild through the URL: {0}", ConfigurationManager.AppSettings["MsBuildDownloadInstructionsUri"]);
+                    ConsoleHelper.WriteLine("Or you can download and install msbuild through the URL: {0}", msbuild.GetDetectionUtil().DownloadInstructionsUri);
                     return -1;
                 }
 
-                CmdMSBuild(pName, buildSetting.Value(), msbuildPath);
+                msbuild.Build(pName, buildSetting.Value());
 
                 return 0;
             });
-        }
-
-        // execute the msbuild to build a project
-        private static void CmdMSBuild(string projectName, string buildSetting, string msbuildPath)
-        {
-            var p = new Process();
-            p.StartInfo.FileName = Path.Combine(msbuildPath, @"bin\MSBuild.exe");
-            p.StartInfo.UseShellExecute = false;
-            p.StartInfo.Arguments = projectName +
-                (string.IsNullOrEmpty(buildSetting) ? "" : " " + buildSetting);
-            p.Start();
-            p.WaitForExit();
-        }
-
-        // Return the path of the latest version of msbuild
-        // If no msbuild is found, return null
-        private static string MsBuildAutoDetect(bool showMsBuildInfo)
-        {
-            if (Directory.Exists(ConfigurationManager.AppSettings["MsBuildDirectory"]))
-            {
-                try
-                {
-                    double max = 0; 
-                    double version;
-                    int index = -1;
-                    if (!Directory.Exists(ConfigurationManager.AppSettings["MsBuildDirectory"]))
-                        return null;
-                    string[] subDirectories = Directory.GetDirectories(ConfigurationManager.AppSettings["MsBuildDirectory"]);
-                    for (int i = 0; i < subDirectories.Length; i++)
-                    {
-                        try
-                        {
-                            version = Convert.ToDouble(subDirectories[i].Substring(ConfigurationManager.AppSettings["MsBuildDirectory"].Length));
-                            if (version > max)
-                            {
-                                max = version;
-                                index = i;
-                            }
-                        }
-                        catch 
-                        {
-                            // ignore the exception
-                        }
-                    }
-
-                    if (index != -1)
-                    {
-                        if(showMsBuildInfo)
-                            Console.WriteLine("MsBuild auto-detection: using msbuild version '{0}' from '{1}'", max, subDirectories[index]);
-                        return subDirectories[index];
-                    }
-                }
-                catch (Exception ex)
-                {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, ex.Message);
-                }
-            }
-            return null;
-        }
-
-        // return 0 for success, return -1 for failure
-        private static int DownloadAndInstallMsBuild()
-        {
-            var webClient = new WebClient();
-            String toolName = "BuildTools_Full";
-            int index = 0;
-            while (File.Exists(toolName + index + ".exe"))
-                index++;
-            webClient.DownloadFile(ConfigurationManager.AppSettings["MsBuildDownloadInstallerUri"], toolName + index + ".exe");
-            Process.Start(toolName + index + ".exe");
-            return 0;
         }
     }
 }
