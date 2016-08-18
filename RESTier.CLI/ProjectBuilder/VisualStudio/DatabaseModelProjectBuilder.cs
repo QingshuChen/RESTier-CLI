@@ -43,11 +43,16 @@ namespace Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio
         public bool Create()
         {
             _projectBuilder.Create();
-            this._dbRelatedConfiguration.AddDatabaseRelatedPackages();
-            this._dbRelatedConfiguration.AddDatabaseProvider();
-            this._dbRelatedConfiguration.AddDatabaseModles();
-            this._dbRelatedConfiguration.AddDatabaseRelatedCode();
-            this._dbRelatedConfiguration.AddDatabaseConnectionString();
+            if (!this._dbRelatedConfiguration.AddDatabaseRelatedPackages())
+                return false;
+            if (!this._dbRelatedConfiguration.AddDatabaseProvider())
+                return false;
+            if (!this._dbRelatedConfiguration.AddDatabaseModles())
+                return false;
+            if (!this._dbRelatedConfiguration.AddDatabaseRelatedCode())
+                return false;
+            if (!this._dbRelatedConfiguration.AddDatabaseConnectionString())
+                return false;
             return true;
         }
     }
