@@ -8,28 +8,30 @@ namespace Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio.DatabaseConfiguratio
 {
     internal class MySqlRelatedConfiguration : IDatabaseRelatedConfiguration
     {
+        public string ConnectionString { get; set; }
+
         public IProjectBuilder ProjectBuilder { get; set; }
-        public void AddDatabaseConnectionString()
+        public bool AddDatabaseConnectionString()
         {
             throw new NotImplementedException();
         }
 
-        public void AddDatabaseModles()
+        public bool AddDatabaseModles()
         {
             throw new NotImplementedException();
         }
 
-        public void AddDatabaseProvider()
+        public bool AddDatabaseProvider()
         {
             throw new NotImplementedException();
         }
 
-        public void AddDatabaseRelatedCode()
+        public bool AddDatabaseRelatedCode()
         {
             throw new NotImplementedException();
         }
 
-        public void AddDatabaseRelatedPackages()
+        public bool AddDatabaseRelatedPackages()
         {
             throw new NotImplementedException();
         }

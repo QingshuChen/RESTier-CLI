@@ -4,6 +4,7 @@ using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
 using Microsoft.RESTier.Cli.ProjectBuilder;
 using Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio;
+using Microsoft.RESTier.Cli.Database;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -52,8 +53,9 @@ namespace Microsoft.RESTier.Cli.Commands
                     ConsoleHelper.WriteLine("No namespace supplied; defaulting to \"RESTier\".");
                     @namespace = "RESTier";
                 }
-                IProjectBuilder asp = new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory());
-                asp.Create();
+                IProjectBuilder dabaProject = new DatabaseModelProjectBuilder(new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory()),
+                    DatabaseSettingsFactory.Create("SQLServer"), connectionString);
+                dabaProject.Create();
                 return 1;
                 //var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
                 //return builder.Generate();

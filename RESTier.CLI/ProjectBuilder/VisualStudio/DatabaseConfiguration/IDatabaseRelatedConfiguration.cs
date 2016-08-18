@@ -9,10 +9,11 @@ namespace Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio.DatabaseConfiguratio
     interface IDatabaseRelatedConfiguration
     {
         IProjectBuilder ProjectBuilder { get; set; }
-        void AddDatabaseRelatedPackages();
-        void AddDatabaseModles();
-        void AddDatabaseConnectionString();
-        void AddDatabaseProvider();
-        void AddDatabaseRelatedCode();
+        String ConnectionString { get; set; }
+        bool AddDatabaseRelatedPackages();
+        bool AddDatabaseModles();
+        bool AddDatabaseConnectionString();
+        bool AddDatabaseProvider();
+        bool AddDatabaseRelatedCode();
     }
 }

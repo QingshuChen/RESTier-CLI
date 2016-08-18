@@ -24,7 +24,12 @@ namespace Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio
                 this._path = System.IO.Path.Combine(value, this.Name);
             }
         }
-
+        /// <summary>
+        /// Create an empty asp.net vs project
+        /// </summary>
+        /// <param name="name">project name</param>
+        /// <param name="namespace">namespace for the project</param>
+        /// <param name="path">path to store the project</param>
         public AspDotNetProjectBuilder(string name, string @namespace, string path)
         {
             this.Name = name;

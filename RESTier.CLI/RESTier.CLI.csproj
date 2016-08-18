@@ -116,139 +116,148 @@
     <Compile Include="CommandExecutor.cs" />
     <Compile Include="Database\DatabaseSetting.cs" />
     <Compile Include="Database\DatabaseSettingsFactory.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\DbProviderServicesResolver.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\DependencyResolver.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\EntityFrameworkVersion.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\GlobalSuppressions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyCodegen\CodeGeneratorBase.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyCodegen\EntityClassGenerator.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyCodegen\EntityCodeGenerator.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyCodegen\LanguageOption.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyDbProviderServicesResolver.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyDbProviderServicesUtils.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbCommandDefinitionWrapper.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbExpressionConverter.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbProviderManifestWrapper.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbProviderServicesWrapper.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\MetadataWorkspaceExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\StoreItemCollectionExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\TypeUsageExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\LegacyProviderWrapper\TypeUsageHelper.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Metadata\CsdlVersion.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Metadata\EdmItemCollectionExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Metadata\EdmTypeExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Metadata\StoreItemCollectionExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Resources.VersioningFacade.Designer.cs">
-      <DependentUpon>Resources.VersioningFacade.resx</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\AssociationSetEndDetails.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\CollapsibleEntityAssociationSets.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\DbDatabaseMappingBuilder.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\DbObjectType.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\EntitySetDefiningQueryConverter.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterEffect.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterEntry.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterObjectTypes.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\ModelBuilderErrorCode.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\ModelGeneratorUtils.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\OneToOneMappingBuilder.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\EntityStoreSchemaGeneratorDatabaseSchemaLoader.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\EntityStoreSchemaQueryGenerator.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsReader.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsRowView.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsV1RowView.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsV3RowView.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\RelationshipDetailsCollection.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\RelationshipDetailsRow.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\StoreSchemaDetails.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\StringBuilderExtensions.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\TableDetailsCollection.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\TableDetailsRow.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\SimpleMappingContext.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\StoreModelBuilder.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\StoreSchemaConnectionFactory.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\ReverseEngineerDb\UniqueIdentifierService.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\SchemaManager.cs" />
-    <Compile Include="EFTools\EntityDesignVersioningFacade\Serialization\MslSerializerWrapper.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\CodeHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IAttributeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\IFluentConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\CascadeDeleteConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\ForeignKeyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\JoinTableConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\NavigationProperty\MultiplicityConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\ColumnConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\DatabaseGeneratedConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\FixedLengthConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\KeyPropertyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthStringConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\NonUnicodeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDateTimeConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDecimalConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\RequiredConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Property\TimestampConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Type\KeyConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Configuration\Type\TableConfiguration.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\CSharpCodeHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\CodeFirstModelGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\DefaultCSharpContextGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\DefaultCSharpEntityTypeGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\INavigationPropertyConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\IPropertyConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\ITypeConfigurationDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\CascadeDeleteDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\ForeignKeyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\JoinTableDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\MultiplicityDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\ColumnDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\DatabaseGeneratedDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\FixedLengthDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\KeyPropertyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\LengthDiscovererBase.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\MaxLengthDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\NonUnicodeDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDateTimeDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDecimalDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\RequiredDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Property\TimestampDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Type\KeyDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Discoverers\Type\TableDiscoverer.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\EdmHelper.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\EntityFrameworkVersion.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\DbModelExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\EdmMemberExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\EntitySetExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\IEnumerableExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\StoreGeneratedPatternExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\Extensions\StringExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\IContextGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\IEntityTypeGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\CodeGeneration\SchemaManager.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\CodeFirstModelBuilderEngine.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ErrorCode.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ModelBuilderEngine.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ModelBuilderSettings.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ModelConstants.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ModelGenerator.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\MslSerializerWrapper.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\ObjectFilterPolicy.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\SchemaFilterEntryBag.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\SchemaFilterEntryExtensions.cs" />
-    <Compile Include="EFTools\EntityDesign\ModelBuilder\SchemaFilterPolicy.cs" />
+    <Compile Include="Database\DatabaseType.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EFCodeGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\DbProviderServicesResolver.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\DependencyResolver.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\EntityFrameworkVersion.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\GlobalSuppressions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyCodegen\CodeGeneratorBase.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyCodegen\EntityClassGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyCodegen\EntityCodeGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyCodegen\LanguageOption.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyDbProviderServicesResolver.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyDbProviderServicesUtils.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbCommandDefinitionWrapper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbExpressionConverter.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbProviderManifestWrapper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyDbProviderServicesWrapper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\MetadataWorkspaceExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\StoreItemCollectionExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\LegacyMetadataExtensions\TypeUsageExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\LegacyProviderWrapper\TypeUsageHelper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Metadata\CsdlVersion.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Metadata\EdmItemCollectionExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Metadata\EdmTypeExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Metadata\StoreItemCollectionExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Resources.VersioningFacade.Designer.cs">
+      <DependentUpon>Resources.VersioningFacade.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\AssociationSetEndDetails.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\CollapsibleEntityAssociationSets.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\DbDatabaseMappingBuilder.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\DbObjectType.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\EntitySetDefiningQueryConverter.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterEffect.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterEntry.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\EntityStoreSchemaFilterObjectTypes.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\ModelBuilderErrorCode.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\ModelGeneratorUtils.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\OneToOneMappingBuilder.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\EntityStoreSchemaGeneratorDatabaseSchemaLoader.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\EntityStoreSchemaQueryGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsReader.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsRowView.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsV1RowView.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\FunctionDetailsV3RowView.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\RelationshipDetailsCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\RelationshipDetailsRow.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\StoreSchemaDetails.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\StringBuilderExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\TableDetailsCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SchemaDiscovery\TableDetailsRow.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\SimpleMappingContext.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\StoreModelBuilder.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\StoreSchemaConnectionFactory.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\ReverseEngineerDb\UniqueIdentifierService.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\SchemaManager.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Serialization\MslSerializerWrapper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\CodeFirstModelGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\CodeHelper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\IAttributeConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\IConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\IFluentConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\NavigationProperty\CascadeDeleteConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\NavigationProperty\ForeignKeyConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\NavigationProperty\JoinTableConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\NavigationProperty\MultiplicityConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\ColumnConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\DatabaseGeneratedConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\FixedLengthConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\KeyPropertyConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\MaxLengthStringConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\NonUnicodeConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDateTimeConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\PrecisionDecimalConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\RequiredConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Property\TimestampConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Type\KeyConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Configuration\Type\TableConfiguration.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\CSharpCodeHelper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\DefaultCSharpContextGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\DefaultCSharpEntityTypeGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\INavigationPropertyConfigurationDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\IPropertyConfigurationDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\ITypeConfigurationDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\CascadeDeleteDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\ForeignKeyDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\JoinTableDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\NavigationProperty\MultiplicityDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\ColumnDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\DatabaseGeneratedDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\FixedLengthDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\KeyPropertyDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\LengthDiscovererBase.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\MaxLengthDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\NonUnicodeDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDateTimeDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\PrecisionDecimalDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\RequiredDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Property\TimestampDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Type\KeyDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Discoverers\Type\TableDiscoverer.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\EdmHelper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\EntityFrameworkVersion.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\DbModelExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\EdmMemberExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\EntitySetExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\StoreGeneratedPatternExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\Extensions\StringExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\IContextGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\IEntityTypeGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\SchemaManager.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\CodeGeneration\CodeFirstModelBuilderEngine.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ErrorCode.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ModelBuilderEngine.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ModelBuilderSettings.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ModelConstants.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ModelGenerator.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\MslSerializerWrapper.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\ObjectFilterPolicy.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\SchemaFilterEntryBag.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\SchemaFilterEntryExtensions.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\ModelBuilder\SchemaFilterPolicy.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesign\DatabaseManager.cs" />
+    <Compile Include="ProjectBuilder\CodeGeneration\ICodeGenerator.cs" />
     <Compile Include="ProjectBuilder\IProjectBuilder.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\AspDotNetProjectBuilder.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\DatabaseRelatedConfigurationFactory.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\SQLServerRelatedConfiguration.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\IDatabaseRelatedConfiguration.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\MySqlRelatedConfiguration.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\DatabaseModelProjectBuilder.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsFile1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -418,15 +427,14 @@
     <Compile Include="Uitls\WebServerUtils\WebServerUtil.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ProjectBuilder\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Resources.VersioningFacade.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.VersioningFacade.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <EmbeddedResource Include="EFTools\EntityDesignVersioningFacade\Resources.VersioningFacade.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.VersioningFacade.Designer.cs</LastGenOutput>
-      <LogicalName>Microsoft.Data.Entity.Design.VersioningFacade.Resources.VersioningFacade.resources</LogicalName>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="RESTier.CLI_TemporaryKey.pfx" />

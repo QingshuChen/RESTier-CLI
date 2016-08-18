@@ -14,6 +14,7 @@ namespace Microsoft.RESTier.Cli.Database
             DatabaseSetting dbSetting = new DatabaseSetting();
             if (Name.ToUpper().Equals("SQLSERVER"))
             {
+                dbSetting.DBType = DatabaseType.SQLServer;
                 dbSetting.Name = "SQLServer";
                 dbSetting.ProviderInvariantName = ConfigurationManager.AppSettings["SQLServerProviderInvariantName"];
                 dbSetting.ProviderType = ConfigurationManager.AppSettings["SQLServerProviderType"];
@@ -21,6 +22,7 @@ namespace Microsoft.RESTier.Cli.Database
             }
             else if (Name.ToUpper().Equals("MYSQL"))
             {
+                dbSetting.DBType = DatabaseType.MYSQL;
                 dbSetting.Name = "MYSQL";
                 dbSetting.ProviderInvariantName = ConfigurationManager.AppSettings["MYSQLProviderInvariantName"];
                 dbSetting.ProviderType = ConfigurationManager.AppSettings["MYSQLProviderType"];
