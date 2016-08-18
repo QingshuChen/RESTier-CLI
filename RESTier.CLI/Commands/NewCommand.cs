@@ -53,9 +53,10 @@ namespace Microsoft.RESTier.Cli.Commands
                     ConsoleHelper.WriteLine("No namespace supplied; defaulting to \"RESTier\".");
                     @namespace = "RESTier";
                 }
-                IProjectBuilder dabaProject = new DatabaseModelProjectBuilder(new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory()),
+                IProjectBuilder dataProject = new DatabaseModelProjectBuilder(new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory()),
                     DatabaseSettingsFactory.Create("SQLServer"), connectionString);
-                dabaProject.Create();
+                IProjectBuilder restierProject = new Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio.RESTierProjectBuilder(dataProject);
+                restierProject.Create();
                 return 1;
                 //var builder = new RESTierProjectBuilder(connectionString, name, @namespace);
                 //return builder.Generate();

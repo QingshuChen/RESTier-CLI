@@ -258,6 +258,7 @@
     <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\IDatabaseRelatedConfiguration.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\DatabaseConfiguration\MySqlRelatedConfiguration.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\DatabaseModelProjectBuilder.cs" />
+    <Compile Include="ProjectBuilder\VisualStudio\RESTierProjectBuilder.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\AiJsFile1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -308,6 +309,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\RESTierWebApiConfigFile.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RESTierWebApiConfigFile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\RESTierWebApiConfigFileCode.cs" />
     <Compile Include="ProjectBuilder\VisualStudio\TextTemplate\SolutionFile.cs">
       <DependentUpon>SolutionFile.tt</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -485,6 +492,10 @@
     <Content Include="ProjectBuilder\VisualStudio\TextTemplate\PackagesConfigFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>
       <LastGenOutput>PackagesConfigFile.cs</LastGenOutput>
+    </Content>
+    <Content Include="ProjectBuilder\VisualStudio\TextTemplate\RESTierWebApiConfigFile.tt">
+      <Generator>TextTemplatingFilePreprocessor</Generator>
+      <LastGenOutput>RESTierWebApiConfigFile.cs</LastGenOutput>
     </Content>
     <Content Include="ProjectBuilder\VisualStudio\TextTemplate\SolutionFile.tt">
       <Generator>TextTemplatingFilePreprocessor</Generator>

@@ -25,10 +25,6 @@
   <package id="Microsoft.Net.Compilers" version="1.0.0" targetFramework="net452" developmentDependency="true" />
   <package id="Microsoft.OData.Core" version="6.15.0" targetFramework="net452" />
   <package id="Microsoft.OData.Edm" version="6.15.0" targetFramework="net452" />
-  <package id="Microsoft.Restier" version="0.5.0-beta" targetFramework="net452" />
-  <package id="Microsoft.Restier.Core" version="0.5.0-beta" targetFramework="net452" />
-  <package id="Microsoft.Restier.Providers.EntityFramework" version="0.5.0-beta" targetFramework="net452" />
-  <package id="Microsoft.Restier.Publishers.OData" version="0.5.0-beta" targetFramework="net452" />
   <package id="Microsoft.Spatial" version="6.15.0" targetFramework="net452" />
   <package id="Newtonsoft.Json" version="6.0.4" targetFramework="net452" />
   <package id="System.Collections" version="4.0.11-rc2-24027" targetFramework="net452" />
