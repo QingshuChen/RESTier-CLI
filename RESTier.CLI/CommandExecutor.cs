@@ -6,6 +6,7 @@ using System.Reflection;
 using Microsoft.Extensions.CommandLineUtils;
 using Microsoft.RESTier.Cli.Commands;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace Microsoft.RESTier.Cli
 {
@@ -27,6 +28,8 @@ namespace Microsoft.RESTier.Cli
             app.Option("-c|--connectionstring",
                 "A connection string to a SQL Server database. Used to reverse engineer a RESTier API.",
                 CommandOptionType.SingleValue);
+            app.Option("-db|--database", "The database type for the new RESTier project, currently support SQLServer and MySQL",
+                CommandOptionType.SingleValue);
             app.Option("-a|--all", "Execute the new, build, run commands together", CommandOptionType.NoValue);
 
             app.Command("new", c => NewCommand.Configure(c));
@@ -37,35 +40,22 @@ namespace Microsoft.RESTier.Cli
                 () =>
                 {
                     var connectionString = app.GetOptionValue("connectionstring");
-                    if (string.IsNullOrWhiteSpace(connectionString))
+                    var dbOption = app.GetOptionValue("database");
+                    if (string.IsNullOrWhiteSpace(connectionString) || string.IsNullOrEmpty(dbOption))
                     {
                         WriteLogo();
                         app.ShowHelp();
                         return 0;
                     }
-                    var connectionStringBuilder = new SqlConnectionStringBuilder();
-                    try
-                    {
-                        connectionStringBuilder.ConnectionString = connectionString;
-                    }
-                    catch (ArgumentException e)
-                    {
-                        throw new ArgumentException("Invalid connection string: " + e.Message, e);
-                    }
-
+                    
                     var ret = app.Commands.First(c => c.Name == "new").Execute();
 
                     // execute the build and run command for the -a option
                     if (ret == 0 && app.Options.First(c => (c.LongName == "all" || c.ShortName == "a")).HasValue())
                     {
                         string projectName = app.Commands.First(c => c.Name == "new").GetOptionValue("name");
-                        if (string.IsNullOrEmpty(projectName))
-                        {
-                            projectName = Path.GetFileNameWithoutExtension(connectionStringBuilder.AttachDBFilename);
-                        }
                         string[] argsForBuild = { "-p", projectName + "\\" + projectName + ".sln" };
                         app.Commands.First(c => c.Name == "build").Execute(argsForBuild);
-
                         app.Commands.First(c => c.Name == "run").Execute(argsForBuild);
                     }
                     return 0;
