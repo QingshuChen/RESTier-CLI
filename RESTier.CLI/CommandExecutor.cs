@@ -5,8 +5,6 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.CommandLineUtils;
 using Microsoft.RESTier.Cli.Commands;
-using System.IO;
-using MySql.Data.MySqlClient;
 
 namespace Microsoft.RESTier.Cli
 {
