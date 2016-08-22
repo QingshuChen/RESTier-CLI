@@ -42,7 +42,8 @@ namespace Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio
 
         public bool Create()
         {
-            _projectBuilder.Create();
+            if(!_projectBuilder.Create())
+                return false;
             if (!this._dbRelatedConfiguration.AddDatabaseRelatedPackages())
                 return false;
             if (!this._dbRelatedConfiguration.AddDatabaseProvider())
