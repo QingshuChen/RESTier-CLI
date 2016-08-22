@@ -13,7 +13,7 @@ There is a sample database `AdventureWorksLT2012_Data.mdf` located at `/samples`
 
 1. Execute
 ~~~
-RESTier new -c "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=AdventureWorksLT2012_Data.mdf;Integrated Security=True;Trusted_Connection=True;" -db sqlserver
+RESTier -c "Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=AdventureWorksLT2012_Data.mdf;Integrated Security=True;Trusted_Connection=True;" -db sqlserver new
 ~~~
 This will reverse-engineer the database and create a default RESTier Visual Studio project named `AdventureWorksLT2012_Data` for it in the current directory.  
 2. Execute
