@@ -24,7 +24,7 @@ namespace Microsoft.RESTier.Cli
             app.HelpOption("-h|--help");
 
             app.Option("-c|--connectionstring",
-                "A connection string to a SQL Server database. Used to reverse engineer a RESTier API.",
+                "A connection string to a database. Used to reverse engineer a RESTier API.",
                 CommandOptionType.SingleValue);
             app.Option("-db|--database", "The database type for the new RESTier project, currently support SQLServer and MySQL",
                 CommandOptionType.SingleValue);
