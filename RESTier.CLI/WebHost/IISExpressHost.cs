@@ -1,24 +1,30 @@
-﻿using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.RESTier.Cli.DependencyResolver;
+using System.Diagnostics;
+using System.IO;
 
-namespace Microsoft.RESTier.Cli.Uitls.WebServerUtils
+namespace Microsoft.RESTier.Cli.WebHost
 {
-    class IISExpressUtil : WebServerUtil
+    class IISExpressHost : IWebHost
     {
-        public IISExpressUtil(DetectionUtil detectionUtil) : base(detectionUtil)
+        IDependencyResolver _dependencyResolver;
+        public IISExpressHost(IDependencyResolver dependencyResolver)
         {
-
+            this._dependencyResolver = dependencyResolver;
         }
-        public override bool Run(string projectDirectory)
+        public IDependencyResolver GetDependencyResolver()
+        {
+            return _dependencyResolver;
+        }
+
+        public bool Host(string projectDirectory)
         {
             var p = new Process();
-            p.StartInfo.FileName = GetDetectionUtil().Detect();
+            p.StartInfo.FileName = _dependencyResolver.Detect();
             if (string.IsNullOrEmpty(p.StartInfo.FileName))
             {
                 return false;
