@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.RESTier.Cli.DependencyResolver
 {
-    class DetectionUtilInDirectoryForDifferentVersion : IDependencyResolver
+    class MsBuildResolver : IDependencyResolver
     {
         private int _index = 0;
         public string Detect()

@@ -3,10 +3,8 @@ using System.Configuration;
 using System.Diagnostics;
 using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
-using System.Collections.Generic;
-using System.Net;
-using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
-using Microsoft.RESTier.Cli.Uitls.BuildUtils;
+using Microsoft.RESTier.Cli.ProjectBuilder;
+using Microsoft.RESTier.Cli.DependencyResolver;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -29,21 +27,15 @@ namespace Microsoft.RESTier.Cli.Commands
             {
                 
                 string msbuildPath;
-                DetectionUtil detectionUtil = new DetectionUtilInDirectoryForDifferentVersion();
-                detectionUtil.SoftwareName = "MSBuild";
-                detectionUtil.ExecutableFileName = @"bin\MSBuild.exe";
-                detectionUtil.Path = ConfigurationManager.AppSettings["MsBuildDirectory"];
-                detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["MsBuildDownloadInstallerUri"];
-                detectionUtil.DownloadInstructionsUri = ConfigurationManager.AppSettings["MsBuildDownloadInstructionsUri"];
-                BuildUtil msbuild = new MsBuildUtil(detectionUtil);
+                IProjectBuilder msbuild = new MsBuildBuilder(new MsBuildResolver());
 
                 if (download.HasValue())
                 {
                     ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install MsBuild.");
-                    msbuildPath = msbuild.GetDetectionUtil().Detect();
+                    msbuildPath = msbuild.GetDependencyResolver().Detect();
                     if (string.IsNullOrEmpty(msbuildPath))
                     {
-                        msbuild.GetDetectionUtil().Install();
+                        msbuild.GetDependencyResolver().Install();
                         return -1;
                     } else
                     {
@@ -87,12 +79,12 @@ namespace Microsoft.RESTier.Cli.Commands
                     return 0;
                 }
 
-                msbuildPath = msbuild.GetDetectionUtil().Detect();
+                msbuildPath = msbuild.GetDependencyResolver().Detect();
                 if (string.IsNullOrEmpty(msbuildPath))
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a msbuild in {0}", msbuild.GetDetectionUtil().Path);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a msbuild in {0}", msbuild.GetDependencyResolver().GetPath());
                     ConsoleHelper.WriteLine("Use \"RESTier build -d\" to download and install msbuild automatically");
-                    ConsoleHelper.WriteLine("Or you can download and install msbuild through the URL: {0}", msbuild.GetDetectionUtil().DownloadInstructionsUri);
+                    ConsoleHelper.WriteLine("Or you can download and install msbuild through the URL: {0}", msbuild.GetDependencyResolver().GetDownloadInstructionsUri());
                     return -1;
                 }
 

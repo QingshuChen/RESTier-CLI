@@ -4,8 +4,8 @@ using Microsoft.Extensions.CommandLineUtils;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
-using Microsoft.RESTier.Cli.Uitls.WebServerUtils;
-using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
+using Microsoft.RESTier.Cli.WebHost;
+using Microsoft.RESTier.Cli.DependencyResolver;
 
 namespace Microsoft.RESTier.Cli.Commands
 {
@@ -25,30 +25,19 @@ namespace Microsoft.RESTier.Cli.Commands
 
             command.OnExecute(() =>
             {
-                DetectionUtil detectionUtil = new DetectionUtilForFile();
-                detectionUtil.SoftwareName = "IISExpress";
-                detectionUtil.ExecutableFileName = "iisexpress.exe";
-                detectionUtil.Path = ConfigurationManager.AppSettings["IISExpressPath"];
-                detectionUtil.DownloadInstructionsUri = ConfigurationManager.AppSettings["IISExpressDownloadInstructionsUri"];
-                bool type;
-                type = Environment.Is64BitOperatingSystem;
-                if (type) 
-                    detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["IISExpressDownloadInstaller64Uri"];
-                else
-                    detectionUtil.DownloadInstallerUri = ConfigurationManager.AppSettings["IISExpressDownloadInstaller32Uri"];
-                WebServerUtil webServer = new IISExpressUtil(detectionUtil);
-                string path = webServer.GetDetectionUtil().Detect();
+                IWebHost webServer = new IISExpressHost(new IISExpressResolver());
+                string path = webServer.GetDependencyResolver().Detect();
                 if (download.HasValue())
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install {0}.", webServer.GetDetectionUtil().SoftwareName);
+                    ConsoleHelper.WriteLine(ConsoleColor.Green, "Download and install {0}.", webServer.GetDependencyResolver().GetSoftwareName());
                     if (string.IsNullOrEmpty(path))
                     {
-                        webServer.GetDetectionUtil().Install();
+                        webServer.GetDependencyResolver().Install();
                         return -1;
                     }
                     else
                     {
-                        Console.WriteLine("{0} has already been installed in {1}", webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().Path);
+                        Console.WriteLine("{0} has already been installed in {1}", webServer.GetDependencyResolver().GetSoftwareName(), webServer.GetDependencyResolver().GetPath());
                         return -1;
                     }
                 }
@@ -72,17 +61,19 @@ namespace Microsoft.RESTier.Cli.Commands
 
                 if (string.IsNullOrEmpty(path))
                 {
-                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a {0} in {1}", webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().Path);
-                    ConsoleHelper.WriteLine("Use \"RESTier run -d\" to download and install {0} automatically", webServer.GetDetectionUtil().SoftwareName);
+                    ConsoleHelper.WriteLine(ConsoleColor.Red, "Can't find a {0} in {1}", 
+                        webServer.GetDependencyResolver().GetSoftwareName(), webServer.GetDependencyResolver().GetPath());
+                    ConsoleHelper.WriteLine("Use \"RESTier run -d\" to download and install {0} automatically",
+                        webServer.GetDependencyResolver().GetSoftwareName());
                     ConsoleHelper.WriteLine("Or you can download and install {0} through the URL: {1}",
-                        webServer.GetDetectionUtil().SoftwareName, webServer.GetDetectionUtil().DownloadInstructionsUri);
+                        webServer.GetDependencyResolver().GetSoftwareName(), webServer.GetDependencyResolver().GetDownloadInstructionsUri());
                     return -1;
                 }
 
                 if (!string.IsNullOrEmpty(projectDirectory))
-                    webServer.Run(projectDirectory);
+                    webServer.Host(projectDirectory);
                 else
-                    webServer.Run(Directory.GetCurrentDirectory());
+                    webServer.Host(Directory.GetCurrentDirectory());
 
                 return 0;
             });

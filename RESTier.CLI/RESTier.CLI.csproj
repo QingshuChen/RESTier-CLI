@@ -129,10 +129,13 @@
     <Compile Include="Database\DatabaseSetting.cs" />
     <Compile Include="Database\DatabaseSettingsFactory.cs" />
     <Compile Include="Database\DatabaseType.cs" />
+    <Compile Include="DependencyResolver\IDependencyResolver.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Commands\GenerateCommand.cs" />
     <Compile Include="Commands\NewCommand.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectBuilder\IProjectBuilder.cs" />
+    <Compile Include="ProjectBuilder\MsBuildBuilder.cs" />
     <Compile Include="ProjectCreator\CodeGeneration\EFCodeGeneration\EFCodeGenerator.cs" />
     <Compile Include="ProjectCreator\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\DbProviderServicesResolver.cs" />
     <Compile Include="ProjectCreator\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\DependencyResolver.cs" />
@@ -357,13 +360,10 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Commands\RunCommand.cs" />
-    <Compile Include="Uitls\BuildUtils\BuildUtil.cs" />
-    <Compile Include="Uitls\BuildUtils\MsBuildUtil.cs" />
-    <Compile Include="Uitls\DetectionUtils\DetectionUtil.cs" />
-    <Compile Include="Uitls\DetectionUtils\DetectionUtilForFile.cs" />
-    <Compile Include="Uitls\DetectionUtils\DetectionUtilInDirectoryForDifferentVersion.cs" />
-    <Compile Include="Uitls\WebServerUtils\IISExpressUtil.cs" />
-    <Compile Include="Uitls\WebServerUtils\WebServerUtil.cs" />
+    <Compile Include="DependencyResolver\IISExpressResolver.cs" />
+    <Compile Include="DependencyResolver\MsBuildResolver.cs" />
+    <Compile Include="WebHost\IISExpressHost.cs" />
+    <Compile Include="WebHost\IWebHost.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProjectCreator\CodeGeneration\EFCodeGeneration\EntityDesignVersioningFacade\Resources.VersioningFacade.resx">
