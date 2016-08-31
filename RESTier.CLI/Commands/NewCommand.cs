@@ -2,8 +2,8 @@
 using System.Data.SqlClient;
 using System.IO;
 using Microsoft.Extensions.CommandLineUtils;
-using Microsoft.RESTier.Cli.ProjectBuilder;
-using Microsoft.RESTier.Cli.ProjectBuilder.VisualStudio;
+using Microsoft.RESTier.Cli.ProjectCreator;
+using Microsoft.RESTier.Cli.ProjectCreator.VisualStudio;
 using Microsoft.RESTier.Cli.Database;
 using MySql.Data.MySqlClient;
 
@@ -92,9 +92,9 @@ namespace Microsoft.RESTier.Cli.Commands
                     ConsoleHelper.WriteLine("No namespace supplied; defaulting to \"RESTier\".");
                     @namespace = "RESTier";
                 }
-                IProjectBuilder aspDotNetProject = new AspDotNetProjectBuilder(name, @namespace, Directory.GetCurrentDirectory());
-                IProjectBuilder dataProject = new DatabaseModelProjectBuilder(aspDotNetProject, dbSetting, connectionString);
-                IProjectBuilder restierProject = new RESTierProjectBuilder(dataProject);
+                IProjectCreator aspDotNetProject = new AspDotNetProjectCreator(name, @namespace, Directory.GetCurrentDirectory());
+                IProjectCreator dataProject = new DatabaseModelProjectCreator(aspDotNetProject, dbSetting, connectionString);
+                IProjectCreator restierProject = new RESTierProjectCreator(dataProject);
                 restierProject.Create();
                 return 0;
             });
