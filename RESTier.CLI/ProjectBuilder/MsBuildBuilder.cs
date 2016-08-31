@@ -1,29 +1,34 @@
-﻿using Microsoft.RESTier.Cli.Uitls.DetectionUtils;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.RESTier.Cli.DependencyResolver;
+using System.IO;
+using System.Diagnostics;
+using System.Net;
+using System.Configuration;
 
-namespace Microsoft.RESTier.Cli.Uitls.BuildUtils
+namespace Microsoft.RESTier.Cli.ProjectBuilder
 {
-    public class MsBuildUtil : BuildUtil
+    class MsBuildBuilder : IProjectBuilder
     {
-        public MsBuildUtil(DetectionUtil detectionUtil) : base(detectionUtil) { }
-        public override bool Build(string project, string buildSetting)
+        private IDependencyResolver _dependencyResolver;
+        public MsBuildBuilder(IDependencyResolver dependencyResolver)
         {
-            if (!NugetRestore(project))
-                return false;
-            var p = new Process();
-            p.StartInfo.FileName = GetDetectionUtil().Detect();
-            if (string.IsNullOrEmpty(p.StartInfo.FileName))
+            this._dependencyResolver = dependencyResolver;
+        }
+        public bool Build(string project, string buildSetting)
+        {
+            string buildTool = _dependencyResolver.Detect();
+            if (!File.Exists(project) || string.IsNullOrEmpty(buildTool))
             {
                 return false;
             }
+            if (!NugetRestore(project))
+                return false;
+            var p = new Process();
+            p.StartInfo.FileName = buildTool;
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.Arguments = project +
                 (string.IsNullOrEmpty(buildSetting) ? "" : " " + buildSetting);
@@ -32,8 +37,13 @@ namespace Microsoft.RESTier.Cli.Uitls.BuildUtils
             return true;
         }
 
+        public IDependencyResolver GetDependencyResolver()
+        {
+            return _dependencyResolver;
+        }
+
         private bool NugetRestore(string project)
-        { 
+        {
             try
             {
                 // restore packages for the RESTier project
