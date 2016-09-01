@@ -28,48 +28,47 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.VisualStudio.TextTemplate
         /// </summary>
         public virtual string TransformText()
         {
-            this.Write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<packages>\r\n  <package id=\"EntityFramewor" +
-                    "k\" version=\"6.1.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.Applica" +
-                    "tionInsights\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Micros" +
-                    "oft.ApplicationInsights.Agent.Intercept\" version=\"1.2.1\" targetFramework=\"net452" +
-                    "\" />\r\n  <package id=\"Microsoft.ApplicationInsights.DependencyCollector\" version=" +
-                    "\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsight" +
-                    "s.JavaScript\" version=\"0.22.19-build00125\" targetFramework=\"net452\" />\r\n  <packa" +
-                    "ge id=\"Microsoft.ApplicationInsights.PerfCounterCollector\" version=\"2.1.0\" targe" +
-                    "tFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsights.Web\" versio" +
-                    "n=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsig" +
-                    "hts.WindowsServer\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"M" +
-                    "icrosoft.ApplicationInsights.WindowsServer.TelemetryChannel\" version=\"2.1.0\" tar" +
-                    "getFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.OData\" version=\"5.9.0\"" +
-                    " targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi\" version=\"5" +
-                    ".2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi.Client" +
-                    "\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.W" +
-                    "ebApi.Core\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsof" +
-                    "t.AspNet.WebApi.WebHost\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package" +
-                    " id=\"Microsoft.CodeDom.Providers.DotNetCompilerPlatform\" version=\"1.0.0\" targetF" +
-                    "ramework=\"net452\" />\r\n  <package id=\"Microsoft.Extensions.DependencyInjection\" v" +
-                    "ersion=\"1.0.0-rc2-final\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.E" +
-                    "xtensions.DependencyInjection.Abstractions\" version=\"1.0.0-rc2-final\" targetFram" +
-                    "ework=\"net452\" />\r\n  <package id=\"Microsoft.Net.Compilers\" version=\"1.0.0\" targe" +
-                    "tFramework=\"net452\" developmentDependency=\"true\" />\r\n  <package id=\"Microsoft.OD" +
-                    "ata.Core\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft" +
-                    ".OData.Edm\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microso" +
-                    "ft.Spatial\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Newtons" +
-                    "oft.Json\" version=\"6.0.4\" targetFramework=\"net452\" />\r\n  <package id=\"System.Col" +
-                    "lections\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=" +
-                    "\"System.Collections.Concurrent\" version=\"4.0.12-rc2-24027\" targetFramework=\"net4" +
-                    "52\" />\r\n  <package id=\"System.ComponentModel\" version=\"4.0.1-rc2-24027\" targetFr" +
-                    "amework=\"net452\" />\r\n  <package id=\"System.Diagnostics.Debug\" version=\"4.0.11-rc" +
-                    "2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Globalization\" versi" +
-                    "on=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Linq\" v" +
-                    "ersion=\"4.1.0-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Linq" +
-                    ".Expressions\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package" +
-                    " id=\"System.Reflection\" version=\"4.1.0-rc2-24027\" targetFramework=\"net452\" />\r\n " +
-                    " <package id=\"System.Resources.ResourceManager\" version=\"4.0.1-rc2-24027\" target" +
-                    "Framework=\"net452\" />\r\n  <package id=\"System.Runtime.Extensions\" version=\"4.1.0-" +
-                    "rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Threading\" version" +
-                    "=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Threading" +
-                    ".Tasks\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n</packages>");
+            this.Write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<packages>\r\n  <package id=\"Microsoft.Appl" +
+                    "icationInsights\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Mic" +
+                    "rosoft.ApplicationInsights.Agent.Intercept\" version=\"1.2.1\" targetFramework=\"net" +
+                    "452\" />\r\n  <package id=\"Microsoft.ApplicationInsights.DependencyCollector\" versi" +
+                    "on=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsi" +
+                    "ghts.JavaScript\" version=\"0.22.19-build00125\" targetFramework=\"net452\" />\r\n  <pa" +
+                    "ckage id=\"Microsoft.ApplicationInsights.PerfCounterCollector\" version=\"2.1.0\" ta" +
+                    "rgetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationInsights.Web\" ver" +
+                    "sion=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.ApplicationIn" +
+                    "sights.WindowsServer\" version=\"2.1.0\" targetFramework=\"net452\" />\r\n  <package id" +
+                    "=\"Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel\" version=\"2.1.0\" " +
+                    "targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.OData\" version=\"5.9" +
+                    ".0\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi\" version" +
+                    "=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNet.WebApi.Cli" +
+                    "ent\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Microsoft.AspNe" +
+                    "t.WebApi.Core\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <package id=\"Micro" +
+                    "soft.AspNet.WebApi.WebHost\" version=\"5.2.3\" targetFramework=\"net452\" />\r\n  <pack" +
+                    "age id=\"Microsoft.CodeDom.Providers.DotNetCompilerPlatform\" version=\"1.0.0\" targ" +
+                    "etFramework=\"net452\" />\r\n  <package id=\"Microsoft.Extensions.DependencyInjection" +
+                    "\" version=\"1.0.0-rc2-final\" targetFramework=\"net452\" />\r\n  <package id=\"Microsof" +
+                    "t.Extensions.DependencyInjection.Abstractions\" version=\"1.0.0-rc2-final\" targetF" +
+                    "ramework=\"net452\" />\r\n  <package id=\"Microsoft.Net.Compilers\" version=\"1.0.0\" ta" +
+                    "rgetFramework=\"net452\" developmentDependency=\"true\" />\r\n  <package id=\"Microsoft" +
+                    ".OData.Core\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Micros" +
+                    "oft.OData.Edm\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Micr" +
+                    "osoft.Spatial\" version=\"6.15.0\" targetFramework=\"net452\" />\r\n  <package id=\"Newt" +
+                    "onsoft.Json\" version=\"6.0.4\" targetFramework=\"net452\" />\r\n  <package id=\"System." +
+                    "Collections\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package " +
+                    "id=\"System.Collections.Concurrent\" version=\"4.0.12-rc2-24027\" targetFramework=\"n" +
+                    "et452\" />\r\n  <package id=\"System.ComponentModel\" version=\"4.0.1-rc2-24027\" targe" +
+                    "tFramework=\"net452\" />\r\n  <package id=\"System.Diagnostics.Debug\" version=\"4.0.11" +
+                    "-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Globalization\" ve" +
+                    "rsion=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Linq" +
+                    "\" version=\"4.1.0-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.L" +
+                    "inq.Expressions\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <pack" +
+                    "age id=\"System.Reflection\" version=\"4.1.0-rc2-24027\" targetFramework=\"net452\" />" +
+                    "\r\n  <package id=\"System.Resources.ResourceManager\" version=\"4.0.1-rc2-24027\" tar" +
+                    "getFramework=\"net452\" />\r\n  <package id=\"System.Runtime.Extensions\" version=\"4.1" +
+                    ".0-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Threading\" vers" +
+                    "ion=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n  <package id=\"System.Thread" +
+                    "ing.Tasks\" version=\"4.0.11-rc2-24027\" targetFramework=\"net452\" />\r\n</packages>");
             return this.GenerationEnvironment.ToString();
         }
     }

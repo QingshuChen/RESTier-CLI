@@ -63,7 +63,7 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration
             {
                 Version actualEntityFrameworkConnectionVersion;
                 ec = new StoreSchemaConnectionFactory().Create(
-                    DependencyResolver.Instance,
+                    Microsoft.Data.Entity.Design.VersioningFacade.DependencyResolver.Instance,
                     _dbSetting.ProviderInvariantName,
                     connectionString,
                     maxVersion,
@@ -121,7 +121,7 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration
         {
             var items = new ArrayList();
 
-            using (var command = new EntityCommand(null, ec, DependencyResolver.Instance))
+            using (var command = new EntityCommand(null, ec, Microsoft.Data.Entity.Design.VersioningFacade.DependencyResolver.Instance))
             {
                 command.CommandType = CommandType.Text;
                 command.CommandText = sqlStr;

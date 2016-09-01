@@ -71,7 +71,7 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration
                 modelBuilderSettings.TargetSchemaVersion = new Version(3, 0, 0, 0);
 
                 // Get the providerManifestTokern 
-                IDbDependencyResolver resolver = DependencyResolver.Instance;
+                IDbDependencyResolver resolver = Microsoft.Data.Entity.Design.VersioningFacade.DependencyResolver.Instance;
                 var providerServices =
                     resolver.GetService<System.Data.Entity.Core.Common.DbProviderServices>(dbSetting.ProviderInvariantName);
                 var factory = DbProviderFactories.GetFactory(dbSetting.ProviderInvariantName);
@@ -86,13 +86,29 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration
 
                 // the function provided by EntityFramework to generate code from a model
                 var generator = new CodeFirstModelGenerator();
-                return generator.Generate(mbe.Model, @namespace + ".Models", projectName + "DbContext", projectName);
+                var result = generator.Generate(mbe.Model, @namespace + ".Models", projectName + "DbContext", projectName);
+                string key = projectName + "DbContext.cs";
+                if (dbSetting.DBType == DatabaseType.MYSQL)
+                {
+                    return result.Where(c => !c.Key.Equals(key)).Concat(
+                    new[] { new KeyValuePair<string, string>(key, addMySqlNamespace(result.First(c => c.Key.Equals(key)).Value)) });
+                }
+
+                return result;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
                 return null;
             }
+        }
+
+        private string addMySqlNamespace(string content)
+        {
+            string flag = "using System.Linq;";
+            int index = content.IndexOf(flag) + flag.Length + 1;
+            content = content.Substring(0, index) + "\tusing MySql.Data.Entity;\n" + "[DbConfigurationType(typeof(MySqlEFConfiguration))]\n" + content.Substring(index);
+            return content;
         }
     }
 }
