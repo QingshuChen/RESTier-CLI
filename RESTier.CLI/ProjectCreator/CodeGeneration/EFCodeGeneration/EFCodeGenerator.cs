@@ -107,7 +107,7 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration
         {
             string flag = "using System.Linq;";
             int index = content.IndexOf(flag) + flag.Length + 1;
-            content = content.Substring(0, index) + "\tusing MySql.Data.Entity;\n" + "[DbConfigurationType(typeof(MySqlEFConfiguration))]\n" + content.Substring(index);
+            content = content.Substring(0, index) + "\tusing MySql.Data.Entity;\n" + "\t[DbConfigurationType(typeof(MySqlEFConfiguration))]\n" + content.Substring(index);
             return content;
         }
     }

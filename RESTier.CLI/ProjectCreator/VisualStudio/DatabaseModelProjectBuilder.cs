@@ -1,7 +1,6 @@
 ﻿using Microsoft.RESTier.Cli.Database;
 using Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration;
 using Microsoft.RESTier.Cli.ProjectCreator.CodeGeneration.EFCodeGeneration;
-using Microsoft.RESTier.Cli.ProjectCreator.VisualStudio.DatabaseConfiguration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -18,7 +17,6 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.VisualStudio
         private string _connectionString;
         private IProjectCreator _projectCreator;
         private DatabaseSetting _dbSetting;
-        private IDatabaseRelatedConfiguration _dbRelatedConfiguration;
         public string Name { get; set; }
         public string Namespace { get; set; }
         public string Path
@@ -37,9 +35,6 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.VisualStudio
         {
             this._projectCreator = projectCreator;
             this._dbSetting = dbSetting;
-            this._dbRelatedConfiguration = DatabaseRelatedConfigurationFactory.Create(dbSetting.DBType);
-            this._dbRelatedConfiguration.ProjectCreator = this;
-            this._dbRelatedConfiguration.ConnectionString = connectionString;
             this.Name = projectCreator.Name;
             this.Namespace = projectCreator.Namespace;
             this._path = projectCreator.Path;
@@ -110,10 +105,17 @@ namespace Microsoft.RESTier.Cli.ProjectCreator.VisualStudio
                 referenceNode.SetAttribute("Include", item.Item1);
                 XmlElement hintPathNode = doc.CreateElement("HintPath", node.NamespaceURI);
                 hintPathNode.InnerText = item.Item2;
-                referenceNode.AppendChild(hintPathNode);
+                if (!string.IsNullOrEmpty(item.Item2))
+                {
+                    referenceNode.AppendChild(hintPathNode);
+                }
+
                 XmlElement privateNode = doc.CreateElement("Private", node.NamespaceURI);
                 privateNode.InnerText = item.Item3;
-                referenceNode.AppendChild(privateNode);
+                if (!string.IsNullOrEmpty(item.Item3))
+                {
+                    referenceNode.AppendChild(privateNode);
+                }
                 node.AppendChild(referenceNode);
             }
             doc.Save(csprojFile);

@@ -19,8 +19,6 @@ namespace Microsoft.RESTier.Cli.Database
                 dbSetting.ProviderInvariantName = ConfigurationManager.AppSettings["SQLServerProviderInvariantName"];
                 dbSetting.ProviderType = ConfigurationManager.AppSettings["SQLServerProviderType"];
                 dbSetting.Packages = new System.Collections.ArrayList();
-                dbSetting.Packages.Add(new Tuple<string, string, string>("MySql.Data", "7.0.3-DMR", "net452"));
-                dbSetting.Packages.Add(new Tuple<string, string, string>("MySql.Data.Entity", "7.0.3-DMR", "net452"));
                 dbSetting.Packages.Add(new Tuple<string, string, string>("EntityFramework", "6.1.3", "net452"));
                 dbSetting.References = new System.Collections.ArrayList();
                 dbSetting.References.Add(new Tuple<string, string, string>(
@@ -37,15 +35,17 @@ namespace Microsoft.RESTier.Cli.Database
                 dbSetting.ProviderType = ConfigurationManager.AppSettings["MYSQLProviderType"];
                 dbSetting.Packages = new System.Collections.ArrayList();
                 dbSetting.Packages.Add(new Tuple<string, string, string>("EntityFramework", "6.1.3", "net452"));
+                dbSetting.Packages.Add(new Tuple<string, string, string>("MySql.Data", "6.9.9", "net452"));
+                dbSetting.Packages.Add(new Tuple<string, string, string>("MySql.Data.Entity", "6.9.9", "net452"));
                 dbSetting.References = new System.Collections.ArrayList();
                 dbSetting.References.Add(new Tuple<string, string, string>(
-                    "MySql.Data, Version = 7.0.3.0, Culture = neutral, PublicKeyToken = c5687fc88969c44d, processorArchitecture = MSIL",
-                    @"..\packages\MySql.Data.7.0.3-DMR\lib\net45\MySql.Data.dll",
+                    "MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL",
+                    @"..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll",
                     "True"));
                 dbSetting.References.Add(new Tuple<string, string, string>(
-                    "MySql.Data.Entity.EF6, Version=7.0.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL",
-                    @"..\packages\MySql.Data.Entity.7.0.3-DMR\lib\net45\MySql.Data.Entity.EF6.dll",
-                    "True"));
+                    "MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL",
+                    @"",
+                    ""));
                 dbSetting.References.Add(new Tuple<string, string, string>(
                     "EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL",
                     @"..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll",

@@ -268,10 +268,6 @@
     <Compile Include="ProjectCreator\CodeGeneration\ICodeGenerator.cs" />
     <Compile Include="ProjectCreator\IProjectCreator.cs" />
     <Compile Include="ProjectCreator\VisualStudio\AspDotNetProjectBuilder.cs" />
-    <Compile Include="ProjectCreator\VisualStudio\DatabaseConfiguration\DatabaseRelatedConfigurationFactory.cs" />
-    <Compile Include="ProjectCreator\VisualStudio\DatabaseConfiguration\SQLServerRelatedConfiguration.cs" />
-    <Compile Include="ProjectCreator\VisualStudio\DatabaseConfiguration\IDatabaseRelatedConfiguration.cs" />
-    <Compile Include="ProjectCreator\VisualStudio\DatabaseConfiguration\MySqlRelatedConfiguration.cs" />
     <Compile Include="ProjectCreator\VisualStudio\DatabaseModelProjectBuilder.cs" />
     <Compile Include="ProjectCreator\VisualStudio\RESTierProjectBuilder.cs" />
     <Compile Include="ProjectCreator\VisualStudio\TextTemplate\AiJsFile1.cs">
